@@ -42,8 +42,6 @@ textarea{resize:vertical;min-height:65px;}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
 .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.75rem;}
 .g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:.65rem;}
-@media(max-width:520px){.g2,.g3,.g4{grid-template-columns:1fr 1fr;}}
-/* Linhas Portalnet */
 .lp{background:#F8FAFD;border:1.5px solid var(--bd);border-radius:8px;padding:.9rem;margin-bottom:.65rem;position:relative;}
 .lp-num{position:absolute;top:.5rem;right:.65rem;font-size:.64rem;font-weight:700;color:var(--gr);background:#E5E7EB;padding:1px 7px;border-radius:20px;}
 .lp-alert{font-size:.71rem;margin-top:.5rem;padding:.45rem .7rem;border-radius:6px;display:none;line-height:1.5;}
@@ -51,76 +49,16 @@ textarea{resize:vertical;min-height:65px;}
 .lp-alert.ok{background:var(--ok-bg);color:var(--ok);}
 .lp-alert.err{background:var(--er-bg);color:var(--er);}
 .lp-alert.warn{background:var(--wa-bg);color:var(--wa);}
-/* Métricas */
-.mets{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:.85rem;padding-top:.85rem;border-top:1px dashed var(--bd);}
-.met{background:var(--az-bg);border-radius:7px;padding:7px 9px;text-align:center;}
-.met-l{font-size:.61rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--az2);margin-bottom:2px;}
-.met-v{font-family:var(--fh);font-size:1.05rem;font-weight:700;color:var(--az);}
-/* Botões */
 .btn{padding:10px 16px;font-family:var(--fh);font-size:.85rem;font-weight:700;border:none;border-radius:var(--r);cursor:pointer;transition:.15s;width:100%;}
 .btn-pri{background:var(--az2);color:#fff;}.btn-pri:hover{background:var(--az);}
-.btn-pri:active{transform:scale(.98);}
 .bsm{padding:5px 11px;font-size:.72rem;font-weight:600;border-radius:6px;cursor:pointer;border:1.5px solid;transition:.15s;width:auto;}
-.badd{background:var(--az-bg);color:var(--az2);border-color:#93C5FD;}.badd:hover{background:#DBEAFE;}
-.brem{background:#FEF2F2;color:#B91C1C;border-color:#FCA5A5;}.brem:hover{background:var(--er-bg);}
-.bsec{background:var(--wh);color:var(--az2);border-color:var(--az2);}.bsec:hover{background:var(--az-bg);}
-.bsec2{background:var(--az2);color:#fff;border-color:var(--az2);}.bsec2:hover{background:var(--az);}
-/* Resultado */
+.badd{background:var(--az-bg);color:var(--az2);border-color:#93C5FD;}
 .rc{border-radius:var(--r);padding:1.1rem;margin-bottom:.9rem;border:1.5px solid;}
-.rc.ok{background:var(--ok-bg);border-color:var(--ok-bd);}
-.rc.warn{background:var(--wa-bg);border-color:var(--wa-bd);}
-.rc.err{background:var(--er-bg);border-color:var(--er-bd);}
 .rc.info{background:var(--az-bg);border-color:#93C5FD;}
-.rtit{font-family:var(--fh);font-size:.88rem;font-weight:700;margin-bottom:.5rem;}
-.rc.ok .rtit{color:var(--ok);}
-.rc.warn .rtit{color:var(--wa);}
-.rc.err .rtit{color:var(--er);}
-.rc.info .rtit{color:var(--az2);}
-.rbody{font-size:.81rem;line-height:1.75;}
-/* Tabela diagnóstico */
 .tdiag{width:100%;border-collapse:collapse;font-size:.75rem;margin-top:.6rem;}
-.tdiag th{background:rgba(0,0,0,.06);padding:6px 8px;text-align:left;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;}
-.tdiag td{padding:6px 8px;border-bottom:1px solid #F3F4F6;vertical-align:middle;}
-.tdiag tr:last-child td{border-bottom:none;}
-.tr-ok{background:#F0FDF4;}.tr-er{background:#FEF2F2;}.tr-wa{background:#FFFBEB;}
-.tr-sub td{padding:2px 8px 5px 18px!important;font-size:.71rem;border-bottom:none!important;color:#555;}
-.bdg{display:inline-block;padding:1px 7px;border-radius:20px;font-size:.63rem;font-weight:700;white-space:nowrap;}
-.bdg.ok{background:var(--ok-bg);color:var(--ok);}
-.bdg.err{background:var(--er-bg);color:var(--er);}
-.bdg.warn{background:var(--wa-bg);color:var(--wa);}
-.bdg.info{background:var(--az-bg);color:var(--az2);}
-.zero{color:#B91C1C;font-weight:700;}
-/* Fórmula */
-.fbox{background:linear-gradient(135deg,var(--az-bg),#fff);border:1px solid #93C5FD;border-radius:8px;padding:.9rem;margin:.65rem 0;font-size:.79rem;}
-.fbox .fm{font-family:monospace;background:rgba(255,255,255,.8);border:1px solid #BFDBFE;border-radius:5px;padding:5px 9px;margin:.35rem 0;font-size:.76rem;line-height:1.6;}
-.fbox .fres{font-family:var(--fh);font-size:1.25rem;font-weight:700;color:var(--az);margin-top:.35rem;}
-/* Texto URE */
-.urebox{background:var(--wh);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;margin-top:.75rem;}
-.urebar{background:var(--az-bg);padding:8px 1.1rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--bd);}
-.urebar span{font-size:.73rem;font-weight:700;color:var(--az2);}
-#ure-txt{padding:1.1rem 1.4rem;font-family:'Times New Roman',serif;font-size:12.5px;line-height:1.85;white-space:pre-wrap;color:#111;min-height:100px;}
-/* Ofício */
-.ofbar{background:var(--az-bg);padding:8px 1.1rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--bd);}
-#of-txt{padding:2rem 2.5rem;font-family:'Times New Roman',serif;font-size:13px;line-height:2;white-space:pre-wrap;color:#111;min-height:280px;}
-/* Tag índice */
-.tag-ind{display:none;margin-top:.4rem;padding:.45rem .85rem;border-radius:7px;font-size:.76rem;font-weight:600;background:var(--az-bg);color:var(--az2);border:1px solid #93C5FD;}
-/* Tabela referência */
-.tref{width:100%;border-collapse:collapse;font-size:.78rem;}
-.tref th{background:var(--az2);color:#fff;padding:7px 10px;text-align:left;font-size:.7rem;letter-spacing:.03em;}
-.tref td{padding:6px 10px;border-bottom:1px solid #F3F4F6;}
-.tref tr:nth-child(even) td{background:#F8FAFD;}
-.tref tr:hover td{background:var(--az-bg);}
-.nota{font-size:.69rem;color:var(--gr);margin-top:.7rem;padding-top:.65rem;border-top:1px dashed var(--bd);font-style:italic;}
-/* Quadro apoio */
-.qa-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:.5rem;}
-@media(max-width:600px){.qa-grid{grid-template-columns:1fr;}}
-.qa-card{background:var(--az-bg);border:1px solid #93C5FD;border-radius:8px;padding:.75rem 1rem;}
-.qa-titulo{font-size:.72rem;font-weight:700;color:var(--az2);margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.04em;}
-.qa-item{font-size:.77rem;color:#374151;padding:2px 0;display:flex;gap:6px;align-items:flex-start;}
-.qa-item::before{content:'•';color:var(--az3);flex-shrink:0;}
-/* Sep */
-.sep{height:1px;background:var(--bd);margin:.7rem 0;}
-@media print{header,nav,.card,.btn,.bsm,.urebar,.ofbar{display:none!important;}.pnl{display:block!important;}#of-txt{padding:0;font-size:12pt;}}
+.tdiag th{background:rgba(0,0,0,.06);padding:6px 8px;text-align:left;font-size:.65rem;font-weight:700;text-transform:uppercase;}
+.tdiag td{padding:6px 8px;border-bottom:1px solid #F3F4F6;}
+.paste-box{background:var(--az-bg);border:2px dashed var(--az3);padding:1rem;margin-bottom:1rem;border-radius:var(--r);}
 </style>
 </head>
 <body>
@@ -129,7 +67,7 @@ textarea{resize:vertical;min-height:65px;}
   <div class="hico">📋</div>
   <div>
     <h1>Calculadora – Bônus por Resultados 2025</h1>
-    <p>Diagnóstico automático · Cálculo do valor correto · Ofício à URE · Quadro de Apoio Escolar</p>
+    <p>Diagnóstico automático · Importação direta do Portalnet · Ofício URE</p>
     <span class="lei">LC nº 1.361/2021 · Deliberação BR nº 4, de 16/04/2026</span>
   </div>
 </header>
@@ -137,1084 +75,171 @@ textarea{resize:vertical;min-height:65px;}
 <nav>
   <button class="tab on" onclick="aba('calc',this)">🧮 Calculadora</button>
   <button class="tab" onclick="aba('oficio',this)">📄 Ofício à URE</button>
-  <button class="tab" onclick="aba('ref',this)">📖 Referências</button>
 </nav>
 
-<!-- ══════════════════════════════════════════
-     PAINEL CALCULADORA
-══════════════════════════════════════════ -->
 <div id="pnl-calc" class="pnl on"><div class="wrap"><div class="grid">
 
-<!-- ─── COLUNA ESQUERDA ─── -->
 <div>
+  <!-- IMPORTAÇÃO RÁPIDA -->
+  <div class="card paste-box">
+    <div class="ctit">🚀 Importação Rápida</div>
+    <div class="f">
+      <label>Copie as linhas da tabela do Portalnet e cole abaixo:</label>
+      <textarea id="raw-portalnet" placeholder="Dica: Selecione as linhas na tela do Portalnet, copie (Ctrl+C) e cole aqui (Ctrl+V)..." oninput="importarPortalnet(this.value)"></textarea>
+    </div>
+    <p class="hint" style="margin-top:5px; color:var(--az2)">O sistema identifica automaticamente as colunas conforme o layout da imagem image_827a12.png.</p>
+  </div>
 
-<!-- 1. IDENTIFICAÇÃO -->
-<div class="card">
-  <div class="ctit">1 · Identificação do Servidor</div>
-  <div class="g2">
-    <div class="f"><label>Nome completo</label><input id="nome" placeholder="Ex: Nome"></div>
-    <div class="f"><label>RG</label><input id="rg" placeholder="Ex: xx.xxx.xxx"></div>
-  </div>
-  <div class="g2">
-    <div class="f"><label>Escola / UA</label><input id="escola" placeholder="Ex: EE ........"></div>
-    <div class="f"><label>Código UA (Portalnet)</label><input id="ua-cod" placeholder="Ex: ....."></div>
-  </div>
-</div>
-
-<!-- 2. CARGO -->
-<div class="card">
-  <div class="ctit">2 · Cargo / Função em 2025</div>
-  <p class="hint">Ao selecionar o cargo, o índice correto é definido automaticamente conforme a Deliberação BR nº 4/2026.</p>
-  <div class="g2">
-    <div class="f">
-      <label>Cargo / Função</label>
-      <select id="cargo" onchange="onCargo()">
-        <option value="">— Selecione —</option>
-        <optgroup label="── Índice SÉRIE/DISCIPLINA ──">
-          <option value="peb_af">Prof. Anos Finais (Grau 1)</option>
-          <option value="peb_em">Prof. Ensino Médio (Grau 2)</option>
-          <option value="peb_art22">Prof. afastado – Art. 22</option>
-          <option value="peb_pei">Prof. PEI</option>
-          <option value="peb_hora_perm">Prof. Hora de Permanência</option>
-          <option value="prof_coord_1">Prof. Coordenador (1 tipo ensino)</option>
-          <option value="cgp_1">CGP (1 tipo de ensino)</option>
-          <option value="peb_aux">Prof. Auxiliar</option>
-          <option value="peb_presenca">Prof. Programa Presença</option>
-        </optgroup>
-        <optgroup label="── Índice ESCOLA – Grau Branco ──">
-          <option value="peb_ai">Prof. Anos Iniciais (Grau Branco)</option>
-        </optgroup>
-        <optgroup label="── Índice ESCOLA – Grau 0 ──">
-          <option value="diretor">Diretor / Diretor Escolar</option>
-          <option value="vice">Vice-Diretor</option>
-          <option value="coe">COE – Coord. Organização Escolar</option>
-          <option value="ed_prof">Educador Profissional (Escola da Família)</option>
-          <option value="peb_readaptado">Prof. Readaptado</option>
-          <option value="cgp_pei_grau0">CGP – PEI (grau 0 da escola)</option>
-          <option value="cgp_3tipos">CGP (3 tipos de ensino)</option>
-          <option value="peb_sala_leitura">Prof. Sala de Leitura</option>
-          <option value="peb_adido">Prof. Adido</option>
-          <option value="admin_escola">Pessoal Administrativo (escola)</option>
-          <option value="pmec">Prof. Mediador – PMEC (7600)</option>
-          <option value="conviva">Prof. Orientador Conviva (7860)</option>
-          <option value="af_065_escola">Afastado cód. 065 – junto à escola</option>
-          <option value="acao_judicial">Carga Horária – Ação Judicial (sem série)</option>
-        </optgroup>
-        <optgroup label="── Índice URE ──">
-          <option value="peb_sala_recursos">Prof. Sala de Recursos / Ed. Especial</option>
-          <option value="supervisor">Supervisor de Ensino</option>
-          <option value="supervisor_ed">Supervisor Educacional</option>
-          <option value="coord_ure">Coordenador / Coord. Geral URE</option>
-          <option value="chefe_dep">Chefe de Departamento</option>
-          <option value="dir_adido_ure">Diretor / Dir. Escolar Adido na URE</option>
-          <option value="servidor_ure">Servidor em exercício na URE</option>
-          <option value="readapt_ure">Readaptado (cód. 360) na URE</option>
-          <option value="afastado_ure">Afastado junto à URE</option>
-          <option value="ceeja">CEEJA</option>
-          <option value="classe_hosp">Classe Hospitalar</option>
-          <option value="pcae">PCAE – Prof. Coord. Agrupamento Escolar</option>
-          <option value="esp_curriculos">Prof. Especialista em Currículos – Oficina</option>
-          <option value="sem_indice">Unidade de ensino sem índice próprio</option>
-          <option value="af_065_ure">Afastado cód. 065 – junto à URE</option>
-          <option value="admin_ure">Pessoal Administrativo da URE</option>
-          <option value="sindicancia_ure">Afastado na URE p/ responder sindicância</option>
-        </optgroup>
-        <optgroup label="── Índice UNIDADE VINCULADORA ──">
-          <option value="cel">CEL / Unidade Multisseriada Vinculada</option>
-          <option value="prisional">Unidade Prisional</option>
-          <option value="fund_casa">Fundação CASA (UI e UIP)</option>
-          <option value="proatec">PROATEC</option>
-        </optgroup>
-        <optgroup label="── Índice do ESTADO ──">
-          <option value="orgao_central">Órgão Central / Secretaria</option>
-          <option value="sindicato">Afastado junto a Sindicato</option>
-          <option value="af_065_estado">Afastado cód. 065 – junto à Secretaria</option>
-        </optgroup>
-        <optgroup label="── MÉDIA índices (Grau 4) ──">
-          <option value="cgp_multi">CGP (múltiplos tipos de ensino)</option>
-        </optgroup>
-        <optgroup label="── CGPAC PEI (misto) ──">
-          <option value="cgpac_ai">CGPAC PEI – Anos Iniciais</option>
-          <option value="cgpac_af">CGPAC PEI – Anos Finais</option>
-          <option value="cgpac_af_em">CGPAC PEI – AF + EM</option>
-          <option value="cgpac_em">CGPAC PEI – Ensino Médio</option>
-        </optgroup>
-        <optgroup label="── QUADRO DE APOIO ESCOLAR ──">
-          <option value="qa_agente_org">Agente de Organização Escolar</option>
-          <option value="qa_agente_serv">Agente de Serviços Escolares</option>
-          <option value="qa_secretario">Secretário de Escola</option>
-          <option value="qa_gerente">Gerente de Org. e Normas</option>
-          <option value="qa_tecnico_adm">Técnico Administrativo</option>
-          <option value="qa_tecnico_fin">Técnico Financeiro</option>
-          <option value="qa_oficial_adm">Oficial Administrativo</option>
-          <option value="qa_auxiliar_adm">Auxiliar Administrativo</option>
-          <option value="qa_agente_tec">Agente Técnico de Ass. à Educação</option>
-          <option value="qa_outro">Outro – Quadro de Apoio Escolar</option>
-        </optgroup>
-      </select>
-    </div>
-    <div class="f">
-      <label>DI (vínculo)</label>
-      <select id="di">
-        <option value="1">DI 1 – vínculo principal</option>
-        <option value="2">DI 2 – segundo vínculo</option>
-        <option value="3">DI 3 – terceiro vínculo</option>
-      </select>
-    </div>
-  </div>
-  <div id="tag-indice" class="tag-ind"></div>
-  <!-- Alerta CGPAC misto -->
-  <div id="aviso-cgpac" style="display:none;margin-top:.5rem;padding:.6rem .9rem;background:var(--wa-bg);border:1px solid var(--wa-bd);border-radius:7px;font-size:.77rem;color:var(--wa);"></div>
-  <!-- Alerta Quadro de Apoio -->
-  <div id="aviso-qa" style="display:none;margin-top:.5rem;padding:.6rem .9rem;background:var(--ok-bg);border:1px solid var(--ok-bd);border-radius:7px;font-size:.77rem;color:var(--ok);"></div>
-</div>
-
-<!-- 3. CARGA HORÁRIA E REMUNERAÇÃO -->
-<div class="card">
-  <div class="ctit">3 · Carga Horária e Remuneração</div>
-  <p class="hint">Valor/hora = Total de vencimentos ÷ Carga horária base (Orientação Técnica – Slide 26). Preencha os vencimentos para calcular automaticamente.</p>
-  <div class="g2">
-    <div class="f">
-      <label>Carga horária BASE do contrato (h/mês)</label>
-      <select id="carga-base" onchange="calcMets()">
-        <option value="">— Selecione —</option>
-        <option value="220">220h – 36 aulas (integral)</option>
-        <option value="215">215h – 35 aulas</option>
-        <option value="210">210h – 34 aulas</option>
-        <option value="205">205h – 33 aulas</option>
-        <option value="200">200h – 32 aulas</option>
-        <option value="195">195h – 31 aulas</option>
-        <option value="190">190h – 30 aulas</option>
-        <option value="185">185h – 29 aulas</option>
-        <option value="175">175h – 28 aulas</option>
-        <option value="170">170h – 27 aulas</option>
-        <option value="165">165h – 26 aulas</option>
-        <option value="160">160h – 25 aulas</option>
-        <option value="150">150h – 24 aulas</option>
-        <option value="145">145h – 23 aulas</option>
-        <option value="140">140h – 22 aulas</option>
-        <option value="135">135h – 21 aulas</option>
-        <option value="125">125h – 20 aulas</option>
-        <option value="120">120h – 19 aulas</option>
-        <option value="115">115h – 18 aulas</option>
-        <option value="110">110h – 17 aulas</option>
-        <option value="100">100h – 16 aulas</option>
-        <option value="outro">Outro valor</option>
-      </select>
-    </div>
-    <div class="f" id="wrap-base-outro" style="display:none">
-      <label>Carga base (manual, h/mês)</label>
-      <input id="carga-base-outro" type="number" placeholder="Ex: 175" oninput="calcMets()">
-    </div>
-    <div class="f">
-      <label>Aulas semanais com alunos (SED)</label>
-      <input id="aulas" type="number" min="1" max="36" placeholder="Ex: 20" oninput="calcMets()">
-    </div>
-  </div>
-  <div class="g3">
-    <div class="f">
-      <label>Subsídio / Vencimento base (R$)</label>
-      <input id="v-sub" type="number" step="0.01" placeholder="Ex: 2650.00" oninput="calcMets()">
-    </div>
-    <div class="f">
-      <label>Carga Suplementar (R$)</label>
-      <input id="v-csupl" type="number" step="0.01" placeholder="Ex: 2650.00" oninput="calcMets()">
-    </div>
-    <div class="f">
-      <label>Grat. Dedicação Exclusiva (R$)</label>
-      <input id="v-gde" type="number" step="0.01" placeholder="Ex: 2120.00" oninput="calcMets()">
-    </div>
-  </div>
-  <div class="g2">
-    <div class="f">
-      <label>Outras gratificações/incorporações (R$)</label>
-      <input id="v-out" type="number" step="0.01" placeholder="Ex: 0.00" oninput="calcMets()">
-    </div>
-    <div class="f">
-      <label>Valor/hora já calculado (R$) — opcional</label>
-      <input id="v-hora-manual" type="number" step="0.01" placeholder="Será calculado automaticamente" oninput="calcMets()">
-    </div>
-  </div>
-  <div id="mets" style="display:none" class="mets">
-    <div class="met"><div class="met-l">Horas mensais</div><div class="met-v" id="m-h">–</div></div>
-    <div class="met"><div class="met-l">Total vencimentos</div><div class="met-v" id="m-tv">–</div></div>
-    <div class="met"><div class="met-l">Valor/hora</div><div class="met-v" id="m-vh">–</div></div>
-    <div class="met"><div class="met-l">Peso (%)</div><div class="met-v" id="m-p">–</div></div>
-  </div>
-</div>
-
-<!-- 4. LINHAS PORTALNET -->
-<div class="card">
-  <div class="ctit">4 · Linhas do Portalnet – Novo Bônus</div>
-  <p class="hint">Digite exatamente o que aparece em cada linha da Consulta por RG. O diagnóstico de UA vazia, IDESP zerado e período errado é automático.</p>
-  <div id="cont-linhas"></div>
-  <div style="margin-top:.55rem;display:flex;gap:.5rem;flex-wrap:wrap;">
-    <button class="bsm badd" onclick="addLinha()">+ Linha</button>
-    <button class="bsm badd" style="background:#fff" onclick="addLinhas(3)">+ 3 linhas</button>
-    <button class="bsm badd" style="background:#fff" onclick="addLinhas(5)">+ 5 linhas</button>
-  </div>
-</div>
-
-<!-- 5. ICM / SITUAÇÃO -->
-<div class="card">
-  <div class="ctit">5 · ICM, Afastamentos e Situação</div>
-  <div class="g2">
-    <div class="f">
-      <label>ICM / IDESP da Escola (0 a 1)</label>
-      <input id="icm-esc" type="number" step="0.001" min="0" max="1" placeholder="Ex: 0.850">
-    </div>
-    <div class="f">
-      <label>ICM / IDESP da URE (0 a 1)</label>
-      <input id="icm-ure" type="number" step="0.001" min="0" max="1" placeholder="Ex: 0.720">
-    </div>
-  </div>
-  <div class="g2">
-    <div class="f">
-      <label>Nível da escola</label>
-      <select id="nivel-esc">
-        <option value="">Não informado</option>
-        <option value="diamante">🏆 Diamante</option>
-        <option value="ouro">🥇 Ouro</option>
-        <option value="prata">🥈 Prata</option>
-        <option value="bronze">🥉 Bronze</option>
-        <option value="em_evolucao">📈 Em Evolução</option>
-      </select>
-    </div>
-    <div class="f">
-      <label>Valor total pago pelo Portalnet (R$)</label>
-      <input id="val-pago" type="number" step="0.01" placeholder="Ex: 9.53">
-    </div>
-  </div>
-  <div class="f">
-    <label>Afastamento em 2025</label>
-    <select id="afastamento" onchange="toggleAfast()">
-      <option value="nao">Não houve afastamento</option>
-      <option value="ef">Sim – Efetivo Exercício (não reduz bônus)</option>
-      <option value="aus">Sim – Ausência (reduz bônus)</option>
-      <option value="art22">Sim – Art. 22</option>
-    </select>
-  </div>
-  <div id="wrap-cod-afast" style="display:none" class="f">
-    <label>Código do afastamento</label>
-    <select id="cod-afast">
-      <option value="">— Selecione —</option>
-      <optgroup label="✅ Efetivo Exercício">
-        <option value="047">047 – Férias do Exercício</option>
-        <option value="008">008 – Licença Gestante</option>
-        <option value="279">279 – Licença Gestante até 180 dias</option>
-        <option value="296">296 – Lic. Maternidade prorrogação</option>
-        <option value="138">138/139/140 – Lic. Maternidade Adoção</option>
-        <option value="137">137/482/297/298/299 – Lic. Maternidade CLT/RGPS</option>
-        <option value="050">050/280 – Licença Adoção</option>
-        <option value="059">059 – Licença Paternidade</option>
-        <option value="038">038/225/285/149 – Nojo/Falecimento</option>
-        <option value="378">378 – Covid Decreto 64879 Inciso II</option>
-        <option value="124">124 – Acompanhar alunos em campeonato</option>
-      </optgroup>
-      <optgroup label="❌ Ausências (reduzem bônus)">
-        <option value="009">009 – Licença Prêmio</option>
-        <option value="205">205 – Licença Prêmio Ação Judicial</option>
-        <option value="379">379 – Covid Decreto 64879 Inciso I</option>
-        <option value="380">380 – Atestado Médico Covid Delib.1/2020</option>
-        <option value="130">130 – Folga Justiça Eleitoral</option>
-        <option value="039">039 – Serviço Obrigatório por Lei</option>
-      </optgroup>
-    </select>
-  </div>
-</div>
-
-<button class="btn btn-pri" onclick="analisar()">🔍 Gerar Diagnóstico Automático Completo</button>
-</div>
-
-<!-- ─── COLUNA DIREITA: RESULTADO ─── -->
-<div id="resultado">
-  <div class="rc info">
-    <div class="rtit">ℹ️ Aguardando dados</div>
-    <div class="rbody">Preencha os campos ao lado e clique em <strong>"Gerar Diagnóstico Automático Completo"</strong>.<br><br>
-    O sistema vai: analisar cada linha do Portalnet, identificar UA vazia / IDESP zero / período de 1 dia, verificar se o índice aplicado corresponde ao cargo, calcular o valor correto estimado com a fórmula oficial e gerar o texto para a URE.</div>
-  </div>
   <div class="card">
-    <div class="ctit">Fórmula oficial – Orientação Técnica Slide 26</div>
-    <div class="fbox">
-      <strong>Valor/hora</strong> = Total de vencimentos ÷ Carga horária mensal base<br>
-      <div class="fm">Ex: R$ 7.420,00 ÷ 200h = R$ 37,10/hora</div>
-      <strong>Bônus estimado</strong> = Valor/hora × Carga base × (Dias/30) × Peso × ICM<br>
-      <div class="fm">Peso = Horas mensais parciais ÷ Carga base × 100%</div>
-    </div>
-  </div>
-</div>
-
-</div></div></div>
-
-<!-- ══════════════════════════════════════════
-     PAINEL OFÍCIO
-══════════════════════════════════════════ -->
-<div id="pnl-oficio" class="pnl"><div class="wrap"><div class="grid">
-
-<div>
-  <div class="card">
-    <div class="ctit">Dados do Ofício</div>
+    <div class="ctit">1 · Identificação e Cargo</div>
     <div class="g2">
-      <div class="f"><label>Número do ofício</label><input id="of-num" placeholder="Ex: 012/2026"></div>
-      <div class="f"><label>Data</label><input id="of-data" placeholder="Ex: Jacareí, 12 de maio de 2026"></div>
-    </div>
-    <div class="f"><label>URE destinatária</label><input id="of-ure" placeholder="Ex: URE – Jacareí"></div>
-    <div class="f"><label>Diretor(a) da URE</label><input id="of-dir-ure" placeholder="Ex: Fulano de Tal"></div>
-    <div class="f"><label>Escola remetente</label><input id="of-escola-rem" placeholder="Ex: EE Dirceu Junqueira de Souza"></div>
-    <div class="f"><label>Diretor(a) da escola signatário</label><input id="of-dir-esc" placeholder="Ex: Beltrana de Tal"></div>
-    <div class="f"><label>Descrição do erro identificado</label>
-      <textarea id="of-erro" rows="5" placeholder="Será preenchido automaticamente ao gerar o diagnóstico, ou edite manualmente."></textarea>
-    </div>
-    <div class="g2">
-      <div class="f"><label>Valor pago (R$)</label><input id="of-pago" placeholder="Ex: R$ 9,53"></div>
-      <div class="f"><label>Valor estimado correto (R$)</label><input id="of-correto" placeholder="Preenchido pelo diagnóstico"></div>
-    </div>
-    <button class="btn btn-pri" onclick="gerarOficio()">📄 Gerar Ofício</button>
-  </div>
-</div>
-
-<div>
-  <div class="card" style="padding:0;overflow:hidden;">
-    <div class="ofbar">
-      <span>📄 Ofício à URE – Revisão do Bônus por Resultados 2025</span>
-      <div style="display:flex;gap:.4rem">
-        <button class="bsm bsec" onclick="copiarOf()">📋 Copiar</button>
-        <button class="bsm bsec2" onclick="window.print()">🖨️ Imprimir</button>
-      </div>
-    </div>
-    <div id="of-txt">O ofício aparecerá aqui após clicar em "Gerar Ofício".</div>
-  </div>
-</div>
-
-</div></div></div>
-
-<!-- ══════════════════════════════════════════
-     PAINEL REFERÊNCIAS
-══════════════════════════════════════════ -->
-<div id="pnl-ref" class="pnl"><div class="wrap">
-
-<div class="grid">
-<div>
-  <!-- Tabela de índices por cargo -->
-  <div class="card">
-    <div class="ctit">Índice por Cargo – Deliberação BR nº 4/2026</div>
-    <table class="tref">
-      <tr><th>Cargo / Função</th><th>Índice</th><th>Grau</th></tr>
-      <tr><td>Prof. Anos Iniciais</td><td>Unidade Escolar</td><td>Branco</td></tr>
-      <tr><td>Prof. Anos Finais</td><td>Série/Disciplina</td><td>1</td></tr>
-      <tr><td>Prof. Ensino Médio</td><td>Série/Disciplina</td><td>2</td></tr>
-      <tr><td>Prof. Art. 22, PEI, HP, Coord. (1 tipo)</td><td>Série/Disciplina</td><td>1 ou 2</td></tr>
-      <tr><td>Prof. Auxiliar, Prog. Presença</td><td>Série/Disciplina</td><td>1 ou 2</td></tr>
-      <tr><td>Diretor / Dir. Escolar / Vice</td><td>Unidade Escolar</td><td>0</td></tr>
-      <tr><td>COE, Educador Profissional</td><td>Unidade Escolar</td><td>0</td></tr>
-      <tr><td>Prof. Readaptado, Adido, Sala de Leitura</td><td>Unidade Escolar</td><td>0</td></tr>
-      <tr><td>PMEC (7600), Prof. Orientador Conviva (7860)</td><td>Unidade Escolar</td><td>0</td></tr>
-      <tr><td>Pessoal Administrativo (escola)</td><td>Unidade Escolar</td><td>0</td></tr>
-      <tr><td>CGP (múltiplos tipos de ensino)</td><td>Média das Séries/Disciplinas</td><td>4</td></tr>
-      <tr><td>Prof. Sala de Recursos / Ed. Especial</td><td>Diretoria de Ensino (URE)</td><td>D</td></tr>
-      <tr><td>CEEJA, Classe Hospitalar</td><td>Diretoria de Ensino (URE)</td><td>D</td></tr>
-      <tr><td>Supervisor, Coord. URE, Chefe Dep.</td><td>Diretoria de Ensino (URE)</td><td>D</td></tr>
-      <tr><td>PCAE, Esp. Currículos, sem índice próprio</td><td>Diretoria de Ensino (URE)</td><td>D</td></tr>
-      <tr><td>Pessoal Administrativo (URE)</td><td>Diretoria de Ensino (URE)</td><td>D</td></tr>
-      <tr><td>Readaptado cód. 360 na URE</td><td>Diretoria de Ensino (URE)</td><td>D</td></tr>
-      <tr><td>CEL / Vinculadas, Unid. Prisional, Fund. CASA</td><td>Unidade Vinculadora</td><td>0</td></tr>
-      <tr><td>Órgão Central, Sindicato, cód. 065 Secretaria</td><td>Índice do Estado</td><td>–</td></tr>
-      <tr><td>Quadro de Apoio Escolar</td><td>Unidade Escolar</td><td>0</td></tr>
-    </table>
-    <p class="nota">CGPAC PEI: cálculo misto — 100h Grau 0 (escola) + 100h Grau 1/2/4 (série/disciplina). Ver detalhes no card ao lado.</p>
-  </div>
-
-  <!-- Tabela conversão aulas/horas -->
-  <div class="card">
-    <div class="ctit">Tabela Oficial: Aulas → Horas Mensais (2025)</div>
-    <table class="tref">
-      <tr><th>Aulas/sem.</th><th>Total sem.</th><th>Horas/mês</th><th>Aulas/sem.</th><th>Total sem.</th><th>Horas/mês</th></tr>
-      <tr><td>1</td><td>2</td><td>10h</td><td>19</td><td>24</td><td>120h</td></tr>
-      <tr><td>2</td><td>3</td><td>15h</td><td>20</td><td>25</td><td>125h</td></tr>
-      <tr><td>3</td><td>4</td><td>20h</td><td>21</td><td>27</td><td>135h</td></tr>
-      <tr><td>4</td><td>5</td><td>25h</td><td>22</td><td>28</td><td>140h</td></tr>
-      <tr><td>5</td><td>7</td><td>35h</td><td>23</td><td>29</td><td>145h</td></tr>
-      <tr><td>6</td><td>8</td><td>40h</td><td>24</td><td>30</td><td>150h</td></tr>
-      <tr><td>7</td><td>9</td><td>45h</td><td>25</td><td>32</td><td>160h</td></tr>
-      <tr><td>8</td><td>10</td><td>50h</td><td>26</td><td>33</td><td>165h</td></tr>
-      <tr><td>9</td><td>12</td><td>60h</td><td>27</td><td>34</td><td>170h</td></tr>
-      <tr><td>10</td><td>13</td><td>65h</td><td>28</td><td>35</td><td>175h</td></tr>
-      <tr><td>11</td><td>14</td><td>70h</td><td>29</td><td>37</td><td>185h</td></tr>
-      <tr><td>12</td><td>15</td><td>75h</td><td>30</td><td>38</td><td>190h</td></tr>
-      <tr><td>13</td><td>17</td><td>85h</td><td>31</td><td>39</td><td>195h</td></tr>
-      <tr><td>14</td><td>18</td><td>90h</td><td>32</td><td>40</td><td>200h</td></tr>
-      <tr><td>15</td><td>19</td><td>95h</td><td>33</td><td>41</td><td>205h</td></tr>
-      <tr><td>16</td><td>20</td><td>100h</td><td>34</td><td>42</td><td>210h</td></tr>
-      <tr><td>17</td><td>22</td><td>110h</td><td>35</td><td>43</td><td>215h</td></tr>
-      <tr><td>18</td><td>23</td><td>115h</td><td>36</td><td>44</td><td>220h</td></tr>
-    </table>
-  </div>
-</div>
-
-<div>
-  <!-- Quadro de Apoio Escolar -->
-  <div class="card">
-    <div class="ctit">Quadro de Apoio Escolar – Regras do Bônus</div>
-    <p class="hint">O Pessoal do Quadro de Apoio Escolar recebe pelo <strong>índice da unidade escolar (Grau 0)</strong>, assim como o pessoal administrativo.</p>
-    <div class="qa-grid">
-      <div class="qa-card">
-        <div class="qa-titulo">🏫 Servidores na Escola</div>
-        <div class="qa-item">Agente de Organização Escolar</div>
-        <div class="qa-item">Agente de Serviços Escolares</div>
-        <div class="qa-item">Secretário de Escola</div>
-        <div class="qa-item">Oficial Administrativo</div>
-        <div class="qa-item">Auxiliar Administrativo</div>
-        <div class="qa-item">Técnico Administrativo</div>
-        <div class="qa-item">Técnico Financeiro</div>
-        <div class="qa-item">Agente Técnico de Ass. à Educação</div>
-        <div class="qa-item">Gerente de Org. e Normas</div>
-      </div>
-      <div class="qa-card">
-        <div class="qa-titulo">🏢 Servidores na URE</div>
-        <div class="qa-item">Todos os cargos do QAE em exercício na URE recebem pelo <strong>índice da URE</strong></div>
-        <div class="qa-item">Readaptado na URE (cód. 360) → índice da URE</div>
-        <div class="qa-item">Afastado junto à URE → índice da URE</div>
-      </div>
-      <div class="qa-card">
-        <div class="qa-titulo">📋 Como verificar o índice correto</div>
-        <div class="qa-item">Conferir no Portalnet a coluna "Grau" — deve ser 0 (zero)</div>
-        <div class="qa-item">Conferir "UA" — deve estar preenchida com o código da escola</div>
-        <div class="qa-item">Conferir "IDESP" — deve ser igual ao ICM da escola, não zero</div>
-        <div class="qa-item">Se IDESP = 0 com muitos dias: erro de UA vazia no lançamento</div>
-      </div>
-      <div class="qa-card">
-        <div class="qa-titulo">⚠️ Erros mais comuns (QAE)</div>
-        <div class="qa-item">UA vazia: sistema não busca o ICM da escola</div>
-        <div class="qa-item">Grau errado (ex: D em vez de 0): servidor na escola recebendo índice da URE</div>
-        <div class="qa-item">DI 2/3: vínculo secundário perde vínculo com a UA</div>
-        <div class="qa-item">Readaptação não lançada: continua recebendo pelo cargo original</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Eventos de frequência -->
-  <div class="card">
-    <div class="ctit">Eventos de Frequência – Bônus 2025</div>
-    <div class="g2">
-      <div>
-        <div style="font-size:.72rem;font-weight:700;color:var(--ok);margin-bottom:.4rem;">✅ EFETIVO EXERCÍCIO (não reduz)</div>
-        <table class="tref" style="font-size:.72rem;">
-          <tr><th>Cód.</th><th>Evento</th></tr>
-          <tr><td>047</td><td>Férias do Exercício</td></tr>
-          <tr><td>008/279/296</td><td>Licença Gestante / Maternidade</td></tr>
-          <tr><td>138/139/140</td><td>Lic. Maternidade Adoção</td></tr>
-          <tr><td>137/482/297/298/299</td><td>Lic. Maternidade CLT/RGPS</td></tr>
-          <tr><td>050/280</td><td>Licença Adoção</td></tr>
-          <tr><td>059</td><td>Licença Paternidade</td></tr>
-          <tr><td>038/225/285/149</td><td>Nojo / Falecimento</td></tr>
-          <tr><td>378</td><td>Covid – Dec. 64879 Inciso II</td></tr>
-          <tr><td>124</td><td>Acomp. alunos campeonato</td></tr>
-        </table>
-      </div>
-      <div>
-        <div style="font-size:.72rem;font-weight:700;color:var(--er);margin-bottom:.4rem;">❌ AUSÊNCIAS (reduzem bônus)</div>
-        <table class="tref" style="font-size:.72rem;">
-          <tr><th>Cód.</th><th>Evento</th></tr>
-          <tr><td>009</td><td>Licença Prêmio</td></tr>
-          <tr><td>205</td><td>Lic. Prêmio Ação Judicial</td></tr>
-          <tr><td>379</td><td>Covid – Dec. 64879 Inciso I</td></tr>
-          <tr><td>380</td><td>Atestado Médico Covid</td></tr>
-          <tr><td>130</td><td>Folga Justiça Eleitoral</td></tr>
-          <tr><td>039</td><td>Serviço Obrigatório por Lei</td></tr>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <!-- CGPAC PEI detalhado -->
-  <div class="card">
-    <div class="ctit">CGPAC PEI – Regra Mista de Cálculo</div>
-    <table class="tref" style="font-size:.75rem;">
-      <tr><th>Tipo</th><th>100h como CGPAC</th><th>100h como PEB</th></tr>
-      <tr><td>Anos Iniciais</td><td>150h Grau 0 (escola)</td><td>50h Grau Branco (escola)</td></tr>
-      <tr><td>Anos Finais</td><td>Grau 0 (escola)</td><td>Grau 1 (série/disciplina)</td></tr>
-      <tr><td>AF + EM</td><td>Grau 0 (escola)</td><td>Grau 4 (média séries)</td></tr>
-      <tr><td>Ensino Médio</td><td>Grau 0 (escola)</td><td>Grau 2 (série/disciplina)</td></tr>
-    </table>
-  </div>
-</div>
-</div>
-
-</div></div>
-
-<script>
-// ═══════════════════════════════════════════════════════
-// DADOS ESTÁTICOS
-// ═══════════════════════════════════════════════════════
-
-// Tabela oficial aulas → horas mensais (2025)
-const A2H={1:10,2:15,3:20,4:25,5:35,6:40,7:45,8:50,9:60,
-  10:65,11:70,12:75,13:85,14:90,15:95,16:100,17:110,18:115,
-  19:120,20:125,21:135,22:140,23:145,24:150,25:160,26:165,
-  27:170,28:175,29:185,30:190,31:195,32:200,33:205,34:210,
-  35:215,36:220};
-
-// Índice esperado por cargo (conforme Deliberação BR nº 4/2026)
-const INDICE={
-  peb_af:{txt:'Série/Disciplina – Grau 1 (Anos Finais)',tipo:'serie',grau:'1'},
-  peb_em:{txt:'Série/Disciplina – Grau 2 (Ensino Médio)',tipo:'serie',grau:'2'},
-  peb_art22:{txt:'Série/Disciplina da carga de afastamento (Art. 22)',tipo:'serie',grau:'1/2'},
-  peb_pei:{txt:'Série/Disciplina (PEI)',tipo:'serie',grau:'1/2'},
-  peb_hora_perm:{txt:'Série/Disciplina (Hora de Permanência)',tipo:'serie',grau:'1/2'},
-  prof_coord_1:{txt:'Série/Disciplina – Prof. Coordenador (1 tipo)',tipo:'serie',grau:'1/2'},
-  cgp_1:{txt:'Série/Disciplina – CGP (1 tipo de ensino)',tipo:'serie',grau:'1/2'},
-  peb_aux:{txt:'Série/Disciplina – Prof. Auxiliar',tipo:'serie',grau:'1/2'},
-  peb_presenca:{txt:'Série/Disciplina – Prof. Programa Presença',tipo:'serie',grau:'1/2'},
-  peb_ai:{txt:'Unidade Escolar – Grau Branco (Anos Iniciais)',tipo:'escola',grau:'branco'},
-  diretor:{txt:'Unidade Escolar – Grau 0',tipo:'escola',grau:'0'},
-  vice:{txt:'Unidade Escolar – Grau 0',tipo:'escola',grau:'0'},
-  coe:{txt:'Unidade Escolar – Grau 0 (COE)',tipo:'escola',grau:'0'},
-  ed_prof:{txt:'Unidade Escolar – Grau 0 (Educador Profissional)',tipo:'escola',grau:'0'},
-  peb_readaptado:{txt:'Unidade Escolar – Grau 0 (Readaptado)',tipo:'escola',grau:'0'},
-  cgp_pei_grau0:{txt:'Unidade Escolar – Grau 0 (CGP PEI)',tipo:'escola',grau:'0'},
-  cgp_3tipos:{txt:'Unidade Escolar – Grau 0 (CGP 3 tipos)',tipo:'escola',grau:'0'},
-  peb_sala_leitura:{txt:'Unidade Escolar – Grau 0 (Sala de Leitura)',tipo:'escola',grau:'0'},
-  peb_adido:{txt:'Unidade Escolar – Grau 0 (Adido)',tipo:'escola',grau:'0'},
-  admin_escola:{txt:'Unidade Escolar – Grau 0 (Administrativo)',tipo:'escola',grau:'0'},
-  pmec:{txt:'Unidade Escolar – Grau 0 (PMEC 7600)',tipo:'escola',grau:'0'},
-  conviva:{txt:'Unidade Escolar – Grau 0 (Conviva 7860)',tipo:'escola',grau:'0'},
-  af_065_escola:{txt:'Unidade Escolar – Grau 0 (cód. 065 escola)',tipo:'escola',grau:'0'},
-  acao_judicial:{txt:'Unidade Escolar – Grau 0 (Ação Judicial sem série)',tipo:'escola',grau:'0'},
-  // QAE → escola grau 0
-  qa_agente_org:{txt:'Unidade Escolar – Grau 0 (Quadro de Apoio Escolar)',tipo:'escola',grau:'0'},
-  qa_agente_serv:{txt:'Unidade Escolar – Grau 0 (Quadro de Apoio Escolar)',tipo:'escola',grau:'0'},
-  qa_secretario:{txt:'Unidade Escolar – Grau 0 (Quadro de Apoio Escolar)',tipo:'escola',grau:'0'},
-  qa_gerente:{txt:'Unidade Escolar – Grau 0 (Quadro de Apoio Escolar)',tipo:'escola',grau:'0'},
-  qa_tecnico_adm:{txt:'Unidade Escolar – Grau 0 (Quadro de Apoio Escolar)',tipo:'escola',grau:'0'},
-  qa_tecnico_fin:{txt:'Unidade Escolar – Grau 0 (Quadro de Apoio Escolar)',tipo:'escola',grau:'0'},
-  qa_oficial_adm:{txt:'Unidade Escolar – Grau 0 (Quadro de Apoio Escolar)',tipo:'escola',grau:'0'},
-  qa_auxiliar_adm:{txt:'Unidade Escolar – Grau 0 (Quadro de Apoio Escolar)',tipo:'escola',grau:'0'},
-  qa_agente_tec:{txt:'Unidade Escolar – Grau 0 (Quadro de Apoio Escolar)',tipo:'escola',grau:'0'},
-  qa_outro:{txt:'Unidade Escolar – Grau 0 (Quadro de Apoio Escolar)',tipo:'escola',grau:'0'},
-  // URE
-  peb_sala_recursos:{txt:'Diretoria de Ensino (URE) – Grau D',tipo:'ure',grau:'D'},
-  supervisor:{txt:'Diretoria de Ensino (URE) – Grau D',tipo:'ure',grau:'D'},
-  supervisor_ed:{txt:'Diretoria de Ensino (URE) – Grau D',tipo:'ure',grau:'D'},
-  coord_ure:{txt:'Diretoria de Ensino (URE) – Grau D',tipo:'ure',grau:'D'},
-  chefe_dep:{txt:'Diretoria de Ensino (URE) – Grau D',tipo:'ure',grau:'D'},
-  dir_adido_ure:{txt:'Diretoria de Ensino (URE) – Grau D',tipo:'ure',grau:'D'},
-  servidor_ure:{txt:'Diretoria de Ensino (URE) – Grau D',tipo:'ure',grau:'D'},
-  readapt_ure:{txt:'Diretoria de Ensino (URE) – Grau D',tipo:'ure',grau:'D'},
-  afastado_ure:{txt:'Diretoria de Ensino (URE) – Grau D',tipo:'ure',grau:'D'},
-  ceeja:{txt:'Diretoria de Ensino (URE) – Grau D',tipo:'ure',grau:'D'},
-  classe_hosp:{txt:'Diretoria de Ensino (URE) – Grau D',tipo:'ure',grau:'D'},
-  pcae:{txt:'Diretoria de Ensino (URE) – Grau D',tipo:'ure',grau:'D'},
-  esp_curriculos:{txt:'Diretoria de Ensino (URE) – Grau D',tipo:'ure',grau:'D'},
-  sem_indice:{txt:'Diretoria de Ensino (URE) – Grau D',tipo:'ure',grau:'D'},
-  af_065_ure:{txt:'Diretoria de Ensino (URE) – Grau D',tipo:'ure',grau:'D'},
-  admin_ure:{txt:'Diretoria de Ensino (URE) – Grau D',tipo:'ure',grau:'D'},
-  sindicancia_ure:{txt:'Diretoria de Ensino (URE) – carga atribuída + média URE',tipo:'ure',grau:'D'},
-  cel:{txt:'Unidade Vinculadora – Grau 0',tipo:'vinculadora',grau:'0'},
-  prisional:{txt:'Unidade Prisional (vinculadora)',tipo:'vinculadora',grau:'0'},
-  fund_casa:{txt:'Fundação CASA (vinculadora)',tipo:'vinculadora',grau:'0'},
-  proatec:{txt:'PROATEC (vinculadora)',tipo:'vinculadora',grau:'0'},
-  orgao_central:{txt:'Índice do Estado (Órgão Central)',tipo:'estado',grau:'–'},
-  sindicato:{txt:'Índice do Estado (Afastado p/ Sindicato)',tipo:'estado',grau:'–'},
-  af_065_estado:{txt:'Índice do Estado (cód. 065 Secretaria)',tipo:'estado',grau:'–'},
-  cgp_multi:{txt:'Média dos índices das Séries/Disciplinas – Grau 4',tipo:'media',grau:'4'},
-  cgpac_ai:{txt:'MISTO: 150h Grau 0 (escola) + 50h Grau Branco (escola)',tipo:'misto',grau:'0+branco'},
-  cgpac_af:{txt:'MISTO: 100h Grau 0 (escola) + 100h Grau 1 (série)',tipo:'misto',grau:'0+1'},
-  cgpac_af_em:{txt:'MISTO: 100h Grau 0 (escola) + 100h Grau 4 (média)',tipo:'misto',grau:'0+4'},
-  cgpac_em:{txt:'MISTO: 100h Grau 0 (escola) + 100h Grau 2 (série)',tipo:'misto',grau:'0+2'},
-};
-
-const CGPAC_INFO={
-  cgpac_ai:'Anos Iniciais: 150h como CGPAC → Grau 0 (escola) + 50h como PEB → Grau Branco (escola)',
-  cgpac_af:'Anos Finais: 100h como CGPAC → Grau 0 (escola) + 100h como PEB → Grau 1 (série/disciplina)',
-  cgpac_af_em:'AF + EM: 100h como CGPAC → Grau 0 (escola) + 100h → Grau 4 (média das séries)',
-  cgpac_em:'Ensino Médio: 100h como CGPAC → Grau 0 (escola) + 100h como PEB → Grau 2 (série/disciplina)',
-};
-
-const QA_CARGOS=['qa_agente_org','qa_agente_serv','qa_secretario','qa_gerente','qa_tecnico_adm','qa_tecnico_fin','qa_oficial_adm','qa_auxiliar_adm','qa_agente_tec','qa_outro'];
-
-// ═══════════════════════════════════════════════════════
-// ABAS
-// ═══════════════════════════════════════════════════════
-function aba(id,btn){
-  document.querySelectorAll('.pnl').forEach(p=>p.classList.remove('on'));
-  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('on'));
-  document.getElementById('pnl-'+id).classList.add('on');
-  btn.classList.add('on');
-}
-
-// ═══════════════════════════════════════════════════════
-// ON CARGO — atualiza tag de índice automaticamente
-// ═══════════════════════════════════════════════════════
-function onCargo(){
-  const c=document.getElementById('cargo').value;
-  const tag=document.getElementById('tag-indice');
-  const avisCgpac=document.getElementById('aviso-cgpac');
-  const avisQa=document.getElementById('aviso-qa');
-  avisCgpac.style.display='none';
-  avisQa.style.display='none';
-
-  if(c&&INDICE[c]){
-    tag.style.display='block';
-    tag.innerHTML='📌 Índice esperado: <strong>'+INDICE[c].txt+'</strong>';
-    if(CGPAC_INFO[c]){
-      avisCgpac.style.display='block';
-      avisCgpac.innerHTML='ℹ️ <strong>Cálculo misto CGPAC PEI:</strong> '+CGPAC_INFO[c];
-    }
-    if(QA_CARGOS.includes(c)){
-      avisQa.style.display='block';
-      avisQa.innerHTML='✅ <strong>Quadro de Apoio Escolar:</strong> Recebe pelo índice da Unidade Escolar (Grau 0). Verificar UA e IDESP da escola no Portalnet.';
-    }
-  } else tag.style.display='none';
-  calcMets();
-}
-
-// ═══════════════════════════════════════════════════════
-// CARGA BASE
-// ═══════════════════════════════════════════════════════
-function getCargaBase(){
-  const s=document.getElementById('carga-base').value;
-  const wO=document.getElementById('wrap-base-outro');
-  if(s==='outro'){wO.style.display='block';return parseFloat(document.getElementById('carga-base-outro').value)||0;}
-  wO.style.display='none';
-  return parseFloat(s)||0;
-}
-
-// ═══════════════════════════════════════════════════════
-// MÉTRICAS EM TEMPO REAL
-// ═══════════════════════════════════════════════════════
-function calcMets(){
-  getCargaBase();
-  const base=getCargaBase();
-  const aulas=parseInt(document.getElementById('aulas').value)||0;
-  const sub=parseFloat(document.getElementById('v-sub').value)||0;
-  const cs=parseFloat(document.getElementById('v-csupl').value)||0;
-  const gde=parseFloat(document.getElementById('v-gde').value)||0;
-  const out=parseFloat(document.getElementById('v-out').value)||0;
-  const total=sub+cs+gde+out;
-  const horas=A2H[aulas]||0;
-  const mets=document.getElementById('mets');
-  const vhManual=parseFloat(document.getElementById('v-hora-manual').value)||0;
-  const vh=vhManual>0?vhManual:(total>0&&base>0?total/base:0);
-
-  if((aulas>0||total>0||base>0)&&(horas>0||base>0)){
-    mets.style.display='grid';
-    document.getElementById('m-h').textContent=horas>0?horas+'h':'–';
-    document.getElementById('m-tv').textContent=total>0?'R$'+total.toFixed(0):'–';
-    document.getElementById('m-vh').textContent=vh>0?'R$'+vh.toFixed(2):'–';
-    document.getElementById('m-p').textContent=(base>0&&horas>0)?Math.round(horas/base*100)+'%':'–';
-  } else mets.style.display='none';
-}
-
-// ═══════════════════════════════════════════════════════
-// AFASTAMENTO TOGGLE
-// ═══════════════════════════════════════════════════════
-function toggleAfast(){
-  const v=document.getElementById('afastamento').value;
-  document.getElementById('wrap-cod-afast').style.display=(v==='ef'||v==='aus')?'block':'none';
-}
-
-// ═══════════════════════════════════════════════════════
-// LINHAS DO PORTALNET
-// ═══════════════════════════════════════════════════════
-let _lc=0;
-function addLinha(dados){
-  _lc++;
-  const n=_lc;
-  const d=dados||{};
-  const div=document.createElement('div');
-  div.className='lp';div.id='lp-'+n;
-  div.innerHTML=`
-    <div class="lp-num">Linha ${n}</div>
-    <div class="g4">
-      <div class="f"><label>Início Vigência</label><input type="text" id="l${n}-ini" value="${d.ini||''}" placeholder="29/01/2025" oninput="diagLinha(${n})"></div>
-      <div class="f"><label>Fim Vigência</label><input type="text" id="l${n}-fim" value="${d.fim||''}" placeholder="30/06/2025" oninput="diagLinha(${n})"></div>
-      <div class="f"><label>Qtde Dias Calc.</label><input type="number" id="l${n}-dias" value="${d.dias||''}" placeholder="153" oninput="diagLinha(${n})"></div>
-      <div class="f"><label>Qtde Faltas</label><input type="number" id="l${n}-faltas" value="${d.faltas||''}" placeholder="0" oninput="diagLinha(${n})"></div>
-    </div>
-    <div class="g4">
-      <div class="f"><label>Carga Base</label><input type="number" id="l${n}-cbase" value="${d.cbase||''}" placeholder="125" oninput="diagLinha(${n})"></div>
-      <div class="f"><label>Carga Parcial</label><input type="number" id="l${n}-cparc" value="${d.cparc||''}" placeholder="125" oninput="diagLinha(${n})"></div>
-      <div class="f"><label>Peso (%)</label><input type="number" id="l${n}-peso" value="${d.peso||''}" placeholder="100" oninput="diagLinha(${n})"></div>
-      <div class="f"><label>Grau</label>
-        <select id="l${n}-grau" onchange="diagLinha(${n})">
-          <option value="">–</option>
-          <option value="branco" ${d.grau==='branco'?'selected':''}>Branco</option>
-          <option value="0" ${d.grau==='0'?'selected':''}>0</option>
-          <option value="1" ${d.grau==='1'?'selected':''}>1</option>
-          <option value="2" ${d.grau==='2'?'selected':''}>2</option>
-          <option value="D" ${d.grau==='D'?'selected':''}>D (URE)</option>
-          <option value="4" ${d.grau==='4'?'selected':''}>4</option>
+      <div class="f"><label>Nome</label><input id="nome" placeholder="Ex: Felipe Ribeiro"></div>
+      <div class="f"><label>Cargo em 2025</label>
+        <select id="cargo" onchange="onCargo()">
+          <option value="">— Selecione —</option>
+          <option value="qa_gerente">Gerente de Org. Escolar (GOE)</option>
+          <option value="admin_escola">Agente de Org. Escolar (AOE)</option>
+          <option value="peb_af">Prof. Anos Finais</option>
+          <option value="peb_em">Prof. Ensino Médio</option>
+          <option value="diretor">Diretor de Escola</option>
         </select>
       </div>
     </div>
-    <div class="g4">
-      <div class="f"><label>Escola (código)</label><input type="text" id="l${n}-esc" value="${d.esc||''}" placeholder="0 ou cód." oninput="diagLinha(${n})"></div>
-      <div class="f"><label>Série</label><input type="text" id="l${n}-serie" value="${d.serie||''}" placeholder="Ex: 0 ou 6ANO" oninput="diagLinha(${n})"></div>
-      <div class="f"><label>Disciplina</label><input type="text" id="l${n}-disc" value="${d.disc||''}" placeholder="Ex: 0 ou MAT" oninput="diagLinha(${n})"></div>
-      <div class="f"><label>IC / IDESP</label><input type="number" id="l${n}-idesp" value="${d.idesp!==undefined?d.idesp:''}" step="0.001" placeholder="Ex: 0 ou 0.85" oninput="diagLinha(${n})"></div>
-    </div>
-    <div class="g4">
-      <div class="f"><label>UA (campo)</label><input type="text" id="l${n}-ua" value="${d.ua||''}" placeholder="vazio ou 39626" oninput="diagLinha(${n})"></div>
-      <div class="f"><label>Tipo UA</label><input type="text" id="l${n}-tua" value="${d.tua||''}" placeholder="Ex: DE ou ESC"></div>
-      <div class="f"><label>Valor Hora (R$)</label><input type="number" id="l${n}-vh" value="${d.vh||''}" step="0.01" placeholder="Ex: 26.50" oninput="diagLinha(${n})"></div>
-      <div class="f"><label>Total Parcial (R$)</label><input type="number" id="l${n}-total" value="${d.total||''}" step="0.01" placeholder="Ex: 0.00" oninput="diagLinha(${n})"></div>
-    </div>
-    <div class="lp-alert" id="la-${n}"></div>
-    <div style="margin-top:.5rem;text-align:right">
-      <button class="bsm brem" onclick="remLinha(${n})">✕ Remover linha ${n}</button>
-    </div>`;
-  document.getElementById('cont-linhas').appendChild(div);
-  if(dados) diagLinha(n);
+  </div>
+
+  <div class="card">
+    <div class="ctit">2 · Linhas do Portalnet</div>
+    <div id="cont-linhas"></div>
+    <button class="bsm badd" onclick="addLinha()">+ Adicionar Linha Manual</button>
+  </div>
+
+  <button class="btn btn-pri" onclick="analisar()">🔍 Gerar Diagnóstico Completo</button>
+</div>
+
+<div id="resultado">
+  <div class="rc info">
+    <div class="rtit">ℹ️ Aguardando dados</div>
+    <div class="rbody">Cole os dados do Portalnet no campo pontilhado acima para começar.</div>
+  </div>
+</div>
+
+</div></div></div>
+
+<script>
+// Mapeamento baseado na imagem image_827a12.png
+const INDICE = {
+  qa_gerente: {txt: 'Unidade Escolar (Grau 0)', tipo: 'escola', grau: '0'},
+  admin_escola: {txt: 'Unidade Escolar (Grau 0)', tipo: 'escola', grau: '0'},
+  peb_af: {txt: 'Série/Disciplina (Grau 1)', tipo: 'serie', grau: '1'},
+  peb_em: {txt: 'Série/Disciplina (Grau 2)', tipo: 'serie', grau: '2'}
+};
+
+let _lc = 0;
+
+function importarPortalnet(texto) {
+    if (!texto.trim()) return;
+    
+    // Limpa se houver dados e reseta contador
+    document.getElementById('cont-linhas').innerHTML = '';
+    _lc = 0;
+
+    const linhas = texto.split('\n');
+    linhas.forEach(linha => {
+        if (linha.trim().length < 15) return;
+
+        // Split por tabulação (comum em cópia de tabelas web) ou espaços múltiplos
+        const col = linha.split(/\t|\s{2,}/).map(s => s.trim());
+
+        if (col.length >= 10) {
+            // Mapeamento conforme image_827a12.png:
+            // [0] Início, [1] Fim, [3] Dias Calc, [5] Carga Base, [6] Peso, [8] Grau, [11] IDESP, [13] UA, [17] Valor Hora, [18] Total Parcial
+            const dados = {
+                ini: col[0],
+                fim: col[1],
+                dias: col[3],
+                cbase: col[5],
+                peso: col[6],
+                grau: col[8],
+                idesp: col[11]?.replace(',', '.'),
+                ua: col[13],
+                vh: col[17]?.replace('R$', '').replace('.', '').replace(',', '.').trim(),
+                total: col[18]?.replace('R$', '').replace('.', '').replace(',', '.').trim()
+            };
+            addLinha(dados);
+        }
+    });
+    
+    // Feedback visual
+    document.getElementById('raw-portalnet').value = '';
+    alert('Importação concluída com sucesso!');
+    analisar();
 }
 
-function addLinhas(qtd){for(let i=0;i<qtd;i++) addLinha();}
-function remLinha(n){const el=document.getElementById('lp-'+n);if(el)el.remove();}
-
-// ─── Diagnóstico automático por linha ───
-function diagLinha(n){
-  const g=id=>document.getElementById('l'+n+'-'+id);
-  const v=id=>{const el=g(id);return el?el.value.trim():'';}
-  const num=id=>{const el=g(id);return el?parseFloat(el.value)||0:0;}
-  const dias=num('dias');
-  const idesp=num('idesp');
-  const ua=v('ua');
-  const total=num('total');
-  const grau=v('grau');
-  const cargo=document.getElementById('cargo').value;
-  const indEsp=INDICE[cargo];
-
-  const probs=[];
-  // UA vazia em linha com muitos dias
-  const uaVazia=(!ua||ua===''||ua==='0');
-  if(uaVazia&&dias>2) probs.push('🔴 UA vazia — sistema não busca o índice ICM, gerando IDESP zerado e Total R$0,00');
-  // IDESP zero em linha principal
-  if(idesp===0&&dias>2) probs.push('🔴 IDESP zerado — nenhum índice foi aplicado neste período, bônus = R$0,00');
-  // Total zero com dias relevantes
-  if(total===0&&dias>2) probs.push('🔴 Total Parcial R$0,00 — todo o período foi desperdiçado no cálculo');
-  // Grau incompatível com cargo
-  if(indEsp&&grau){
-    if(indEsp.tipo==='ure'&&grau!=='D'&&grau!=='') probs.push('⚠️ Grau '+grau+' encontrado, mas cargo indica Grau D (URE) — índice incorreto');
-    if(indEsp.tipo==='escola'&&grau==='D') probs.push('⚠️ Grau D (URE) encontrado, mas cargo indica índice da escola — índice incorreto');
-    if(indEsp.tipo==='serie'&&(grau==='0'||grau==='D')) probs.push('⚠️ Grau '+grau+' encontrado, mas cargo indica Grau 1 ou 2 (série/disciplina)');
-  }
-  // Período de 1 dia com valor
-  if(dias===1&&total>0) probs.push('⚠️ Apenas 1 dia de vigência gerou o valor pago — lançamento concentrou cálculo em data incorreta');
-  // Período de 1 dia sem valor
-  if(dias===1&&total===0) probs.push('ℹ️ Período de 1 dia sem valor — provável linha de ajuste ou encerramento');
-
-  const alertEl=document.getElementById('la-'+n);
-  if(probs.length>0){
-    const tipo=probs.some(p=>p.startsWith('🔴'))?'err':'warn';
-    alertEl.className='lp-alert show '+tipo;
-    alertEl.innerHTML=probs.join('<br>');
-  } else if(dias>0&&total>0&&idesp>0&&!uaVazia){
-    alertEl.className='lp-alert show ok';
-    alertEl.innerHTML='✅ Linha aparentemente correta — IDESP preenchido, UA presente, valor calculado';
-  } else alertEl.className='lp-alert';
+function addLinha(d = {}) {
+    _lc++;
+    const n = _lc;
+    const div = document.createElement('div');
+    div.className = 'lp';
+    div.id = `lp-${n}`;
+    div.innerHTML = `
+        <div class="lp-num">Linha ${n}</div>
+        <div class="g4">
+            <div class="f"><label>Início</label><input id="l${n}-ini" value="${d.ini||''}"></div>
+            <div class="f"><label>Fim</label><input id="l${n}-fim" value="${d.fim||''}"></div>
+            <div class="f"><label>Dias Calc.</label><input type="number" id="l${n}-dias" value="${d.dias||''}"></div>
+            <div class="f"><label>UA</label><input id="l${n}-ua" value="${d.ua||''}"></div>
+        </div>
+        <div class="g4">
+            <div class="f"><label>Grau</label><input id="l${n}-grau" value="${d.grau||''}"></div>
+            <div class="f"><label>IDESP</label><input id="l${n}-idesp" value="${d.idesp||''}"></div>
+            <div class="f"><label>Valor Hora</label><input id="l${n}-vh" value="${d.vh||''}"></div>
+            <div class="f"><label>Total Parcial</label><input id="l${n}-total" value="${d.total||''}"></div>
+        </div>
+        <div class="lp-alert" id="la-${n}"></div>
+    `;
+    document.getElementById('cont-linhas').appendChild(div);
+    if(d.ua) diagLinha(n);
 }
 
-// ═══════════════════════════════════════════════════════
-// ANÁLISE PRINCIPAL
-// ═══════════════════════════════════════════════════════
-function analisar(){
-  const nome=document.getElementById('nome').value||'[SERVIDOR]';
-  const rg=document.getElementById('rg').value||'';
-  const escola=document.getElementById('escola').value||'';
-  const uaCod=document.getElementById('ua-cod').value||'';
-  const cargo=document.getElementById('cargo').value;
-  const di=document.getElementById('di').value;
-  const base=getCargaBase();
-  const aulas=parseInt(document.getElementById('aulas').value)||0;
-  const horas=A2H[aulas]||0;
-  const sub=parseFloat(document.getElementById('v-sub').value)||0;
-  const cs=parseFloat(document.getElementById('v-csupl').value)||0;
-  const gde=parseFloat(document.getElementById('v-gde').value)||0;
-  const out=parseFloat(document.getElementById('v-out').value)||0;
-  const totalRem=sub+cs+gde+out;
-  const vhManual=parseFloat(document.getElementById('v-hora-manual').value)||0;
-  const vh=vhManual>0?vhManual:(totalRem>0&&base>0?totalRem/base:0);
-  const icmEsc=parseFloat(document.getElementById('icm-esc').value)||0;
-  const icmUre=parseFloat(document.getElementById('icm-ure').value)||0;
-  const nivelEsc=document.getElementById('nivel-esc').value;
-  const afastamento=document.getElementById('afastamento').value;
-  const codAfast=document.getElementById('cod-afast').value;
-  const valPago=parseFloat(document.getElementById('val-pago').value)||0;
-
-  if(!cargo){
-    document.getElementById('resultado').innerHTML=`<div class="rc info"><div class="rtit">ℹ️ Selecione o cargo</div><div class="rbody">O cargo é obrigatório para determinar o índice correto.</div></div>`;
-    return;
-  }
-
-  const indEsp=INDICE[cargo]||{txt:'Consultar Portalnet',tipo:'',grau:''};
-  const isQA=QA_CARGOS.includes(cargo);
-
-  // Coletar e analisar linhas
-  const linhas=[];
-  document.querySelectorAll('.lp').forEach(div=>{
-    const id=div.id.replace('lp-','');
-    const gv=f=>{const el=document.getElementById('l'+id+'-'+f);return el?el.value.trim():'';}
-    const gn=f=>{const el=document.getElementById('l'+id+'-'+f);return el?parseFloat(el.value)||0:0;}
-    linhas.push({
-      id,ini:gv('ini'),fim:gv('fim'),dias:gn('dias'),faltas:gn('faltas'),
-      cbase:gn('cbase'),cparc:gn('cparc'),peso:gn('peso'),
-      grau:gv('grau'),esc:gv('esc'),serie:gv('serie'),disc:gv('disc'),
-      idesp:gn('idesp'),ua:gv('ua'),tua:gv('tua'),vh:gn('vh'),total:gn('total')
-    });
-  });
-
-  // ─── Detectar problemas por linha ───
-  let diasUAVazia=0,diasIDESPZero=0,diasTotalZero=0,diasUmDia=0;
-  let linhasComErro=[];
-  const uaPreenchida=linhas.find(l=>l.ua&&l.ua!==''&&l.ua!=='0');
-
-  linhas.forEach(l=>{
-    const uaV=(!l.ua||l.ua===''||l.ua==='0');
-    if(uaV&&l.dias>2) diasUAVazia+=l.dias;
-    if(l.idesp===0&&l.dias>2) diasIDESPZero+=l.dias;
-    if(l.total===0&&l.dias>2) diasTotalZero+=l.dias;
-    if(l.dias===1) diasUmDia++;
-    const probs=[];
-    if(uaV&&l.dias>2) probs.push({t:'err',m:'UA vazia → sem índice ICM → IDESP zerado → Total R$0,00'});
-    if(l.idesp===0&&l.dias>2) probs.push({t:'err',m:'IDESP zerado → índice não aplicado → bônus zero neste período'});
-    if(l.total===0&&l.dias>2) probs.push({t:'err',m:'Total Parcial R$0,00 → período perdido no cálculo'});
-    if(l.dias===1&&l.total>0) probs.push({t:'warn',m:'1 dia de vigência gerou todo o valor pago → período de vigência incorreto'});
-    if(indEsp.tipo==='ure'&&l.grau&&l.grau!=='D'&&l.grau!='') probs.push({t:'warn',m:'Grau '+l.grau+' mas cargo indica Grau D (URE)'});
-    if(indEsp.tipo==='escola'&&l.grau==='D') probs.push({t:'warn',m:'Grau D (URE) mas cargo indica índice da escola'});
-    if(probs.length) linhasComErro.push({...l,probs});
-  });
-
-  // ─── Problemas globais ───
-  const globais=[];
-  const acoes=[];
-  if(diasUAVazia>0){
-    globais.push({t:'err',m:`UA vazia em ${diasUAVazia} dias — o sistema não consegue buscar o ICM sem UA preenchida`});
-    acoes.push('Corrigir no PAEF (URE) o lançamento do afastamento vinculando a UA correta (código '+( uaPreenchida?uaPreenchida.ua:uaCod||'da escola/URE')+') a todos os períodos de vigência');
-  }
-  if(diasIDESPZero>0) globais.push({t:'err',m:`IDESP zerado em ${diasIDESPZero} dias — índice ICM não aplicado nesses períodos`});
-  if(diasTotalZero>0) globais.push({t:'err',m:`Total Parcial R$0,00 em ${diasTotalZero} dias — bônus correspondente ao período foi perdido`});
-  if(diasUmDia>0) globais.push({t:'warn',m:`${diasUmDia} linha(s) com apenas 1 dia de vigência — verificar datas de lançamento`});
-  if(afastamento==='art22') globais.push({t:'warn',m:'Art. 22: a carga de afastamento deve estar lançada no PAEF com datas e UA correspondentes ao período integral'});
-  if(afastamento==='aus') globais.push({t:'warn',m:`Afastamento código ${codAfast} conta como AUSÊNCIA — verifique se está corretamente registrado no BFE`});
-  if(di==='2'||di==='3') globais.push({t:'warn',m:`DI ${di} (vínculo secundário): vínculos secundários frequentemente perdem a associação com a UA — verificar`});
-  if(isQA) globais.push({t:'info',m:'Quadro de Apoio Escolar: deve receber pelo índice da escola (Grau 0). Confirmar UA e IDESP da escola no Portalnet.'});
-  if(nivelEsc==='diamante') globais.push({t:'info',m:'Escola nível Diamante: o ICM deveria ser alto. Se o Portalnet mostrou valor baixo, confirmar o índice aplicado.'});
-
-  if(diasUAVazia>0||diasIDESPZero>0){
-    acoes.push('Preencher o link de reclamações disponibilizado pela URE com os períodos, valores e o erro de UA vazia / IDESP zerado');
-    acoes.push('A correção entra na programação de pagamento do DFOLP — não haverá Ordem de Crédito extra para o Bônus 2025');
-  }
-  if(linhasComErro.length===0&&globais.filter(g=>g.t==='err').length===0&&afastamento==='nao'){
-    acoes.push('Situação regular — dar devolutiva ao servidor confirmando que o cálculo está correto');
-  }
-
-  // ─── ICM a usar para estimativa ───
-  const icmUsar=indEsp.tipo==='ure'?icmUre:icmEsc;
-  const pesoDecimal=base>0&&horas>0?horas/base:1;
-  const totalDias=linhas.reduce((s,l)=>s+l.dias,0);
-
-  // ─── Estimativa do valor correto ───
-  let valorCorreto=null, formulaStr='';
-  // Tenta usar o valor/hora do Portalnet se disponível
-  const vhPortalnet=linhas.find(l=>l.vh>0);
-  const vhUsar=vh>0?vh:(vhPortalnet?vhPortalnet.vh:0);
-
-  if(vhUsar>0&&totalDias>0&&base>0){
-    // Fórmula: VH × (CargaBase/30) × Dias × Peso × ICM
-    const icmF=icmUsar>0?icmUsar:1;
-    valorCorreto=vhUsar*(base/30)*totalDias*pesoDecimal*icmF;
-    const icmLabel=icmUsar>0?`× ${(icmUsar*100).toFixed(1)}% ICM`:'× ICM (não informado — usar ICM real)';
-    formulaStr=`R$${vhUsar.toFixed(2)}/h × (${base}h÷30) × ${totalDias} dias × ${(pesoDecimal*100).toFixed(0)}% peso ${icmLabel}`;
-    document.getElementById('of-correto').value='R$ '+valorCorreto.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})+' (estimado)';
-  }
-
-  // Preencher campos do ofício automaticamente
-  document.getElementById('of-escola-rem').value=escola;
-  if(valPago>0) document.getElementById('of-pago').value='R$ '+valPago.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
-
-  // ─── Montar texto para URE ───
-  let txtUre='';
-  if(globais.some(g=>g.t==='err')||linhasComErro.length>0){
-    const linhasErro=linhas.filter(l=>{
-      const uaV=!l.ua||l.ua===''||l.ua==='0';
-      return (uaV&&l.dias>2)||(l.idesp===0&&l.dias>2)||(l.total===0&&l.dias>2);
-    }).map(l=>`${l.ini} a ${l.fim} (${l.dias} dias)`).join('; ');
-    txtUre=`"No sistema Portalnet – Novo Bônus, as linhas de vigência ${linhasErro||'dos períodos principais de 2025'} estão com UA vazia e IDESP zerado, resultando em Total Parcial R$0,00. Apenas ${diasUmDia>0?'1 dia':'período mínimo'} foi calculado com IDESP preenchido, gerando R$ ${valPago.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})}.\n\nO(a) servidor(a) ${nome}${rg?', RG '+rg:''}, ${indEsp.txt}, DI ${di}, deveria receber pelo índice ${indEsp.txt} em todos os ${totalDias} dias do período de exercício em 2025. O erro origina-se no lançamento do PAEF que não vinculou a UA correta (${uaPreenchida?uaPreenchida.ua:uaCod||'[código]'}) aos períodos principais.\n\nSolicitamos correção do PAEF com a UA correta em todos os períodos e reporte ao DFOLP via link de reclamações."`;
-    document.getElementById('of-erro').value=txtUre.replace(/"/g,'');
-  }
-
-  // ─── HTML DO RESULTADO ───
-  const temErroGlobal=globais.some(g=>g.t==='err');
-  const temErroLinha=linhas.some(l=>{const u=!l.ua||l.ua===''||l.ua==='0';return (u&&l.dias>2)||(l.idesp===0&&l.dias>2)||(l.total===0&&l.dias>2);});
-  const tipoRes=temErroGlobal||temErroLinha?'err':(globais.some(g=>g.t==='warn')?'warn':'ok');
-  const emoji=tipoRes==='ok'?'✅':tipoRes==='warn'?'⚠️':'🚨';
-  const titulo=tipoRes==='ok'?'Situação regular — nenhuma irregularidade crítica detectada':tipoRes==='warn'?'Atenção — pontos de verificação identificados':'Erro crítico — bônus calculado incorretamente pelo sistema';
-
-  let html=`<div class="rc ${tipoRes}">
-    <div class="rtit">${emoji} ${titulo}</div>
-    <div class="rbody">
-      <strong>Servidor(a):</strong> ${nome}${rg?' | RG: '+rg:''}<br>
-      <strong>DI:</strong> ${di} | <strong>Cargo:</strong> ${document.getElementById('cargo').options[document.getElementById('cargo').selectedIndex]?.text||''}<br>
-      <strong>Índice esperado:</strong> ${indEsp.txt}<br>
-      ${nivelEsc?'<strong>Escola:</strong> Nível '+nivelEsc.charAt(0).toUpperCase()+nivelEsc.slice(1)+'<br>':''}
-      <strong>Valor pago pelo Portalnet:</strong> R$ ${valPago.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})}
-      ${valorCorreto?`<br><strong>Valor estimado correto:</strong> R$ ${valorCorreto.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})} <em style="font-size:.75em">(aprox. — sujeito a ICM real e dias úteis)</em>`:''}
-    </div>`;
-
-  // Problemas globais
-  if(globais.length){
-    html+=`<ul style="list-style:none;margin-top:.65rem;">`;
-    globais.forEach(g=>{
-      const ic=g.t==='err'?'🔴':g.t==='warn'?'🟡':'🔵';
-      html+=`<li style="font-size:.8rem;padding:2px 0;display:flex;gap:7px"><span>${ic}</span><span>${g.m}</span></li>`;
-    });
-    html+=`</ul>`;
-  }
-  html+=`</div>`;
-
-  // Diagnóstico linha a linha
-  if(linhas.length>0){
-    html+=`<div class="card"><div class="ctit">Diagnóstico linha a linha – Portalnet</div>
-      <table class="tdiag">
-        <tr><th>#</th><th>Período</th><th>Dias</th><th>UA</th><th>IDESP</th><th>Grau</th><th>Total Parcial</th><th>Status</th></tr>`;
-    linhas.forEach((l,i)=>{
-      const uaV=!l.ua||l.ua===''||l.ua==='0';
-      const temErr=(uaV&&l.dias>2)||(l.idesp===0&&l.dias>2)||(l.total===0&&l.dias>2);
-      const temWarn=(l.dias===1&&l.total>0)||(indEsp.tipo==='ure'&&l.grau&&l.grau!=='D'&&l.grau!='');
-      const cls=temErr?'tr-er':temWarn?'tr-wa':'tr-ok';
-      const bdg=temErr?'<span class="bdg err">Erro crítico</span>':temWarn?'<span class="bdg warn">Atenção</span>':'<span class="bdg ok">OK</span>';
-      const uaDisp=uaV?`<span class="zero">VAZIA</span>`:l.ua;
-      const idespDisp=l.idesp===0&&l.dias>2?`<span class="zero">0</span>`:l.idesp;
-      const totalDisp=l.total===0&&l.dias>2?`<span class="zero">R$0,00</span>`:'R$ '+l.total.toLocaleString('pt-BR',{minimumFractionDigits:2});
-      html+=`<tr class="${cls}"><td>${i+1}</td><td style="white-space:nowrap;font-size:.72rem">${l.ini||'–'}<br>até ${l.fim||'–'}</td><td>${l.dias}</td><td>${uaDisp}</td><td>${idespDisp}</td><td>${l.grau||'–'}</td><td>${totalDisp}</td><td>${bdg}</td></tr>`;
-      // Sub-linhas de problemas
-      const sublProbs=[];
-      if(uaV&&l.dias>2) sublProbs.push('🔴 UA vazia → IDESP zerado → Total R$0,00');
-      if(l.idesp===0&&l.dias>2) sublProbs.push('🔴 IDESP = 0 → índice ICM não aplicado');
-      if(l.total===0&&l.dias>2) sublProbs.push('🔴 Total Parcial R$0,00 → período desperdiçado');
-      if(l.dias===1&&l.total>0) sublProbs.push('⚠️ 1 dia de vigência → datas de lançamento incorretas');
-      sublProbs.forEach(p=>{html+=`<tr class="tr-sub"><td colspan="8">${p}</td></tr>`;});
-    });
-    html+=`</table></div>`;
-  }
-
-  // Estimativa
-  if(formulaStr){
-    html+=`<div class="card"><div class="ctit">Estimativa do valor correto</div>
-      <div style="background:var(--az-bg);border:1px solid #93C5FD;border-radius:8px;padding:.85rem;font-size:.79rem;color:var(--az2)">
-        <strong>Fórmula:</strong><br>
-        <code style="font-size:.75rem;line-height:1.7">${formulaStr}</code><br>
-        <div style="font-family:var(--fh);font-size:1.2rem;font-weight:700;color:var(--az);margin-top:.4rem">≈ R$ ${valorCorreto?valorCorreto.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}):'–'}</div>
-        ${icmUsar===0?'<div style="margin-top:.3rem;font-size:.72rem;color:var(--wa)">⚠️ ICM não informado — o cálculo acima usa ICM=1 (sem ajuste). Informe o ICM para resultado preciso.</div>':''}
-      </div>
-      <p class="nota">Valor estimado para conferência. Sujeito a descontos de previdência e assistência médica (Lei nº 17.293/2020). O valor exato está no Portalnet – Novo Bônus após a correção.</p>
-    </div>`;
-  }
-
-  // Ações
-  if(acoes.length){
-    html+=`<div class="card"><div class="ctit">Ações necessárias</div>
-      <ul style="list-style:none">`;
-    acoes.forEach(a=>{html+=`<li style="font-size:.8rem;padding:3px 0;display:flex;gap:8px"><span>➡️</span><span>${a}</span></li>`;});
-    html+=`</ul>`;
-    // Texto pronto para URE
-    if(txtUre){
-      html+=`<div style="margin-top:.8rem"><div style="font-size:.73rem;font-weight:700;color:var(--az2);margin-bottom:.35rem">📋 Texto pronto para levar à URE:</div>
-        <div id="txt-ure-box" style="background:#F8FAFD;border:1px solid var(--bd);border-radius:7px;padding:.85rem;font-size:.77rem;line-height:1.75;white-space:pre-wrap">${txtUre}</div>
-        <button class="bsm bsec" style="margin-top:.4rem" onclick="copiarTxtUre()">📋 Copiar texto</button>
-      </div>`;
+function diagLinha(n) {
+    const ua = document.getElementById(`l${n}-ua`).value;
+    const idesp = parseFloat(document.getElementById(`l${n}-idesp`).value) || 0;
+    const total = parseFloat(document.getElementById(`l${n}-total`).value) || 0;
+    const alert = document.getElementById(`la-${n}`);
+    
+    let msg = [];
+    if (!ua || ua === '0') msg.push('🔴 UA Vazia detectada!');
+    if (idesp === 0) msg.push('🔴 IDESP Zerado - Bônus não calculado!');
+    
+    if (msg.length) {
+        alert.className = 'lp-alert show err';
+        alert.innerHTML = msg.join('<br>');
+    } else {
+        alert.className = 'lp-alert show ok';
+        alert.innerHTML = '✅ Linha processada corretamente.';
     }
-    html+=`</div>`;
-  }
-
-  html+=`<p class="nota">Base legal: Lei Complementar nº 1.361/2021 · Deliberação BR nº 4, de 16/04/2026 · Orientação Técnica COAPES–DFOLP. Esta calculadora é ferramenta de apoio — a decisão final cabe ao DFOLP após análise da URE.</p>`;
-  document.getElementById('resultado').innerHTML=html;
 }
 
-// ═══════════════════════════════════════════════════════
-// GERADOR DE OFÍCIO
-// ═══════════════════════════════════════════════════════
-function gerarOficio(){
-  const nome=document.getElementById('nome').value||'[NOME]';
-  const rg=document.getElementById('rg').value||'[RG]';
-  const di=document.getElementById('di').value;
-  const cargo=document.getElementById('cargo').value;
-  const cargoOpt=document.getElementById('cargo').options[document.getElementById('cargo').selectedIndex];
-  const cargoTxt=cargoOpt?cargoOpt.text.replace(/^─+\s*/,''):'[CARGO]';
-  const indEsp=INDICE[cargo]||{txt:'[ÍNDICE]'};
-
-  const num=document.getElementById('of-num').value||'XXX/2026';
-  const data=document.getElementById('of-data').value||'[LOCAL E DATA]';
-  const ure=document.getElementById('of-ure').value||'[URE]';
-  const dirUre=document.getElementById('of-dir-ure').value||'[DIRETOR(A) DA URE]';
-  const escolaRem=document.getElementById('of-escola-rem').value||document.getElementById('escola').value||'[ESCOLA]';
-  const dirEsc=document.getElementById('of-dir-esc').value||'[DIRETOR(A)]';
-  const erro=document.getElementById('of-erro').value||'[DESCREVA O ERRO]';
-  const pago=document.getElementById('of-pago').value||'não informado';
-  const correto=document.getElementById('of-correto').value||'a apurar';
-
-  document.getElementById('of-txt').textContent=`OFÍCIO Nº ${num}
-
-${data}
-
-À
-${dirUre}
-${ure}
-
-Assunto: Revisão da Bonificação por Resultados 2025 – Servidor(a) ${nome} – RG ${rg} – DI ${di}
-
-Senhora Diretora / Senhor Diretor,
-
-Cumprimentando-a(o) cordialmente, esta Unidade Escolar encaminha, em conformidade com o Comunicado da COAPES – DFOLP referente ao Bônus por Resultados 2025 (pagamento realizado em 30/04/2026), a presente solicitação de revisão do cálculo da Bonificação por Resultados, exercício 2025, referente ao(à) servidor(a):
-
-  Servidor(a): ${nome}
-  RG: ${rg}  |  DI: ${di}
-  Cargo/Função: ${cargoTxt}
-  Unidade Escolar: ${escolaRem}
-  Índice esperado conforme Deliberação BR nº 4/2026: ${indEsp.txt}
-
-2. Após análise no Portalnet – Novo Bônus (Consulta por RG), SED – Cadastro Funcional, SED – BFE e histórico de associações, foram constatadas as seguintes irregularidades:
-
-${erro.split('\n').map(l=>'  '+l).join('\n')}
-
-3. Em decorrência das inconsistências, há divergência entre o valor pago (${pago}) e o valor estimado como devido (${correto}), nos termos da Lei Complementar nº 1.361/2021 e da Deliberação BR nº 4, de 16/04/2026.
-
-4. Solicitamos à URE que:
-  a) Verifique o lançamento no PAEF quanto à UA vinculada a todos os períodos de vigência de 2025;
-  b) Confirme se o IDESP/ICM está sendo aplicado corretamente em todos os períodos;
-  c) Caso confirmado o erro, preencha o link de reclamações da SEDUC com os dados detalhados para encaminhamento ao DFOLP.
-
-5. O(a) servidor(a) foi orientado(a) a aguardar a análise desta URE.
-
-Documentos anexos:
-  – Extrato Portalnet – Novo Bônus (Consulta por RG)
-  – Histórico de Atribuição de Aulas (SED – RH)
-  – Consulta Funcional / Carga Horária (SED – DI ${di})
-
-Atenciosamente,
-
-
-_______________________________________________
-${dirEsc}
-Diretor(a) de Escola
-${escolaRem}`;
+function analisar() {
+    // Implementação simplificada para o exemplo
+    const totalFinal = Array.from(document.querySelectorAll('[id$="-total"]'))
+                            .reduce((acc, el) => acc + (parseFloat(el.value) || 0), 0);
+    
+    document.getElementById('resultado').innerHTML = `
+        <div class="rc info">
+            <div class="rtit">📊 Resultado do Diagnóstico</div>
+            <div class="rbody">
+                <strong>Valor total identificado no Portalnet:</strong> R$ ${totalFinal.toLocaleString('pt-BR', {minimumFractionDigits:2})}<br><br>
+                Verifique as linhas em vermelho acima. Se houver UA vazia, você deve abrir chamado na URE.
+            </div>
+        </div>
+    `;
 }
 
-function copiarOf(){
-  navigator.clipboard.writeText(document.getElementById('of-txt').textContent).then(()=>{
-    const b=event.target;b.textContent='✅ Copiado!';setTimeout(()=>b.textContent='📋 Copiar',2000);
-  });
+function aba(id, btn) {
+    document.querySelectorAll('.pnl').forEach(p => p.classList.remove('on'));
+    document.getElementById('pnl-' + id).classList.add('on');
 }
-
-function copiarTxtUre(){
-  const el=document.getElementById('txt-ure-box');
-  if(!el) return;
-  navigator.clipboard.writeText(el.textContent).then(()=>{
-    const b=event.target;b.textContent='✅ Copiado!';setTimeout(()=>b.textContent='📋 Copiar texto',2000);
-  });
-}
-
-// Inicializar com 3 linhas
-addLinhas(3);
 </script>
 </body>
 </html>
