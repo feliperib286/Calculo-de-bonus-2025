@@ -57,95 +57,114 @@ input,select,textarea{width:100%;padding:7px 10px;font-size:.83rem;border:1.5px 
 <header>
   <div class="hico">📋</div>
   <div>
-    <h1>Bônus 2025 – Calculadora & Diagnóstico (GOE)</h1>
-    <p>Filtro de Elegibilidade 244 dias · Ausências e Efetivo Exercício · Mapeamento image_827a12.png</p>
+    <h1>Bônus 2025 – Diagnóstico Completo (GOE)</h1>
+    <p>Elegibilidade 244 dias · Ausências · Importação image_827a12.png · Regras Técnicas</p>
     <span class="lei">LC 1.361/2021 · Deliberação BR 4/2026</span>
   </div>
 </header>
 
 <nav>
   <button class="tab on" onclick="aba('calc',this)">🧮 Calculadora & Importador</button>
-  <button class="tab" onclick="aba('ref',this)">📖 Critérios e Faltas</button>
+  <button class="tab" onclick="aba('ref',this)">📖 Referências & Regras</button>
 </nav>
 
+<!-- PAINEL CALCULADORA -->
 <div id="pnl-calc" class="pnl on"><div class="wrap"><div class="grid">
 <div>
   <div class="card paste-box">
     <div class="ctit">🚀 Colar do Portalnet (image_827a12.png)</div>
-    <textarea id="raw-portalnet" placeholder="Copie as linhas da tabela e cole aqui..." oninput="importarPortalnet(this.value)"></textarea>
+    <textarea id="raw-portalnet" placeholder="Copie as linhas da tabela no Portalnet e cole aqui..." oninput="importarPortalnet(this.value)"></textarea>
   </div>
 
   <div class="card">
-    <div class="ctit">1 · Elegibilidade e Perfil</div>
+    <div class="ctit">1 · Perfil e Elegibilidade</div>
     <div class="g2">
-      <div class="f"><label>Nome</label><input id="nome" placeholder="Felipe Ribeiro"></div>
+      <div class="f"><label>Nome do Servidor</label><input id="nome" placeholder="Felipe Ribeiro"></div>
       <div class="f">
-        <label>Situação Funcional</label>
+        <label>Situação em 2025</label>
         <select id="sit-func" onchange="analisar()">
           <option value="reg">Titular / Categoria O</option>
           <option value="art22">Afastado Art. 22</option>
           <option value="qa">Quadro de Apoio (GOE/AOE)</option>
+          <option value="pei">Docente PEI / CGPAC</option>
         </select>
       </div>
     </div>
     <div class="f" style="margin-top:10px">
-      <label>Dias de Exercício (Soma Portalnet)</label>
+      <label>Dias de Exercício (Identificados no Portalnet)</label>
       <input type="number" id="dias-totais" placeholder="Ex: 250" oninput="analisar()">
       <p id="aviso-prazo" style="font-size:0.75rem; font-weight:700; margin-top:5px;"></p>
     </div>
   </div>
 
   <div class="card">
-    <div class="ctit">2 · Edição Manual dos Lançamentos</div>
+    <div class="ctit">2 · Lançamentos Identificados (Edição Manual)</div>
     <div id="cont-linhas"></div>
-    <button class="btn" style="background:var(--az-bg); color:var(--az2)" onclick="addLinha()">+ Inserir Linha Manual</button>
+    <button class="btn" style="background:var(--az-bg); color:var(--az2)" onclick="addLinha()">+ Linha Manual</button>
   </div>
-  <button class="btn btn-pri" onclick="analisar()">🔍 Validar e Gerar Resumo</button>
+  <button class="btn btn-pri" onclick="analisar()">🔍 Validar Diagnóstico Final</button>
 </div>
 
 <div id="resultado"></div>
 </div></div></div>
 
+<!-- PAINEL REFERÊNCIAS (TODAS AS INFORMAÇÕES RESTAURADAS) -->
 <div id="pnl-ref" class="pnl"><div class="wrap"><div class="grid">
 <div>
   <div class="card">
-    <div class="ctit">Regra dos 244 Dias (Elegibilidade)</div>
-    <p style="font-size:0.8rem; margin-bottom:1rem;">O bônus exige exercício em pelo menos 2/3 (dois terços) do ano base.</p>
+    <div class="ctit">Regra de Elegibilidade (244 Dias)</div>
     <div class="qa-card">
-      <div class="qa-titulo">Cálculo de Elegibilidade</div>
-      <div class="qa-item"><strong>Mínimo: 244 dias de exercício</strong>.</div>
-      <div class="qa-item">Afastamentos sem vencimento impedem o pagamento.</div>
+      <div class="qa-titulo">Cálculo de 2/3 do Ano</div>
+      <div class="qa-item"><strong>Mínimo: 244 dias de efetivo exercício</strong>.</div>
+      <div class="qa-item">Afastamentos sem vencimento (LIP) zeram a elegibilidade.</div>
     </div>
   </div>
 
   <div class="card">
-    <div class="ctit">✅ Faltas que NÃO Descontam (Efetivo Exercício)</div>
+    <div class="ctit">Aulas → Horas Mensais (Referência 2025)</div>
     <table class="tref">
-      <tr><th>Código</th><th>Tipo de Ausência</th></tr>
-      <tr><td>047</td><td>Férias e Recesso Escolar</td></tr>
-      <tr><td>008 / 279</td><td>Licença Gestante (180 dias)</td></tr>
-      <tr><td>059</td><td>Licença Paternidade</td></tr>
-      <tr><td>050 / 280</td><td>Licença Adoção</td></tr>
-      <tr><td>038 / 285</td><td>Nojo (Falecimento)</td></tr>
-      <tr><td>037 / 284</td><td>Gala (Casamento)</td></tr>
-      <tr><td>017 / 130</td><td>Serviço Eleitoral (Folgas TRE)</td></tr>
+      <tr><th>Aulas</th><th>Horas/mês</th><th>Aulas</th><th>Horas/mês</th></tr>
+      <tr><td>10</td><td>65h</td><td>24</td><td>150h</td></tr>
+      <tr><td>16</td><td>100h</td><td>32</td><td>200h</td></tr>
+      <tr><td>20</td><td>125h</td><td>36</td><td>220h</td></tr>
     </table>
+    <p class="nota">Base: Orientação Técnica COAPES-DFOLP.</p>
+  </div>
+
+  <div class="card">
+    <div class="ctit">CGPAC PEI – Regra Mista de Cálculo</div>
+    <table class="tref">
+      <tr><th>Tipo</th><th>Como CGPAC</th><th>Como PEB</th></tr>
+      <tr><td>Anos Iniciais</td><td>150h Grau 0</td><td>50h Grau Branco</td></tr>
+      <tr><td>Anos Finais</td><td>100h Grau 0</td><td>100h Grau 1</td></tr>
+      <tr><td>Ensino Médio</td><td>100h Grau 0</td><td>100h Grau 2</td></tr>
+    </table>
+    <p class="nota">Misto: Escola (Grau 0) + Série/Disciplina.</p>
   </div>
 </div>
 
 <div>
   <div class="card">
-    <div class="ctit">❌ Faltas que REDUZEM o Valor do Bônus</div>
+    <div class="ctit">✅ Efetivo Exercício (NÃO Descontam)</div>
     <table class="tref">
-      <tr><th>Código</th><th>Tipo de Ausência</th></tr>
-      <tr><td>009 / 205</td><td>Licença-Prêmio</td></tr>
-      <tr><td>002</td><td>Licença Médica (Servidor/Pessoa Família)</td></tr>
-      <tr><td>011 / 012</td><td>Faltas Médicas (Parcial ou Integral)</td></tr>
-      <tr><td>013 / 014</td><td>Faltas Abonadas / Justificadas</td></tr>
-      <tr><td>015</td><td>Faltas Injustificadas</td></tr>
-      <tr><td>010</td><td>Licença para Tratar de Interesses Particulares (LIP)</td></tr>
+      <tr><th>Cód</th><th>Ausência</th></tr>
+      <tr><td>047</td><td>Férias / Recesso</td></tr>
+      <tr><td>008</td><td>Licença Gestante</td></tr>
+      <tr><td>059</td><td>Licença Paternidade</td></tr>
+      <tr><td>130</td><td>Serviço Eleitoral (Folgas)</td></tr>
+      <tr><td>038</td><td>Falecimento (Nojo)</td></tr>
     </table>
-    <p class="nota">Importante: A falta médica parcial (até 2 horas) também impacta proporcionalmente.</p>
+  </div>
+
+  <div class="card">
+    <div class="ctit">❌ Ausências que REDUZEM o Valor</div>
+    <table class="tref">
+      <tr><th>Cód</th><th>Ausência</th></tr>
+      <tr><td>009</td><td>Licença-Prêmio</td></tr>
+      <tr><td>011</td><td>Faltas Médicas (Parcial/Integral)</td></tr>
+      <tr><td>013</td><td>Faltas Abonadas / Justificadas</td></tr>
+      <tr><td>002</td><td>Licença Médica</td></tr>
+    </table>
   </div>
 </div>
 </div></div></div>
@@ -189,7 +208,7 @@ function addLinha(d = {}) {
     const div = document.createElement('div');
     div.className = 'lp';
     div.innerHTML = `
-        <div class="lp-num">Lançamento ${n}</div>
+        <div class="lp-num">Linha ${n}</div>
         <div class="g4">
             <div class="f"><label>Início</label><input id="l${n}-ini" value="${d.ini||''}"></div>
             <div class="f"><label>Fim</label><input id="l${n}-fim" value="${d.fim||''}"></div>
@@ -225,11 +244,11 @@ function analisar() {
     
     document.getElementById('resultado').innerHTML = `
         <div class="rc ${elegivel ? 'ok' : 'err'}">
-            <div class="rtit">Status do Bônus 2025</div>
+            <div class="rtit">Diagnóstico de Bônus (Jacareí)</div>
             <div class="rbody">
-                Dias de Exercício: <strong>${d} / ${DIAS_MINIMOS}</strong><br>
-                Valor Total Pago: <strong>R$ ${totalPg.toLocaleString('pt-BR', {minimumFractionDigits:2})}</strong><br><br>
-                ${elegivel ? 'O servidor cumpriu o requisito temporal.' : 'Verifique se faltas (como Licença-Prêmio) reduziram o tempo abaixo do limite.'}
+                Soma de Exercício: <strong>${d} / ${DIAS_MINIMOS} dias</strong><br>
+                Bonificação Líquida Acumulada: <strong>R$ ${totalPg.toLocaleString('pt-BR', {minimumFractionDigits:2})}</strong><br><br>
+                ${elegivel ? 'Requisito temporal de 2/3 do ano atingido.' : 'Atenção: Servidor não atingiu os dias mínimos de efetivo exercício.'}
             </div>
         </div>`;
     
@@ -238,8 +257,8 @@ function analisar() {
         const id = parseFloat(document.getElementById(`l${n}-idesp`).value) || 0;
         const al = document.getElementById(`la-${n}`);
         if (!ua || ua === '0' || id === 0) {
-            al.className = 'lp-alert show err'; al.innerHTML = '🚨 Erro de Lançamento!';
-        } else { al.className = 'lp-alert show ok'; al.innerHTML = '✅ Lançamento OK'; }
+            al.className = 'lp-alert show err'; al.innerHTML = '🚨 Falha de Lançamento (UA Vazia/IDESP 0)';
+        } else { al.className = 'lp-alert show ok'; al.innerHTML = '✅ Lançamento Consistente'; }
     });
 }
 </script>
