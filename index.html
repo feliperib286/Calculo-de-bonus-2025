@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bônus 2025 – Gestão Multi-Escola (Jacareí)</title>
+<title>Bônus 2025 – Sistema de Auditoria Especialista (GOE)</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -17,174 +17,228 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:var(--ft);background:var(--bg);color:#1e2836;font-size:13px;line-height:1.6;}
-header{background:linear-gradient(135deg,var(--az),var(--az2));color:#fff;padding:1.2rem 1.75rem;}
-header h1{font-family:var(--fh);font-size:1.1rem;margin-bottom:4px;}
+header{background:linear-gradient(135deg,var(--az),var(--az2));color:#fff;padding:1.2rem 1.75rem;display:flex;align-items:center;gap:1rem;}
+.hico{width:46px;height:46px;background:rgba(255,255,255,.18);border-radius:12px;display:grid;place-items:center;font-size:22px;}
+header h1{font-family:var(--fh);font-size:1.1rem;font-weight:700;}
+header p{font-size:.7rem;opacity:.8;}
+nav{background:var(--az);display:flex;padding:0 1.75rem;gap:2px;}
+.tab{padding:.55rem 1.1rem;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.5);background:none;border:none;cursor:pointer;border-bottom:3px solid transparent;transition:.15s;}
+.tab.on{color:#fff;border-bottom-color:#60A5FA;}
 .wrap{max-width:1200px;margin:0 auto;padding:1rem;}
-.grid{display:grid;grid-template-columns:1fr 400px;gap:1.5rem;}
-@media(max-width:960px){.grid{grid-template-columns:1fr;}}
-
-/* Cards e Seções */
-.card{background:var(--wh);border:1px solid var(--bd);border-radius:var(--r);padding:1.15rem;box-shadow:var(--sh);margin-bottom:1rem;}
-.ctit{font-family:var(--fh);font-size:.7rem;font-weight:700;text-transform:uppercase;color:var(--az2);margin-bottom:1rem;display:flex;align-items:center;gap:6px;}
-.ua-card{border-left:5px solid var(--az3);background:#fcfdff;margin-bottom:1.5rem;padding:1rem;border-radius:8px;border:1px solid var(--bd);border-left-width:6px;}
-
-/* Inputs */
-label{display:block;font-size:.75rem;font-weight:600;margin-bottom:4px;}
-textarea, input, select {width:100%;padding:10px;border:1.5px solid var(--bd);border-radius:8px;font-family:inherit;}
+.pnl{display:none;}.pnl.on{display:block;}
+.grid{display:grid;grid-template-columns:1fr 420px;gap:1.2rem;}
+@media(max-width:1024px){.grid{grid-template-columns:1fr;}}
+.card{background:var(--wh);border:1px solid var(--bd);border-radius:var(--r);padding:1.15rem;box-shadow:var(--sh);margin-bottom:.9rem;}
+.ctit{font-family:var(--fh);font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--az2);margin-bottom:.9rem;display:flex;align-items:center;gap:6px;}
+.ctit::before{content:'';width:3px;height:13px;background:var(--az2);border-radius:2px;}
+label{display:block;font-size:.74rem;font-weight:600;color:#374151;margin-bottom:3px;}
+input,select,textarea{width:100%;padding:8px 10px;font-size:0.85rem;border:1.5px solid var(--bd);border-radius:7px;background:var(--wh);}
 textarea{height:80px;background:var(--az-bg);border:2px dashed var(--az3);}
-
-/* Botões */
+.ua-card{border-left:6px solid var(--az3);padding:1.2rem;margin-bottom:1.5rem;background:#fcfdff;border-radius:8px;border:1px solid var(--bd);border-left-width:6px;}
+.lp{background:#F8FAFD;border:1.5px solid var(--bd);border-radius:8px;padding:0.8rem;margin-bottom:0.6rem;position:relative;}
+.res-destaque{font-size:1.6rem;font-weight:800;color:var(--ok);line-height:1.2;}
 .btn-recalc{background:var(--az2);color:#fff;border:none;padding:12px;border-radius:8px;font-weight:700;cursor:pointer;width:100%;margin-top:10px;transition:0.2s;}
-.btn-recalc:hover{background:var(--az3);transform:translateY(-2px);}
-
-/* Alertas */
-.badge-escola{background:var(--az);color:#fff;padding:4px 10px;border-radius:20px;font-size:0.7rem;margin-bottom:10px;display:inline-block;}
-.err-box{background:var(--er-bg);color:var(--er);padding:10px;border-radius:6px;font-size:0.75rem;margin-top:10px;border:1px solid var(--er-bd);}
+.btn-recalc:hover{background:var(--az3);}
+.badge{padding:2px 6px;border-radius:4px;font-size:0.6rem;font-weight:700;text-transform:uppercase;}
+.esp{background:var(--ok-bg);color:var(--ok);}
+.err-msg{background:var(--er-bg);color:var(--er);padding:8px;border-radius:6px;font-size:0.75rem;margin-top:8px;border:1px solid var(--er-bd);font-weight:600;}
+.tref{width:100%;border-collapse:collapse;font-size:0.75rem;}
+.tref th{background:var(--az2);color:#fff;padding:8px;text-align:left;}
+.tref td{padding:7px;border-bottom:1px solid #F3F4F6;}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Bônus 2025 – Diagnóstico Multi-Escolas</h1>
-  <p>Fiel aos Códigos Oficiais e Consolidação de Dias Reais</p>
+  <div class="hico">🏦</div>
+  <div>
+    <h1>Bônus 2025 – Diagnóstico Avançado (GOE Jacareí)</h1>
+    <p>Consolidação de Multidisciplinas • Gestão de UAs • Cálculo Real (Sem Duplicidade)</p>
+  </div>
 </header>
 
-<div class="wrap">
-  <div class="grid">
-    <div>
-        <div class="card">
-            <div class="ctit">Importação de Dados</div>
-            <label>Cole aqui o conteúdo do Portalnet (Linhas das Escolas)</label>
-            <textarea id="raw-portalnet" placeholder="Copie e cole as linhas aqui..." oninput="processarDados()"></textarea>
-            <button class="btn-recalc" onclick="processarDados()">🔄 RECALCULAR TUDO</button>
-        </div>
+<nav>
+  <button class="tab on" onclick="aba('calc',this)">🧮 Auditoria de Bônus</button>
+  <button class="tab" onclick="aba('ref',this)">📖 Disciplinas & Códigos</button>
+  <button class="tab" onclick="aba('lei',this)">⚖️ Fundamentação Legal</button>
+</nav>
 
-        <div id="container-escolas">
-            </div>
+<div id="pnl-calc" class="pnl on"><div class="wrap"><div class="grid">
+  <div>
+    <div class="card paste-box">
+        <div class="ctit">Importação Direta (Portalnet)</div>
+        <label>Cole as linhas da consulta por RG abaixo:</label>
+        <textarea id="raw-portalnet" placeholder="Ctrl+C no Portalnet > Ctrl+V aqui..." oninput="processarDados()"></textarea>
+        <button class="btn-recalc" onclick="processarDados()">🔄 ATUALIZAR E RECALCULAR</button>
     </div>
+    <div class="card">
+        <div class="ctit">Identificação</div>
+        <div class="f"><label>Nome do Servidor</label><input id="nome" placeholder="Nome Completo"></div>
+    </div>
+    <div id="container-escolas"></div>
+  </div>
 
-    <div id="resultado-geral">
-        <div class="card" style="position: sticky; top: 1rem;">
-            <div class="ctit">Resumo Consolidado</div>
-            <div id="res-total">Aguardando dados...</div>
+  <div id="col-resultado">
+    <div class="card" style="position: sticky; top: 1rem;">
+        <div class="ctit">Diagnóstico Consolidado</div>
+        <div id="res-dias">Aguardando dados...</div>
+        <hr style="margin:15px 0; opacity:0.1">
+        <div id="res-financeiro"></div>
+        <div id="res-recurso" style="display:none; margin-top:15px;">
+            <label style="color:var(--er)">⚠️ Texto para Recurso/Ofício:</label>
+            <div id="txt-recurso" style="font-size:0.75rem; background:#fff5f5; padding:10px; border-radius:6px; border:1px solid var(--er-bd);"></div>
         </div>
+        <button class="btn-recalc" style="background:var(--gr); margin-top:15px;" onclick="window.print()">🖨️ IMPRIMIR LAUDO</button>
     </div>
   </div>
-</div>
+</div></div></div>
+
+<div id="pnl-ref" class="pnl"><div class="wrap"><div class="grid">
+    <div class="card">
+        <div class="ctit">Busca de Disciplinas (PDF Oficial)</div>
+        <input type="text" placeholder="Pesquisar disciplina..." oninput="filtrarDisc(this.value)" style="margin-bottom:10px;">
+        <table class="tref">
+            <thead><tr><th>Cód</th><th>Disciplina</th><th>Tipo</th></tr></thead>
+            <tbody id="corpo-disc"></tbody>
+        </table>
+    </div>
+    <div class="card">
+        <div class="ctit">Critério Temporal</div>
+        <div class="ua-card" style="border-left-color:var(--wa)">
+            <strong>Mínimo: 244 Dias</strong><br>
+            Cálculo baseado em 2/3 do ano (366 dias em 2024/2025). 
+            Períodos com afastamentos (LIP, Licença Prêmio) são descontados da elegibilidade conforme BFE.
+        </div>
+    </div>
+</div></div></div>
+
+<div id="pnl-lei" class="pnl"><div class="wrap">
+    <div class="card">
+        <div class="ctit">Fundamentação Jurídica para Ofícios</div>
+        <div style="line-height:1.8">
+            <p><strong>1. Da Lei Complementar nº 1.361/2021:</strong> Institui a Bonificação por Resultados (BR). O pagamento é condicionado ao alcance de metas e ao tempo de efetivo exercício.</p>
+            <p><strong>2. Da Deliberação BR nº 4/2026:</strong> Define os índices ICM (IDESP) aplicáveis para o exercício de 2025. O erro de vinculação de UA no PAEF impede a correta aplicação do índice da unidade escolar ou disciplina.</p>
+            <p><strong>3. Do Peso da Carga Horária:</strong> Orientação técnica COAPES/DFOLP. O valor é proporcional à carga horária cumprida. Erros no campo "Carga Parcial" reduzem o bônus indevidamente.</p>
+            <p><strong>4. Do Efetivo Exercício:</strong> Conforme o Estatuto do Funcionário Público, apenas ausências amparadas por lei (Férias, Licença Gestante, Gala, Nojo, TRE) não descontam do tempo total.</p>
+        </div>
+    </div>
+</div></div>
 
 <script>
-// Códigos oficiais baseados no seu PDF/DOC
-const DISCIPLINAS = {
-    "1100": "LÍNGUA PORTUGUESA", "1300": "MATEMÁTICA", "1600": "HISTÓRIA", "1700": "GEOGRAFIA",
-    "1900": "ED. FÍSICA", "1200": "INGLÊS", "1800": "ARTE", "8468": "SOCIOLOGIA (INOVA)",
-    "0500": "SALA DE RECURSOS", "7800": "PROJETO DE VIDA", "7900": "TECNOLOGIA"
+const DISC_MAP = {
+    "1100":"PORTUGUÊS", "1300":"MATEMÁTICA", "1600":"HISTÓRIA", "1700":"GEOGRAFIA",
+    "1900":"ED. FÍSICA", "1200":"INGLÊS", "1800":"ARTE", "8468":"SOCIOLOGIA (INOVA)",
+    "0500":"SALA DE RECURSOS", "7800":"PROJETO DE VIDA", "7900":"TECNOLOGIA",
+    "2000":"FÍSICA", "2100":"QUÍMICA", "2200":"BIOLOGIA", "2300":"SOCIOLOGIA (REG)"
 };
 
-function parseData(str) {
-    const p = str.split('/');
-    return p.length === 3 ? new Date(p[2], p[1]-1, p[0]) : null;
+function aba(id, btn) {
+    document.querySelectorAll('.pnl').forEach(p => p.classList.remove('on'));
+    document.querySelectorAll('.tab').forEach(b => b.classList.remove('on'));
+    document.getElementById('pnl-' + id).classList.add('on');
+    btn.classList.add('on');
 }
+
+function filtrarDisc(v) {
+    const p = v.toUpperCase();
+    const corpo = document.getElementById('corpo-disc');
+    corpo.innerHTML = Object.keys(DISC_MAP)
+        .filter(k => DISC_MAP[k].includes(p) || k.includes(p))
+        .map(k => `<tr><td><strong>${k}</strong></td><td>${DISC_MAP[k]}</td><td>${parseInt(k)<2000?'Específica':'Não Esp.'}</td></tr>`).join('');
+}
+filtrarDisc('');
+
+function parseData(s) { const p = s.split('/'); return p.length===3 ? new Date(p[2], p[1]-1, p[0]) : null; }
 
 function processarDados() {
     const texto = document.getElementById('raw-portalnet').value;
     if (!texto.trim()) return;
-
     const linhas = texto.split('\n');
-    const uas = {}; // Agrupador por UA
+    const uas = {};
 
     linhas.forEach(linha => {
         const col = linha.split(/\t|\s{2,}/).map(s => s.trim());
         if (col.length >= 10) {
-            const ua = col[13] || "UA NÃO INFORMADA";
+            const ua = col[13] || "UA_VAZIA";
             if (!uas[ua]) uas[ua] = [];
             uas[ua].push({
                 ini: col[0], fim: col[1], dias: parseInt(col[3]) || 0,
-                disc: col[10], idesp: parseFloat(col[11]) || 0, grau: col[8]
+                base: parseFloat(col[4]) || 0, parcial: parseFloat(col[5]) || 0,
+                idesp: parseFloat(col[11]) || 0, vhora: parseFloat(col[17]) || 0,
+                disc: col[10]
             });
         }
     });
-
-    renderizarEscolas(uas);
+    renderizar(uas);
 }
 
-function renderizarEscolas(uas) {
+function renderizar(uas) {
     const container = document.getElementById('container-escolas');
     container.innerHTML = "";
-    let totalDiasGeral = 0;
     let periodosGeral = [];
+    let totalFinanceiro = 0;
+    let errosTexto = [];
 
-    Object.keys(uas).forEach(uaCodigo => {
-        const lancamentos = uas[uaCodigo];
-        let somaDiasEscola = 0;
-        let errosUA = [];
-
+    Object.keys(uas).forEach(ua => {
+        const dados = uas[ua];
         const uaDiv = document.createElement('div');
         uaDiv.className = 'ua-card';
+        let htmlL = `<div class="badge" style="background:var(--az2); color:#fff; font-size:0.75rem; margin-bottom:10px;">UA: ${ua}</div>`;
         
-        let htmlLancamentos = "";
-        lancamentos.forEach(l => {
-            somaDiasEscola += l.dias;
-            totalDiasGeral += l.dias; // Note: Isso ainda é a soma bruta para exibição
+        dados.forEach(l => {
             periodosGeral.push({start: parseData(l.ini), end: parseData(l.fim)});
+            const peso = l.base > 0 ? (l.parcial / l.base) : 0;
+            const valorLinha = l.vhora * l.parcial * peso * l.idesp;
+            totalFinanceiro += valorLinha;
 
-            if (l.idesp === 0) errosUA.push(`Código ${l.disc}: IDESP zerado.`);
-            
-            htmlLancamentos += `
-                <div style="font-size:0.8rem; border-bottom:1px solid #eee; padding:5px 0;">
-                    <strong>${l.ini} - ${l.fim}</strong> | 
-                    Disc: ${DISCIPLINAS[l.disc] || l.disc} | 
-                    Dias: ${l.dias} | IDESP: ${l.idesp}
+            if (ua === "UA_VAZIA") errosTexto.push(`Período ${l.ini} sem UA definida.`);
+            if (l.idesp === 0) errosTexto.push(`Unidade ${ua} com IDESP zero.`);
+
+            htmlL += `
+                <div class="lp">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span style="font-weight:700;">${l.ini} a ${l.fim}</span>
+                        <span class="badge esp">${DISC_MAP[l.disc] || l.disc}</span>
+                    </div>
+                    <div style="font-size:0.7rem; color:var(--gr); margin-top:5px; border-top:1px solid #eee; padding-top:5px;">
+                        Peso: ${(peso*100).toFixed(1)}% | IDESP: ${l.idesp} | <strong>R$ ${valorLinha.toFixed(2)}</strong>
+                    </div>
+                    ${(ua === "UA_VAZIA" || l.idesp === 0) ? `<div class="err-msg">🚨 Falha detectada no lançamento.</div>` : ''}
                 </div>`;
         });
-
-        uaDiv.innerHTML = `
-            <div class="badge-escola">ESCOLA / UA: ${uaCodigo}</div>
-            <div style="margin-bottom:10px;">${htmlLancamentos}</div>
-            <div style="font-weight:700; color:var(--az2)">Total nesta UA: ${somaDiasEscola} dias</div>
-            ${errosUA.length > 0 ? `<div class="err-box">⚠️ ${errosUA.join('<br>')}</div>` : ''}
-            <button class="btn-recalc" style="padding:5px; font-size:0.7rem; background:var(--gr)" onclick="processarDados()">Recalcular UA ${uaCodigo}</button>
-        `;
+        uaDiv.innerHTML = htmlL;
         container.appendChild(uaDiv);
     });
 
-    calcularFinal(periodosGeral);
-}
-
-// Função para evitar a duplicidade que você mencionou
-function calcularFinal(intervalos) {
-    if (intervalos.length === 0) return;
-    
-    // Ordenar e Mesclar para não passar de 365 dias
-    intervalos.sort((a,b) => a.start - b.start);
+    // CÁLCULO DE DIAS REAIS (Sem Duplicidade)
+    periodosGeral.sort((a,b) => a.start - b.start);
     let merged = [];
-    if(intervalos[0].start) {
-        let current = intervalos[0];
-        for(let i=1; i<intervalos.length; i++){
-            if(intervalos[i].start <= current.end){
-                current.end = new Date(Math.max(current.end, intervalos[i].end));
-            } else {
-                merged.push(current);
-                current = intervalos[i];
-            }
+    if(periodosGeral.length > 0 && periodosGeral[0].start){
+        let current = periodosGeral[0];
+        for(let i=1; i<periodosGeral.length; i++){
+            if(periodosGeral[i].start <= current.end){
+                current.end = new Date(Math.max(current.end, periodosGeral[i].end));
+            } else { merged.push(current); current = periodosGeral[i]; }
         }
         merged.push(current);
     }
-
-    const diasReais = merged.reduce((acc, range) => {
-        return acc + Math.round((range.end - range.start) / (1000*60*60*24)) + 1;
-    }, 0);
-
+    const diasReais = merged.reduce((acc, r) => acc + Math.round((r.end - r.start)/(1000*60*60*24))+1, 0);
     const elegivel = diasReais >= 244;
 
-    document.getElementById('res-total').innerHTML = `
-        <div style="font-size:1.5rem; font-weight:800; color:${elegivel?'var(--ok)':'var(--er)'}">
-            ${diasReais} DIAS REAIS
-        </div>
-        <p>${elegivel ? '✅ ELEGÍVEL AO BÔNUS' : '🚨 NÃO ATINGIU 244 DIAS'}</p>
-        <div style="margin-top:10px; font-size:0.7rem; color:var(--gr)">
-            *O cálculo consolidou períodos de múltiplas escolas para evitar contagem duplicada.
-        </div>
-    `;
+    document.getElementById('res-dias').innerHTML = `
+        <div style="color:${elegivel?'var(--ok)':'var(--er)'}; font-size:1.8rem; font-weight:800;">${diasReais} DIAS REAIS</div>
+        <p style="font-weight:600">${elegivel ? '✅ ELEGÍVEL' : '🚨 NÃO ATINGIU 244 DIAS'}</p>`;
+
+    document.getElementById('res-financeiro').innerHTML = `
+        <div class="ctit" style="margin-top:10px;">Valor Bruto Estimado</div>
+        <div class="res-destaque">R$ ${totalFinanceiro.toLocaleString('pt-BR', {minimumFractionDigits:2})}</div>`;
+
+    if (errosTexto.length > 0) {
+        document.getElementById('res-recurso').style.display = "block";
+        document.getElementById('txt-recurso').innerText = `Servidor ${document.getElementById('nome').value || '[NOME]'} apresenta inconsistências no Portalnet: ${errosTexto.join(' ')} Solicitamos correção via PAEF/URE conforme LC 1.361/2021.`;
+    } else {
+        document.getElementById('res-recurso').style.display = "none";
+    }
 }
 </script>
 </body>
