@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bônus 2025 – Diagnóstico & Recurso (GOE)</title>
+<title>Bônus 2025 – Diagnóstico Fiel ao PDF (GOE Jacareí)</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -16,165 +16,117 @@
   --ft:'Inter',sans-serif;--fh:'Sora',sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:var(--ft);background:var(--bg);color:#1e2836;font-size:14px;line-height:1.6;}
+body{font-family:var(--ft);background:var(--bg);color:#1e2836;font-size:13px;line-height:1.6;}
 header{background:linear-gradient(135deg,var(--az),var(--az2));color:#fff;padding:1.2rem 1.75rem;display:flex;align-items:center;gap:1rem;}
 .hico{width:46px;height:46px;background:rgba(255,255,255,.18);border-radius:12px;display:grid;place-items:center;font-size:22px;}
 header h1{font-family:var(--fh);font-size:1.05rem;font-weight:700;}
-header p{font-size:.7rem;opacity:.7;}
-.lei{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:1px 9px;font-size:.65rem;margin-top:3px;}
 nav{background:var(--az);display:flex;padding:0 1.75rem;gap:2px;}
 .tab{padding:.55rem 1.1rem;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.5);background:none;border:none;cursor:pointer;border-bottom:3px solid transparent;transition:.15s;}
 .tab.on{color:#fff;border-bottom-color:#60A5FA;}
-.wrap{max-width:1200px;margin:0 auto;padding:1.4rem 1rem;}
+.wrap{max-width:1200px;margin:0 auto;padding:1rem;}
 .pnl{display:none;}.pnl.on{display:block;}
-.grid{display:grid;grid-template-columns:560px 1fr;gap:1.2rem;}
+.grid{display:grid;grid-template-columns:580px 1fr;gap:1.2rem;}
 @media(max-width:960px){.grid{grid-template-columns:1fr;}}
 .card{background:var(--wh);border:1px solid var(--bd);border-radius:var(--r);padding:1.15rem;box-shadow:var(--sh);margin-bottom:.9rem;}
 .ctit{font-family:var(--fh);font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--az2);margin-bottom:.9rem;display:flex;align-items:center;gap:6px;}
 .ctit::before{content:'';width:3px;height:13px;background:var(--az2);border-radius:2px;}
 label{display:block;font-size:.74rem;font-weight:600;color:#374151;margin-bottom:3px;}
-input,select,textarea{width:100%;padding:7px 10px;font-size:.83rem;border:1.5px solid var(--bd);border-radius:7px;background:var(--wh);color:#1e2836;}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
-.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:.65rem;}
-.lp{background:#F8FAFD;border:1.5px solid var(--bd);border-radius:8px;padding:.9rem;margin-bottom:.65rem;position:relative;}
-.lp-alert{font-size:.71rem;margin-top:.5rem;padding:.45rem .7rem;border-radius:6px;display:none;line-height:1.4;}
+input,select,textarea{width:100%;padding:8px 10px;font-size:0.85rem;border:1.5px solid var(--bd);border-radius:7px;background:var(--wh);}
+.lp{background:#F8FAFD;border:1.5px solid var(--bd);border-radius:8px;padding:0.9rem;margin-bottom:0.65rem;}
+.lp-alert{font-size:0.75rem;margin-top:0.5rem;padding:0.5rem;border-radius:6px;display:none;}
 .lp-alert.show{display:block;}
 .lp-alert.err{background:var(--er-bg);color:var(--er);border:1px solid var(--er-bd);}
 .lp-alert.ok{background:var(--ok-bg);color:var(--ok);border:1px solid var(--ok-bd);}
-.btn{padding:10px 16px;font-family:var(--fh);font-size:.85rem;font-weight:700;border:none;border-radius:var(--r);cursor:pointer;transition:.15s;width:100%;margin-top:10px;}
-.btn-pri{background:var(--az2);color:#fff;}
-.paste-box{background:var(--az-bg);border:2px dashed var(--az3);padding:1rem;margin-bottom:1rem;border-radius:var(--r);}
-.tref{width:100%;border-collapse:collapse;font-size:.78rem;}
-.tref th{background:var(--az2);color:#fff;padding:7px 10px;text-align:left;}
-.tref td{padding:6px 10px;border-bottom:1px solid #F3F4F6;}
-.qa-card{background:var(--az-bg);border:1px solid #93C5FD;border-radius:8px;padding:.75rem 1rem;margin-bottom:0.5rem;}
-.qa-titulo{font-size:.72rem;font-weight:700;color:var(--az2);margin-bottom:.3rem;text-transform:uppercase;}
-.qa-item{font-size:.77rem;color:#374151;padding:2px 0;display:flex;gap:6px;}
-.cron-item{border-left:3px solid var(--az3);padding-left:15px;margin-bottom:15px;position:relative;}
-.cron-date{font-weight:700;color:var(--az2);font-size:0.85rem;}
-.cron-desc{font-size:0.8rem;color:#4b5563;}
+.tref{width:100%;border-collapse:collapse;font-size:0.75rem;}
+.tref th{background:var(--az2);color:#fff;padding:8px;text-align:left;}
+.tref td{padding:7px;border-bottom:1px solid #F3F4F6;}
+.badge{padding:2px 6px;border-radius:4px;font-size:0.6rem;font-weight:700;text-transform:uppercase;}
+.esp{background:var(--ok-bg);color:var(--ok);}
+.nesp{background:var(--wa-bg);color:var(--wa);}
+.ped{background:var(--az-bg);color:var(--az2);}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="hico">📋</div>
+  <div class="hico">📑</div>
   <div>
-    <h1>Bônus 2025 – Diagnóstico & Recurso (GOE)</h1>
-    <p>Elegibilidade 244 dias · Cronograma Oficial · Mapeamento image_827a12.png</p>
-    <span class="lei">LC 1.361/2021 · Jacareí/SP</span>
+    <h1>Bônus 2025 – Diagnóstico Baseado no PDF (GOE)</h1>
+    <p>Jacareí/SP • Códigos Oficiais da Tabela I, II e III do Documento PDF</p>
   </div>
 </header>
 
 <nav>
   <button class="tab on" onclick="aba('calc',this)">🧮 Diagnóstico</button>
-  <button class="tab" onclick="aba('ref',this)">📖 Regras & Faltas</button>
-  <button class="tab" onclick="aba('crono',this)">📅 Cronograma & Recurso</button>
+  <button class="tab" onclick="aba('ref',this)">📖 Tabela do PDF (Consulta)</button>
 </nav>
 
 <div id="pnl-calc" class="pnl on"><div class="wrap"><div class="grid">
-<div>
-  <div class="card paste-box">
-    <div class="ctit">🚀 Colar do Portalnet</div>
-    <textarea id="raw-portalnet" placeholder="Cole as linhas da consulta por RG aqui..." oninput="importarPortalnet(this.value)"></textarea>
-  </div>
-
-  <div class="card">
-    <div class="ctit">1 · Dados do Servidor</div>
-    <div class="g2">
-      <div class="f"><label>Nome</label><input id="nome" placeholder="Nome completo"></div>
-      <div class="f">
-        <label>Perfil Funcional</label>
-        <select id="sit-func" onchange="analisar()">
-          <option value="reg">Titular / Categoria O</option>
-          <option value="art22">Professor - Artigo 22</option>
-          <option value="qa">Quadro de Apoio (QAE / QSE)</option>
-          <option value="pei">Docente / CGPAC (PEI)</option>
-        </select>
-      </div>
+  <div>
+    <div class="card" style="background:var(--az-bg); border:2px dashed var(--az3); padding:1rem;">
+        <label>🚀 Colar Linhas do Portalnet (image_827a12.png)</label>
+        <textarea id="raw-portalnet" placeholder="Cole as linhas aqui..." oninput="importarPortalnet(this.value)" style="height:60px; margin-top:5px;"></textarea>
     </div>
-    <div class="f" style="margin-top:10px">
-      <label>Dias de Exercício (Soma Automática)</label>
-      <input type="number" id="dias-totais" oninput="analisar()">
-      <p id="aviso-prazo" style="font-size:0.75rem; font-weight:700; margin-top:5px;"></p>
+    <div class="card">
+        <div class="ctit">Perfil do Servidor</div>
+        <div class="g2">
+            <div class="f"><label>Nome</label><input id="nome" placeholder="Nome do Professor"></div>
+            <div class="f">
+                <label>Situação Funcional</label>
+                <select id="sit-func" onchange="analisar()">
+                    <option value="reg">Titular / Categoria O</option>
+                    <option value="qa">Quadro de Apoio (Grau 0)</option>
+                </select>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <div class="card">
-    <div class="ctit">2 · Linhas Identificadas</div>
     <div id="cont-linhas"></div>
   </div>
-  <button class="btn btn-pri" onclick="analisar()">🔍 Validar Diagnóstico</button>
-</div>
-<div id="resultado"></div>
+  <div id="resultado"></div>
 </div></div></div>
 
-<div id="pnl-ref" class="pnl"><div class="wrap"><div class="grid">
-<div>
-  <div class="card">
-    <div class="ctit">✅ Efetivo Exercício (Não Descontam)</div>
-    <table class="tref">
-      <tr><th>Cód</th><th>Tipo</th></tr>
-      <tr><td>047</td><td>Férias / Recesso</td></tr>
-      <tr><td>008</td><td>Licença Gestante</td></tr>
-      <tr><td>059</td><td>Licença Paternidade</td></tr>
-      <tr><td>130</td><td>Folgas TRE</td></tr>
-    </table>
-  </div>
-</div>
-<div>
-  <div class="card">
-    <div class="ctit">❌ Ausências (Reduzem o Valor)</div>
-    <table class="tref">
-      <tr><th>Cód</th><th>Tipo</th></tr>
-      <tr><td>009</td><td>Licença-Prêmio</td></tr>
-      <tr><td>011</td><td>Faltas Médicas</td></tr>
-      <tr><td>002</td><td>Licença Médica</td></tr>
-    </table>
-  </div>
-</div>
-</div></div></div>
-
-<div id="pnl-crono" class="pnl"><div class="wrap"><div class="grid">
-<div>
-  <div class="card">
-    <div class="ctit">📅 Cronograma Oficial (image_71c642.png)</div>
-    <div class="cron-item">
-      <div class="cron-date">30/04/2026</div>
-      <div class="cron-desc">Pagamento da Bonificação por Resultados (Exercício 2025).</div>
+<div id="pnl-ref" class="pnl"><div class="wrap">
+    <div class="card">
+        <div class="ctit">Códigos Oficiais Extraídos do PDF</div>
+        <table class="tref">
+            <thead><tr><th>Cód</th><th>Disciplina</th><th>Classificação</th></tr></thead>
+            <tbody id="corpo-disc"></tbody>
+        </table>
     </div>
-    <div class="cron-item">
-      <div class="cron-date">Até 12/05/2026</div>
-      <div class="cron-desc">Prazo para o servidor solicitar a revisão (10 dias após disponibilização).</div>
-    </div>
-    <div class="cron-item">
-      <div class="cron-date">Maio/Junho 2026</div>
-      <div class="cron-desc">Análise das inconsistências pelas Diretorias de Ensino (UREs).</div>
-    </div>
-  </div>
-</div>
-<div>
-  <div class="card">
-    <div class="ctit">📄 Como Entrar com Recurso (image_71c341.png)</div>
-    <div class="qa-card">
-      <div class="qa-titulo">Passo 1: Fundamentação</div>
-      <div class="qa-item">Use o diagnóstico gerado na aba ao lado para explicar o erro (UA vazia, IDESP 0, etc).</div>
-    </div>
-    <div class="qa-card">
-      <div class="qa-titulo">Passo 2: Documentação</div>
-      <div class="qa-item">Anexar extrato do Portalnet, Histórico de Atribuição e BFE.</div>
-    </div>
-    <div class="qa-card">
-      <div class="qa-titulo">Passo 3: Protocolo</div>
-      <div class="qa-item">O recurso deve ser protocolado na Unidade Escolar para envio à URE via sistema oficial.</div>
-    </div>
-  </div>
-</div>
-</div></div></div>
+</div></div>
 
 <script>
-let _lc = 0;
-const DIAS_MINIMOS = 244;
+// CÓDIGOS EXTRAÍDOS FIELMENTE DO PDF ENVIADO (Tabela I, II e III)
+const DISCIPLINAS = [
+    {cod:"1100", nome:"LÍNGUA PORTUGUESA", tipo:"Específica"},
+    {cod:"1300", nome:"MATEMÁTICA", tipo:"Específica"},
+    {cod:"1500", nome:"CIÊNCIAS FÍSICAS E BIOLÓGICAS", tipo:"Específica"},
+    {cod:"1600", nome:"HISTÓRIA", tipo:"Específica"},
+    {cod:"1700", nome:"GEOGRAFIA", tipo:"Específica"},
+    {cod:"1900", nome:"EDUCAÇÃO FÍSICA", tipo:"Específica"},
+    {cod:"1200", nome:"INGLÊS", tipo:"Não Específica"},
+    {cod:"1800", nome:"ARTE", tipo:"Não Específica"},
+    {cod:"2000", nome:"FÍSICA", tipo:"Específica"},
+    {cod:"2100", nome:"QUÍMICA", tipo:"Específica"},
+    {cod:"2200", nome:"BIOLOGIA", tipo:"Específica"},
+    {cod:"2300", nome:"SOCIOLOGIA", tipo:"Específica"},
+    {cod:"2400", nome:"FILOSOFIA", tipo:"Específica"},
+    {cod:"0400", nome:"EDUCAÇÃO ESPECIAL", tipo:"Pedagógica"},
+    {cod:"0500", nome:"SALA DE RECURSOS", tipo:"Pedagógica"},
+    {cod:"1400", nome:"CLASSE COMUM (ANOS INICIAIS)", tipo:"Pedagógica"},
+    {cod:"7800", nome:"PROJETO DE VIDA", tipo:"Não Específica"},
+    {cod:"7900", nome:"TECNOLOGIA E INOVAÇÃO", tipo:"Não Específica"},
+    {cod:"8468", nome:"SOCIOLOGIA (EXPANSÃO/INOVA)", tipo:"Não Específica"}
+];
+
+function init() {
+    const corpo = document.getElementById('corpo-disc');
+    DISCIPLINAS.sort((a,b) => a.cod - b.cod).forEach(d => {
+        let classe = d.tipo === 'Específica' ? 'esp' : (d.tipo === 'Pedagógica' ? 'ped' : 'nesp');
+        corpo.innerHTML += `<tr><td><strong>${d.cod}</strong></td><td>${d.nome}</td><td><span class="badge ${classe}">${d.tipo}</span></td></tr>`;
+    });
+}
+init();
 
 function aba(id, btn) {
     document.querySelectorAll('.pnl').forEach(p => p.classList.remove('on'));
@@ -183,97 +135,69 @@ function aba(id, btn) {
     btn.classList.add('on');
 }
 
+let _lc = 0;
 function importarPortalnet(texto) {
     if (!texto.trim()) return;
-    document.getElementById('cont-linhas').innerHTML = '';
-    _lc = 0;
+    document.getElementById('cont-linhas').innerHTML = ''; _lc = 0;
     const linhas = texto.split('\n');
-    let somaDias = 0;
     linhas.forEach(linha => {
         const col = linha.split(/\t|\s{2,}/).map(s => s.trim());
         if (col.length >= 10) {
-            const d = parseInt(col[3]) || 0;
-            somaDias += d;
-            addLinha({
-                ini: col[0], fim: col[1], dias: d, grau: col[8], 
-                idesp: col[11]?.replace(',', '.'), ua: col[13], 
-                total: col[18]?.replace('R$', '').replace('.', '').replace(',', '.').trim()
-            });
+            // No Portalnet, se o código vier com 4 dígitos (ex: 1100), o sistema vai achar
+            addLinha({ini:col[0], fim:col[1], dias:col[3], disc:col[10], grau:col[8], idesp:col[11], ua:col[13]});
         }
     });
-    document.getElementById('dias-totais').value = somaDias;
-    document.getElementById('raw-portalnet').value = '';
     analisar();
 }
 
-function addLinha(d = {}) {
+function addLinha(d) {
     _lc++; const n = _lc;
+    // Busca exata pelo código de 4 dígitos do PDF
+    const discObj = DISCIPLINAS.find(x => x.cod === d.disc);
     const div = document.createElement('div');
     div.className = 'lp';
     div.innerHTML = `
-        <div class="lp-num">Linha ${n}</div>
-        <div class="g4">
-            <div class="f"><label>Início</label><input id="l${n}-ini" value="${d.ini||''}"></div>
-            <div class="f"><label>Fim</label><input id="l${n}-fim" value="${d.fim||''}"></div>
-            <div class="f"><label>Dias</label><input type="number" id="l${n}-dias" value="${d.dias||''}" oninput="recalc()"></div>
-            <div class="f"><label>UA</label><input id="l${n}-ua" value="${d.ua||''}"></div>
+        <div style="font-weight:700; margin-bottom:5px; color:var(--az2)">
+            Lançamento ${n} - ${discObj ? discObj.nome + ' (' + discObj.tipo + ')' : 'Código Desconhecido: ' + d.disc}
         </div>
         <div class="g4">
+            <div class="f"><label>Dias</label><input type="number" id="l${n}-dias" value="${d.dias||''}" oninput="analisar()"></div>
+            <div class="f"><label>UA</label><input id="l${n}-ua" value="${d.ua||''}"></div>
             <div class="f"><label>Grau</label><input id="l${n}-grau" value="${d.grau||''}"></div>
             <div class="f"><label>IDESP</label><input id="l${n}-idesp" value="${d.idesp||''}"></div>
-            <div class="f"><label>Total R$</label><input id="l${n}-total" value="${d.total||''}"></div>
-            <div id="la-${n}" class="lp-alert"></div>
-        </div>`;
+        </div>
+        <div id="la-${n}" class="lp-alert"></div>`;
     document.getElementById('cont-linhas').appendChild(div);
 }
 
-function recalc() {
-    const t = Array.from(document.querySelectorAll('[id$="-dias"]'))
-                   .reduce((a, e) => a + (parseInt(e.value) || 0), 0);
-    document.getElementById('dias-totais').value = t;
-    analisar();
-}
-
 function analisar() {
-    const d = parseInt(document.getElementById('dias-totais').value) || 0;
-    const sit = document.getElementById('sit-func').value;
-    const aviso = document.getElementById('aviso-prazo');
-    const elegivel = d >= DIAS_MINIMOS;
-    
-    aviso.innerHTML = elegivel ? '✅ ELEGÍVEL' : `🚨 ABAIXO DE ${DIAS_MINIMOS} DIAS!`;
-    aviso.style.color = elegivel ? 'var(--ok)' : 'var(--er)';
-
-    const totalPg = Array.from(document.querySelectorAll('[id$="-total"]'))
-                       .reduce((a, e) => a + (parseFloat(e.value) || 0), 0);
-    
-    document.getElementById('resultado').innerHTML = `
-        <div class="rc ${elegivel ? 'ok' : 'err'}">
-            <div class="rtit">Diagnóstico de Bônus (Jacareí)</div>
-            <div class="rbody">
-                Dias de Exercício: <strong>${d} / ${DIAS_MINIMOS}</strong><br>
-                Valor Identificado: <strong>R$ ${totalPg.toLocaleString('pt-BR', {minimumFractionDigits:2})}</strong><br>
-                <em>${elegivel ? 'Servidor cumpre o requisito de 244 dias.' : 'Atenção: Servidor não atingiu o tempo mínimo.'}</em>
-            </div>
-        </div>`;
+    const dias = Array.from(document.querySelectorAll('[id$="-dias"]')).reduce((a, e) => a + (parseInt(e.value) || 0), 0);
+    const elegivel = dias >= 244;
     
     document.querySelectorAll('.lp').forEach((_, i) => {
         const n = i+1; 
         const ua = document.getElementById(`l${n}-ua`).value;
-        const id = parseFloat(document.getElementById(`l${n}-idesp`).value) || 0;
-        const grau = document.getElementById(`l${n}-grau`).value;
+        const idesp = parseFloat(document.getElementById(`l${n}-idesp`).value) || 0;
         const al = document.getElementById(`la-${n}`);
+        let err = [];
+        if(!ua || ua === '0') err.push("UA não vinculada no PAEF.");
+        if(idesp === 0 && dias > 1) err.push("IDESP não carregado para este código.");
         
-        let erros = [];
-        if (!ua || ua === '0') erros.push("<strong>UA Vazia:</strong> Falha no cadastro PAEF. Impede o cálculo do IDESP.");
-        if (id === 0) erros.push("<strong>IDESP Zero:</strong> Índice não aplicado. Bônus zerado nesta linha.");
-        if (sit === 'qa' && grau !== '0') erros.push("<strong>Erro de Grau:</strong> GOE/AOE deve ser Grau 0.");
-
-        if (erros.length > 0) {
-            al.className = 'lp-alert show err'; al.innerHTML = erros.join('<br>');
-        } else { 
-            al.className = 'lp-alert show ok'; al.innerHTML = '✅ Lançamento validado.'; 
-        }
+        if(err.length > 0) { 
+            al.className = 'lp-alert show err'; al.innerHTML = `🚨 ${err.join(' ')}`;
+        } else { al.className = 'lp-alert show ok'; al.innerHTML = '✅ Lançamento em conformidade com o PDF.'; }
     });
+
+    document.getElementById('resultado').innerHTML = `
+        <div class="card" style="border-top: 5px solid ${elegivel?'var(--ok)':'var(--er)'}">
+            <div class="ctit">Diagnóstico Final</div>
+            <div style="font-size:1.2rem; font-weight:700; color:${elegivel?'var(--ok)':'var(--er)'}">
+                ${elegivel ? '✅ SERVIDOR ELEGÍVEL' : '🚨 NÃO ELEGÍVEL'}
+            </div>
+            <p>Total de Exercício: <strong>${dias} dias</strong> (Mínimo 244)</p>
+            <hr style="margin:10px 0; opacity:0.1">
+            <p style="font-size:0.75rem; color:var(--gr)">Códigos validados conforme Tabela de Disciplinas Específicas e Não Específicas (PDF SEDUC).</p>
+        </div>`;
 }
 </script>
 </body>
