@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bônus 2025 – Diagnóstico Avançado Jacareí</title>
+<title>Bônus 2025 – Gestão Multi-Escola (Jacareí)</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -17,212 +17,174 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:var(--ft);background:var(--bg);color:#1e2836;font-size:13px;line-height:1.6;}
-header{background:linear-gradient(135deg,var(--az),var(--az2));color:#fff;padding:1.2rem 1.75rem;display:flex;align-items:center;gap:1rem;}
-.hico{width:46px;height:46px;background:rgba(255,255,255,.18);border-radius:12px;display:grid;place-items:center;font-size:22px;}
-header h1{font-family:var(--fh);font-size:1.05rem;font-weight:700;}
-nav{background:var(--az);display:flex;padding:0 1.75rem;gap:2px;}
-.tab{padding:.55rem 1.1rem;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.5);background:none;border:none;cursor:pointer;border-bottom:3px solid transparent;transition:.15s;}
-.tab.on{color:#fff;border-bottom-color:#60A5FA;}
+header{background:linear-gradient(135deg,var(--az),var(--az2));color:#fff;padding:1.2rem 1.75rem;}
+header h1{font-family:var(--fh);font-size:1.1rem;margin-bottom:4px;}
 .wrap{max-width:1200px;margin:0 auto;padding:1rem;}
-.pnl{display:none;}.pnl.on{display:block;}
-.grid{display:grid;grid-template-columns:560px 1fr;gap:1.2rem;}
+.grid{display:grid;grid-template-columns:1fr 400px;gap:1.5rem;}
 @media(max-width:960px){.grid{grid-template-columns:1fr;}}
-.card{background:var(--wh);border:1px solid var(--bd);border-radius:var(--r);padding:1.15rem;box-shadow:var(--sh);margin-bottom:.9rem;}
-.ctit{font-family:var(--fh);font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--az2);margin-bottom:.9rem;display:flex;align-items:center;gap:6px;}
-.ctit::before{content:'';width:3px;height:13px;background:var(--az2);border-radius:2px;}
-label{display:block;font-size:.74rem;font-weight:600;color:#374151;margin-bottom:3px;}
-input,select,textarea{width:100%;padding:8px 10px;font-size:0.85rem;border:1.5px solid var(--bd);border-radius:7px;background:var(--wh);}
-.lp{background:#F8FAFD;border:1.5px solid var(--bd);border-radius:8px;padding:0.9rem;margin-bottom:0.65rem;}
-.lp-alert{font-size:0.72rem;margin-top:0.5rem;padding:0.6rem;border-radius:6px;display:none;line-height:1.5;}
-.lp-alert.show{display:block;}
-.lp-alert.err{background:var(--er-bg);color:var(--er);border:1px solid var(--er-bd);}
-.lp-alert.ok{background:var(--ok-bg);color:var(--ok);border:1px solid var(--ok-bd);}
-.tref{width:100%;border-collapse:collapse;font-size:0.75rem;}
-.tref th{background:var(--az2);color:#fff;padding:8px;text-align:left;}
-.tref td{padding:7px;border-bottom:1px solid #F3F4F6;}
-.paste-box{background:var(--az-bg);border:2px dashed var(--az3);padding:1rem;margin-bottom:1rem;border-radius:var(--r);}
-.btn{padding:10px 16px;font-family:var(--fh);font-size:.85rem;font-weight:700;border:none;border-radius:var(--r);cursor:pointer;transition:.15s;width:100%;}
-.btn-pri{background:var(--az2);color:#fff;}
+
+/* Cards e Seções */
+.card{background:var(--wh);border:1px solid var(--bd);border-radius:var(--r);padding:1.15rem;box-shadow:var(--sh);margin-bottom:1rem;}
+.ctit{font-family:var(--fh);font-size:.7rem;font-weight:700;text-transform:uppercase;color:var(--az2);margin-bottom:1rem;display:flex;align-items:center;gap:6px;}
+.ua-card{border-left:5px solid var(--az3);background:#fcfdff;margin-bottom:1.5rem;padding:1rem;border-radius:8px;border:1px solid var(--bd);border-left-width:6px;}
+
+/* Inputs */
+label{display:block;font-size:.75rem;font-weight:600;margin-bottom:4px;}
+textarea, input, select {width:100%;padding:10px;border:1.5px solid var(--bd);border-radius:8px;font-family:inherit;}
+textarea{height:80px;background:var(--az-bg);border:2px dashed var(--az3);}
+
+/* Botões */
+.btn-recalc{background:var(--az2);color:#fff;border:none;padding:12px;border-radius:8px;font-weight:700;cursor:pointer;width:100%;margin-top:10px;transition:0.2s;}
+.btn-recalc:hover{background:var(--az3);transform:translateY(-2px);}
+
+/* Alertas */
+.badge-escola{background:var(--az);color:#fff;padding:4px 10px;border-radius:20px;font-size:0.7rem;margin-bottom:10px;display:inline-block;}
+.err-box{background:var(--er-bg);color:var(--er);padding:10px;border-radius:6px;font-size:0.75rem;margin-top:10px;border:1px solid var(--er-bd);}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="hico">📐</div>
-  <div>
-    <h1>Bônus 2025 – Diagnóstico Final (GOE)</h1>
-    <p>Cálculo de Dias Reais • Tabela PDF Oficial • Jacareí/SP</p>
-  </div>
+  <h1>Bônus 2025 – Diagnóstico Multi-Escolas</h1>
+  <p>Fiel aos Códigos Oficiais e Consolidação de Dias Reais</p>
 </header>
 
-<nav>
-  <button class="tab on" onclick="aba('calc',this)">🧮 Diagnóstico Automático</button>
-  <button class="tab" onclick="aba('ref',this)">📖 Disciplinas & Regras</button>
-</nav>
+<div class="wrap">
+  <div class="grid">
+    <div>
+        <div class="card">
+            <div class="ctit">Importação de Dados</div>
+            <label>Cole aqui o conteúdo do Portalnet (Linhas das Escolas)</label>
+            <textarea id="raw-portalnet" placeholder="Copie e cole as linhas aqui..." oninput="processarDados()"></textarea>
+            <button class="btn-recalc" onclick="processarDados()">🔄 RECALCULAR TUDO</button>
+        </div>
 
-<div id="pnl-calc" class="pnl on"><div class="wrap"><div class="grid">
-  <div>
-    <div class="card paste-box">
-        <div class="ctit">Importar do Portalnet</div>
-        <textarea id="raw-portalnet" placeholder="Cole as linhas da consulta por RG aqui..." oninput="importarPortalnet(this.value)" style="height:60px;"></textarea>
-    </div>
-    <div class="card">
-        <div class="ctit">Perfil do Servidor</div>
-        <div class="g2">
-            <div class="f"><label>Nome</label><input id="nome" placeholder="Nome do Professor"></div>
-            <div class="f">
-                <label>Situação Funcional</label>
-                <select id="sit-func" onchange="analisar()">
-                    <option value="reg">Titular / Categoria O</option>
-                    <option value="art22">Artigo 22 (Afastamento)</option>
-                    <option value="qa">Quadro de Apoio (Grau 0)</option>
-                </select>
+        <div id="container-escolas">
             </div>
+    </div>
+
+    <div id="resultado-geral">
+        <div class="card" style="position: sticky; top: 1rem;">
+            <div class="ctit">Resumo Consolidado</div>
+            <div id="res-total">Aguardando dados...</div>
         </div>
     </div>
-    <div id="cont-linhas"></div>
   </div>
-  <div id="resultado"></div>
-</div></div></div>
-
-<div id="pnl-ref" class="pnl"><div class="wrap"><div class="grid">
-    <div class="card">
-        <div class="ctit">Tabela de Disciplinas (PDF Oficial)</div>
-        <table class="tref">
-            <thead><tr><th>Cód</th><th>Disciplina</th><th>Tipo</th></tr></thead>
-            <tbody>
-                <tr><td>1100</td><td>PORTUGUÊS</td><td>Específica</td></tr>
-                <tr><td>1300</td><td>MATEMÁTICA</td><td>Específica</td></tr>
-                <tr><td>1600</td><td>HISTÓRIA</td><td>Específica</td></tr>
-                <tr><td>1700</td><td>GEOGRAFIA</td><td>Específica</td></tr>
-                <tr><td>8468</td><td>SOCIOLOGIA (EXP/INOVA)</td><td>Não Específica</td></tr>
-                <tr><td>0500</td><td>SALA DE RECURSOS</td><td>Pedagógica</td></tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="card">
-        <div class="ctit">Regras de Elegibilidade</div>
-        <p><strong>Corte: 244 dias reais</strong> (2/3 do ano em exercício).</p>
-        <p style="margin-top:10px; font-size:0.75rem;">Nota: Para professores mistos, o sistema conta os dias de calendário, ignorando sobreposições de disciplinas.</p>
-    </div>
-</div></div></div>
+</div>
 
 <script>
-let _lc = 0;
-const DIAS_MINIMOS = 244;
-
-function aba(id, btn) {
-    document.querySelectorAll('.pnl').forEach(p => p.classList.remove('on'));
-    document.querySelectorAll('.tab').forEach(b => b.classList.remove('on'));
-    document.getElementById('pnl-' + id).classList.add('on');
-    btn.classList.add('on');
-}
-
-function importarPortalnet(texto) {
-    if (!texto.trim()) return;
-    document.getElementById('cont-linhas').innerHTML = ''; _lc = 0;
-    const linhas = texto.split('\n');
-    linhas.forEach(linha => {
-        const col = linha.split(/\t|\s{2,}/).map(s => s.trim());
-        if (col.length >= 10) {
-            addLinha({ini:col[0], fim:col[1], dias:col[3], disc:col[10], grau:col[8], idesp:col[11], ua:col[13], total:col[18]});
-        }
-    });
-    analisar();
-}
-
-function addLinha(d) {
-    _lc++; const n = _lc;
-    const div = document.createElement('div');
-    div.className = 'lp';
-    div.innerHTML = `
-        <div style="font-weight:700; margin-bottom:5px; color:var(--az2)">Lançamento ${n} - Período: ${d.ini} a ${d.fim}</div>
-        <div class="g4">
-            <div class="f"><label>Início</label><input class="l-ini" id="l${n}-ini" value="${d.ini||''}" oninput="analisar()"></div>
-            <div class="f"><label>Fim</label><input class="l-fim" id="l${n}-fim" value="${d.fim||''}" oninput="analisar()"></div>
-            <div class="f"><label>UA</label><input id="l${n}-ua" value="${d.ua||''}"></div>
-            <div class="f"><label>IDESP</label><input id="l${n}-idesp" value="${d.idesp||''}"></div>
-        </div>
-        <div id="la-${n}" class="lp-alert"></div>`;
-    document.getElementById('cont-linhas').appendChild(div);
-}
-
-// FUNÇÃO MESTRE: CONTA DIAS REAIS SEM DUPLICIDADE
-function contarDiasReais() {
-    let intervalos = [];
-    const inis = document.querySelectorAll('.l-ini');
-    const fims = document.querySelectorAll('.l-fim');
-    
-    for(let i=0; i<inis.length; i++) {
-        let d1 = parseData(inis[i].value);
-        let d2 = parseData(fims[i].value);
-        if(d1 && d2) intervalos.push({start: d1, end: d2});
-    }
-    
-    if(intervalos.length === 0) return 0;
-
-    // Ordena por início
-    intervalos.sort((a,b) => a.start - b.start);
-
-    // Mescla intervalos sobrepostos
-    let merged = [intervalos[0]];
-    for(let i=1; i<intervalos.length; i++) {
-        let last = merged[merged.length-1];
-        let curr = intervalos[i];
-        if(curr.start <= last.end) {
-            last.end = new Date(Math.max(last.end, curr.end));
-        } else {
-            merged.push(curr);
-        }
-    }
-
-    // Soma os dias reais
-    return merged.reduce((acc, range) => {
-        return acc + Math.round((range.end - range.start) / (1000*60*60*24)) + 1;
-    }, 0);
-}
+// Códigos oficiais baseados no seu PDF/DOC
+const DISCIPLINAS = {
+    "1100": "LÍNGUA PORTUGUESA", "1300": "MATEMÁTICA", "1600": "HISTÓRIA", "1700": "GEOGRAFIA",
+    "1900": "ED. FÍSICA", "1200": "INGLÊS", "1800": "ARTE", "8468": "SOCIOLOGIA (INOVA)",
+    "0500": "SALA DE RECURSOS", "7800": "PROJETO DE VIDA", "7900": "TECNOLOGIA"
+};
 
 function parseData(str) {
     const p = str.split('/');
-    if(p.length !== 3) return null;
-    return new Date(p[2], p[1]-1, p[0]);
+    return p.length === 3 ? new Date(p[2], p[1]-1, p[0]) : null;
 }
 
-function analisar() {
-    const diasReais = contarDiasReais();
-    const elegivel = diasReais >= DIAS_MINIMOS;
-    const nomeS = document.getElementById('nome').value || '[NOME]';
-    
-    let htmlResultado = `
-        <div class="card" style="border-top: 5px solid ${elegivel?'var(--ok)':'var(--er)'}">
-            <div class="ctit">Diagnóstico de Elegibilidade</div>
-            <div style="font-size:1.2rem; font-weight:700; color:${elegivel?'var(--ok)':'var(--er)'}">
-                ${elegivel ? '✅ SERVIDOR ELEGÍVEL' : '🚨 NÃO ELEGÍVEL'}
-            </div>
-            <p>Dias Reais no Calendário: <strong>${diasReais} dias</strong></p>
-            <p style="font-size:0.75rem; color:var(--gr)">Corte: 244 dias. Períodos sobrepostos foram consolidados automaticamente.</p>
-            <hr style="margin:10px 0; opacity:0.1">
-            <button class="btn btn-pri" onclick="window.print()">🖨️ Imprimir Laudo Técnico</button>
-        </div>`;
+function processarDados() {
+    const texto = document.getElementById('raw-portalnet').value;
+    if (!texto.trim()) return;
 
-    document.getElementById('resultado').innerHTML = htmlResultado;
+    const linhas = texto.split('\n');
+    const uas = {}; // Agrupador por UA
 
-    // Alertas por linha
-    document.querySelectorAll('.lp').forEach((_, i) => {
-        const n = i+1;
-        const ua = document.getElementById(`l${n}-ua`).value;
-        const id = parseFloat(document.getElementById(`l${n}-idesp`).value) || 0;
-        const al = document.getElementById(`la-${n}`);
-        let err = [];
-        if(!ua || ua === '0') err.push("<strong>UA Vazia:</strong> Falha de vinculação no PAEF. O sistema não localiza o índice da unidade.");
-        if(id === 0) err.push("<strong>IDESP Zero:</strong> Nenhum índice de metas foi aplicado a este período.");
-        
-        if(err.length > 0) {
-            al.className = 'lp-alert show err'; al.innerHTML = err.join('<br>');
-        } else {
-            al.className = 'lp-alert show ok'; al.innerHTML = '✅ Lançamento regular.';
+    linhas.forEach(linha => {
+        const col = linha.split(/\t|\s{2,}/).map(s => s.trim());
+        if (col.length >= 10) {
+            const ua = col[13] || "UA NÃO INFORMADA";
+            if (!uas[ua]) uas[ua] = [];
+            uas[ua].push({
+                ini: col[0], fim: col[1], dias: parseInt(col[3]) || 0,
+                disc: col[10], idesp: parseFloat(col[11]) || 0, grau: col[8]
+            });
         }
     });
+
+    renderizarEscolas(uas);
+}
+
+function renderizarEscolas(uas) {
+    const container = document.getElementById('container-escolas');
+    container.innerHTML = "";
+    let totalDiasGeral = 0;
+    let periodosGeral = [];
+
+    Object.keys(uas).forEach(uaCodigo => {
+        const lancamentos = uas[uaCodigo];
+        let somaDiasEscola = 0;
+        let errosUA = [];
+
+        const uaDiv = document.createElement('div');
+        uaDiv.className = 'ua-card';
+        
+        let htmlLancamentos = "";
+        lancamentos.forEach(l => {
+            somaDiasEscola += l.dias;
+            totalDiasGeral += l.dias; // Note: Isso ainda é a soma bruta para exibição
+            periodosGeral.push({start: parseData(l.ini), end: parseData(l.fim)});
+
+            if (l.idesp === 0) errosUA.push(`Código ${l.disc}: IDESP zerado.`);
+            
+            htmlLancamentos += `
+                <div style="font-size:0.8rem; border-bottom:1px solid #eee; padding:5px 0;">
+                    <strong>${l.ini} - ${l.fim}</strong> | 
+                    Disc: ${DISCIPLINAS[l.disc] || l.disc} | 
+                    Dias: ${l.dias} | IDESP: ${l.idesp}
+                </div>`;
+        });
+
+        uaDiv.innerHTML = `
+            <div class="badge-escola">ESCOLA / UA: ${uaCodigo}</div>
+            <div style="margin-bottom:10px;">${htmlLancamentos}</div>
+            <div style="font-weight:700; color:var(--az2)">Total nesta UA: ${somaDiasEscola} dias</div>
+            ${errosUA.length > 0 ? `<div class="err-box">⚠️ ${errosUA.join('<br>')}</div>` : ''}
+            <button class="btn-recalc" style="padding:5px; font-size:0.7rem; background:var(--gr)" onclick="processarDados()">Recalcular UA ${uaCodigo}</button>
+        `;
+        container.appendChild(uaDiv);
+    });
+
+    calcularFinal(periodosGeral);
+}
+
+// Função para evitar a duplicidade que você mencionou
+function calcularFinal(intervalos) {
+    if (intervalos.length === 0) return;
+    
+    // Ordenar e Mesclar para não passar de 365 dias
+    intervalos.sort((a,b) => a.start - b.start);
+    let merged = [];
+    if(intervalos[0].start) {
+        let current = intervalos[0];
+        for(let i=1; i<intervalos.length; i++){
+            if(intervalos[i].start <= current.end){
+                current.end = new Date(Math.max(current.end, intervalos[i].end));
+            } else {
+                merged.push(current);
+                current = intervalos[i];
+            }
+        }
+        merged.push(current);
+    }
+
+    const diasReais = merged.reduce((acc, range) => {
+        return acc + Math.round((range.end - range.start) / (1000*60*60*24)) + 1;
+    }, 0);
+
+    const elegivel = diasReais >= 244;
+
+    document.getElementById('res-total').innerHTML = `
+        <div style="font-size:1.5rem; font-weight:800; color:${elegivel?'var(--ok)':'var(--er)'}">
+            ${diasReais} DIAS REAIS
+        </div>
+        <p>${elegivel ? '✅ ELEGÍVEL AO BÔNUS' : '🚨 NÃO ATINGIU 244 DIAS'}</p>
+        <div style="margin-top:10px; font-size:0.7rem; color:var(--gr)">
+            *O cálculo consolidou períodos de múltiplas escolas para evitar contagem duplicada.
+        </div>
+    `;
 }
 </script>
 </body>
