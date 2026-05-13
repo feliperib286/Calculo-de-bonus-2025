@@ -3,23 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bônus 2025 – Diagnóstico Híbrido (GOE)</title>
+<title>Bônus 2025 – Auditoria, Recurso & Explicação</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --az:#0D2B55;--az2:#1A4A8A;--az3:#3B82F6;--az-bg:#EBF2FB;
   --ok:#14532D;--ok-bg:#DCFCE7;--ok-bd:#86EFAC;
-  --wa:#92400E;--wa-bg:#FEF3C7;--wa-bd:#FCD34D;
   --er:#7F1D1D;--er-bg:#FEE2E2;--er-bd:#FCA5A5;
   --gr:#6B7280;--bd:#D1D5DB;--bg:#F1F5F9;--wh:#fff;
   --r:10px;--sh:0 2px 10px rgba(0,0,0,.08);
   --ft:'Inter',sans-serif;--fh:'Sora',sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:var(--ft);background:var(--bg);color:#1e2836;font-size:14px;line-height:1.6;}
+body{font-family:var(--ft);background:var(--bg);color:#1e2836;font-size:13px;line-height:1.6;}
 header{background:linear-gradient(135deg,var(--az),var(--az2));color:#fff;padding:1.2rem 1.75rem;display:flex;align-items:center;gap:1rem;}
 .hico{width:46px;height:46px;background:rgba(255,255,255,.18);border-radius:12px;display:grid;place-items:center;font-size:22px;}
-header h1{font-family:var(--fh);font-size:1.05rem;font-weight:700;}
+header h1{font-family:var(--fh);font-size:1.1rem;font-weight:700;}
 nav{background:var(--az);display:flex;padding:0 1.75rem;gap:2px;}
 .tab{padding:.55rem 1.1rem;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.5);background:none;border:none;cursor:pointer;border-bottom:3px solid transparent;transition:.15s;}
 .tab.on{color:#fff;border-bottom-color:#60A5FA;}
@@ -28,92 +27,107 @@ nav{background:var(--az);display:flex;padding:0 1.75rem;gap:2px;}
 .grid{display:grid;grid-template-columns:560px 1fr;gap:1.2rem;}
 @media(max-width:960px){.grid{grid-template-columns:1fr;}}
 .card{background:var(--wh);border:1px solid var(--bd);border-radius:var(--r);padding:1.15rem;box-shadow:var(--sh);margin-bottom:.9rem;}
-.ctit{font-family:var(--fh);font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--az2);margin-bottom:.9rem;display:flex;align-items:center;gap:6px;}
+.ctit{font-family:var(--fh);font-size:.67rem;font-weight:700;text-transform:uppercase;color:var(--az2);margin-bottom:.9rem;display:flex;align-items:center;gap:6px;}
 .ctit::before{content:'';width:3px;height:13px;background:var(--az2);border-radius:2px;}
 label{display:block;font-size:.74rem;font-weight:600;color:#374151;margin-bottom:3px;}
-input,select,textarea{width:100%;padding:7px 10px;font-size:.83rem;border:1.5px solid var(--bd);border-radius:7px;background:var(--wh);color:#1e2836;}
-.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:.65rem;}
-.lp{background:#F8FAFD;border:1.5px solid var(--bd);border-radius:8px;padding:.9rem;margin-bottom:.65rem;position:relative;}
-.lp-alert{font-size:.71rem;margin-top:.5rem;padding:.45rem .7rem;border-radius:6px;display:none;line-height:1.4;}
-.lp-alert.show{display:block;}
-.lp-alert.err{background:var(--er-bg);color:var(--er);border:1px solid var(--er-bd);}
-.lp-alert.ok{background:var(--ok-bg);color:var(--ok);border:1px solid var(--ok-bd);}
+input,select,textarea{width:100%;padding:7px 10px;font-size:.83rem;border:1.5px solid var(--bd);border-radius:7px;background:var(--wh);}
+.lp{background:#F8FAFD;border:1.5px solid var(--bd);border-radius:8px;padding:.9rem;margin-bottom:.65rem;}
 .btn{padding:10px 16px;font-family:var(--fh);font-size:.85rem;font-weight:700;border:none;border-radius:var(--r);cursor:pointer;transition:.15s;width:100%;}
 .btn-pri{background:var(--az2);color:#fff;}
 .btn-sec{background:var(--gr);color:#fff;margin-top:10px;}
-.paste-box{background:var(--az-bg);border:2px dashed var(--az3);padding:1rem;margin-bottom:1rem;border-radius:var(--r);}
-.rc{border-radius:var(--r);padding:1.1rem;margin-bottom:.9rem;border:1.5px solid;}
-.rc.ok{background:var(--ok-bg);border-color:var(--ok-bd);}
-.rc.err{background:var(--er-bg);border-color:var(--er-bd);}
-.total-val{font-size:1.4rem;font-weight:800;color:var(--az2);}
+/* Tabela Excel */
+.excel-table{width:100%;border-collapse:collapse;margin-top:10px;background:white;font-size:11px;}
+.excel-table th{background:#f1f5f9;border:1px solid #cbd5e1;padding:8px;text-align:left;color:var(--az);}
+.excel-table td{border:1px solid #cbd5e1;padding:8px;}
+/* Explicação */
+.exp-box{background:var(--az-bg);border-radius:8px;padding:15px;margin-bottom:15px;border-left:4px solid var(--az3);}
+.exp-tit{font-weight:700;color:var(--az);margin-bottom:5px;display:block;}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="hico">📋</div>
+  <div class="hico">📄</div>
   <div>
-    <h1>Bônus 2025 – Diagnóstico Híbrido (GOE)</h1>
-    <p>Importação Portalnet + Entrada Manual de Dados</p>
+    <h1>Bônus 2025 – Gestão Completa (GOE Jacareí)</h1>
+    <p>Auditoria Híbrida • Tabela de Recurso • Explicação Técnica</p>
   </div>
 </header>
 
 <nav>
   <button class="tab on" onclick="aba('calc',this)">🧮 Auditoria</button>
-  <button class="tab" onclick="aba('ref',this)">📖 Referências</button>
+  <button class="tab" onclick="aba('excel',this)">📑 Tabela de Recurso</button>
+  <button class="tab" onclick="aba('exp',this)">💡 Explicação & Regras</button>
 </nav>
 
 <div id="pnl-calc" class="pnl on"><div class="wrap"><div class="grid">
-<div>
-  <div class="card paste-box">
-    <div class="ctit">🚀 Importar Automático</div>
-    <textarea id="raw-portalnet" placeholder="Cole as linhas do Portalnet aqui..." oninput="importarPortalnet(this.value)"></textarea>
-  </div>
-
-  <div class="card">
-    <div class="ctit">1 · Perfil do Servidor</div>
-    <div class="g2" style="display:grid; grid-template-columns: 1fr 1fr; gap:10px">
-      <div class="f"><label>Nome</label><input id="nome" placeholder="Ex: Felipe"></div>
-      <div class="f">
-        <label>Cargo/Situação</label>
-        <select id="sit-func" onchange="analisar()">
-          <option value="reg">Titular / Categoria O</option>
-          <option value="qa">Quadro de Apoio (QAE)</option>
-        </select>
-      </div>
+  <div>
+    <div class="card" style="background:var(--az-bg); border:2px dashed var(--az3);">
+      <div class="ctit">Importar Portalnet</div>
+      <textarea id="raw-portalnet" placeholder="Cole as linhas aqui..." oninput="importarPortalnet(this.value)"></textarea>
+    </div>
+    <div class="card">
+      <div class="ctit">Lançamentos Atualizáveis</div>
+      <div id="cont-linhas"></div>
+      <button class="btn btn-sec" onclick="addLinha()">➕ Adicionar Linha Manual</button>
     </div>
   </div>
-
-  <div class="card">
-    <div class="ctit">2 · Lançamentos (Automáticos ou Manuais)</div>
-    <div id="cont-linhas"></div>
-    <button class="btn btn-sec" onclick="addLinha()">➕ Adicionar Linha Manual</button>
+  <div>
+    <div class="card" style="position:sticky; top:1rem;">
+      <div class="ctit">Resumo do Diagnóstico</div>
+      <div id="res-valor" style="font-size:1.8rem; font-weight:800; color:var(--az2);">R$ 0,00</div>
+      <div id="res-dias" style="font-weight:700; margin-bottom:10px;">0 / 244 Dias</div>
+      <div id="res-alerta"></div>
+    </div>
   </div>
-</div>
-
-<div id="resultado-fixo">
-  <div class="card">
-    <div class="ctit">3 · Diagnóstico Final</div>
-    <div id="resultado"></div>
-    <button class="btn btn-pri" style="margin-top:15px" onclick="analisar()">🔍 Atualizar Cálculos</button>
-  </div>
-</div>
 </div></div></div>
 
-<div id="pnl-ref" class="pnl">
-    <div class="wrap">
-        <div class="card">
-            <div class="ctit">Regras de Validação</div>
-            <p><strong>Corte:</strong> 244 dias.</p>
-            <p><strong>QAE:</strong> Deve estar no Grau 0.</p>
-        </div>
+<div id="pnl-excel" class="pnl"><div class="wrap">
+  <div class="card">
+    <div class="ctit">Planilha de Conferência para Recurso</div>
+    <div style="overflow-x:auto;">
+      <table class="excel-table">
+        <thead>
+          <tr>
+            <th>UA</th><th>Período</th><th>Dias Calc.</th><th>Disciplina</th><th>IDESP</th><th>Subtotal R$</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-excel"></tbody>
+      </table>
     </div>
-</div>
+  </div>
+</div></div>
+
+<div id="pnl-exp" class="pnl"><div class="wrap">
+  <div class="card">
+    <div class="ctit">Guia de Orientação para o GOE</div>
+    
+    <div class="exp-box">
+      <span class="exp-tit">1. A Regra dos 244 Dias (Elegibilidade)</span>
+      O servidor deve possuir ao menos 2/3 de efetivo exercício no ano de 2025. Isso equivale a <strong>244 dias</strong>. Se o total na calculadora for menor, o bônus será indeferido automaticamente pelo sistema.
+    </div>
+
+    <div class="exp-box">
+      <span class="exp-tit">2. O Erro do Código 2800 (Carga Suplementar)</span>
+      O código <strong>2800</strong> identifica carga suplementar ou projetos. Muitas vezes, o sistema não associa o IDESP da escola a este código. Se você vir "IDESP 0.00" nesta linha, o recurso deve solicitar a "vinculação de índice à carga suplementar".
+    </div>
+
+    <div class="exp-box">
+      <span class="exp-tit">3. UA Vazia (Inconsistência de Cadastro)</span>
+      A UA (Unidade Administrativa) é o que "diz" ao sistema qual nota a escola tirou. Se a UA estiver em branco no Portalnet, o cálculo não tem base e resulta em zero. É necessário retificar o histórico no PAEF.
+    </div>
+
+    <div class="exp-box">
+      <span class="exp-tit">4. Base Legal para Citar</span>
+      • Lei Complementar nº 1.361/2021 (Institui a Bonificação)<br>
+      • Deliberação BR 4/2026 (Metas e Índices)<br>
+      • Tabela de Disciplinas Específicas (Resolução SEDUC)
+    </div>
+  </div>
+</div></div>
 
 <script>
 let _lc = 0;
-const DIAS_MINIMOS = 244;
-
 function aba(id, btn) {
     document.querySelectorAll('.pnl').forEach(p => p.classList.remove('on'));
     document.querySelectorAll('.tab').forEach(b => b.classList.remove('on'));
@@ -123,17 +137,16 @@ function aba(id, btn) {
 
 function importarPortalnet(texto) {
     if (!texto.trim()) return;
-    const linhas = texto.split('\n');
-    linhas.forEach(linha => {
-        const col = linha.split(/\t|\s{2,}/).map(s => s.trim());
-        if (col.length >= 10) {
-            addLinha({
-                ini: col[0], fim: col[1], dias: col[3], grau: col[8], 
-                idesp: col[11]?.replace(',', '.'), ua: col[13], 
-                total: col[18]?.replace('R$', '').replace('.', '').replace(',', '.').trim()
-            });
-        }
-    });
+    const regex = /(\d{2}\/\d{2}\/\d{4}.+?)(?=\d{2}\/\d{2}\/\d{4}|$)/gs;
+    const matches = texto.match(regex);
+    if (matches) {
+        matches.forEach(m => {
+            const c = m.split(/\t|\s{2,}/).filter(x => x.trim() !== "");
+            if (c.length >= 18) {
+                addLinha({ini:c[0], fim:c[1], dias:c[3], disc:c[10], idesp:c[12], ua:c[13], total:c[18]});
+            }
+        });
+    }
     document.getElementById('raw-portalnet').value = '';
     analisar();
 }
@@ -144,73 +157,40 @@ function addLinha(d = {}) {
     div.className = 'lp';
     div.id = `bloco-${n}`;
     div.innerHTML = `
-        <div class="lp-num" style="display:flex; justify-content:space-between">
-            <span>Lançamento ${n}</span>
-            <button onclick="removerLinha(${n})" style="border:none; background:none; color:var(--er); cursor:pointer; font-size:10px">Remover</button>
+        <div style="display:flex; justify-content:space-between; font-weight:700; font-size:11px;">
+            <span>LINHA ${n} - UA: <input class="l-ua" value="${d.ua||''}" style="width:60px; border:none; background:transparent;" oninput="analisar()"></span>
+            <button onclick="document.getElementById('bloco-${n}').remove(); analisar()" style="color:var(--er); border:none; background:none; cursor:pointer;">✖</button>
         </div>
-        <div class="g4">
-            <div class="f"><label>Início</label><input class="l-ini" value="${d.ini||''}" oninput="analisar()"></div>
-            <div class="f"><label>Fim</label><input class="l-fim" value="${d.fim||''}" oninput="analisar()"></div>
-            <div class="f"><label>Dias</label><input type="number" class="l-dias" value="${d.dias||''}" oninput="analisar()"></div>
-            <div class="f"><label>UA</label><input class="l-ua" value="${d.ua||''}" oninput="analisar()"></div>
-        </div>
-        <div class="g4">
-            <div class="f"><label>Grau</label><input class="l-grau" value="${d.grau||''}" oninput="analisar()"></div>
-            <div class="f"><label>IDESP</label><input class="l-idesp" value="${d.idesp||''}" oninput="analisar()"></div>
-            <div class="f"><label>Valor R$</label><input type="number" class="l-total" value="${d.total||''}" oninput="analisar()"></div>
-            <div id="la-${n}" class="lp-alert"></div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:8px; margin-top:5px;">
+            <div class="f"><label>Dias</label><input type="number" class="l-dias" value="${d.dias||'0'}" oninput="analisar()"></div>
+            <div class="f"><label>IDESP</label><input class="l-idesp" value="${d.idesp||'0.0000'}" oninput="analisar()"></div>
+            <div class="f"><label>Total R$</label><input class="l-total" value="${d.total||'0.00'}" oninput="analisar()"></div>
         </div>`;
     document.getElementById('cont-linhas').appendChild(div);
     analisar();
 }
 
-function removerLinha(n) {
-    document.getElementById(`bloco-${n}`).remove();
-    analisar();
-}
-
 function analisar() {
-    const listaDias = document.querySelectorAll('.l-dias');
-    const listaTotal = document.querySelectorAll('.l-total');
-    const sit = document.getElementById('sit-func').value;
-    
-    let somaDias = 0;
-    listaDias.forEach(i => somaDias += (parseInt(i.value) || 0));
+    let tV = 0; let tD = 0;
+    const linhas = document.querySelectorAll('.lp');
+    const corpo = document.getElementById('corpo-excel');
+    corpo.innerHTML = "";
 
-    let somaTotal = 0;
-    listaTotal.forEach(i => somaTotal += (parseFloat(i.value) || 0));
+    linhas.forEach(l => {
+        const d = parseInt(l.querySelector('.l-dias').value) || 0;
+        const v = parseFloat(l.querySelector('.l-total').value.replace(',','.')) || 0;
+        const id = l.querySelector('.l-idesp').value;
+        const ua = l.querySelector('.l-ua').value;
+        tV += v; tD += d;
 
-    const elegivel = somaDias >= DIAS_MINIMOS;
-    
-    document.getElementById('resultado').innerHTML = `
-        <div class="rc ${elegivel ? 'ok' : 'err'}">
-            <div class="total-val">R$ ${somaTotal.toLocaleString('pt-BR', {minimumFractionDigits:2})}</div>
-            <p><strong>Tempo:</strong> ${somaDias} / ${DIAS_MINIMOS} dias</p>
-            <p><strong>Status:</strong> ${elegivel ? 'ELEGÍVEL ✅' : 'ABAIXO DO PRAZO 🚨'}</p>
-        </div>`;
-
-    // Validação de alertas linha por linha
-    const blocos = document.querySelectorAll('.lp');
-    blocos.forEach((bloco, index) => {
-        const n = index + 1; // Para fins de ID
-        const ua = bloco.querySelector('.l-ua').value;
-        const idesp = parseFloat(bloco.querySelector('.l-idesp').value) || 0;
-        const grau = bloco.querySelector('.l-grau').value;
-        const alerta = bloco.querySelector('.lp-alert');
-        
-        let erros = [];
-        if (!ua || ua === '0') erros.push("UA Vazia");
-        if (idesp === 0 && somaDias > 0) erros.push("IDESP Zero");
-        if (sit === 'qa' && grau !== '0') erros.push("Grau QAE deve ser 0");
-
-        if (erros.length > 0) {
-            alerta.className = 'lp-alert show err';
-            alerta.innerHTML = `🚨 ${erros.join(' | ')}`;
-        } else {
-            alerta.className = 'lp-alert show ok';
-            alerta.innerHTML = '✅ Validado';
-        }
+        corpo.innerHTML += `<tr><td>${ua}</td><td>-</td><td>${d}</td><td>-</td><td>${id}</td><td>R$ ${v.toFixed(2)}</td></tr>`;
     });
+
+    document.getElementById('res-valor').innerText = tV.toLocaleString('pt-BR', {style:'currency', currency:'BRL'});
+    document.getElementById('res-dias').innerText = `${tD} / 244 Dias`;
+    document.getElementById('res-alerta').innerHTML = tD >= 244 ? 
+        '<div style="color:var(--ok); font-weight:700;">✅ Elegível</div>' : 
+        '<div style="color:var(--er); font-weight:700;">🚨 Não Elegível</div>';
 }
 </script>
 </body>
