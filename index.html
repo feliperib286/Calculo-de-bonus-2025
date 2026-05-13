@@ -1,245 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bônus 2025 – Sistema de Auditoria Especialista (GOE)</title>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --az:#0D2B55;--az2:#1A4A8A;--az3:#3B82F6;--az-bg:#EBF2FB;
-  --ok:#14532D;--ok-bg:#DCFCE7;--ok-bd:#86EFAC;
-  --wa:#92400E;--wa-bg:#FEF3C7;--wa-bd:#FCD34D;
-  --er:#7F1D1D;--er-bg:#FEE2E2;--er-bd:#FCA5A5;
-  --gr:#6B7280;--bd:#D1D5DB;--bg:#F1F5F9;--wh:#fff;
-  --r:10px;--sh:0 2px 10px rgba(0,0,0,.08);
-  --ft:'Inter',sans-serif;--fh:'Sora',sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:var(--ft);background:var(--bg);color:#1e2836;font-size:13px;line-height:1.6;}
-header{background:linear-gradient(135deg,var(--az),var(--az2));color:#fff;padding:1.2rem 1.75rem;display:flex;align-items:center;gap:1rem;}
-.hico{width:46px;height:46px;background:rgba(255,255,255,.18);border-radius:12px;display:grid;place-items:center;font-size:22px;}
-header h1{font-family:var(--fh);font-size:1.1rem;font-weight:700;}
-header p{font-size:.7rem;opacity:.8;}
-nav{background:var(--az);display:flex;padding:0 1.75rem;gap:2px;}
-.tab{padding:.55rem 1.1rem;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.5);background:none;border:none;cursor:pointer;border-bottom:3px solid transparent;transition:.15s;}
-.tab.on{color:#fff;border-bottom-color:#60A5FA;}
-.wrap{max-width:1200px;margin:0 auto;padding:1rem;}
-.pnl{display:none;}.pnl.on{display:block;}
-.grid{display:grid;grid-template-columns:1fr 420px;gap:1.2rem;}
-@media(max-width:1024px){.grid{grid-template-columns:1fr;}}
-.card{background:var(--wh);border:1px solid var(--bd);border-radius:var(--r);padding:1.15rem;box-shadow:var(--sh);margin-bottom:.9rem;}
-.ctit{font-family:var(--fh);font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--az2);margin-bottom:.9rem;display:flex;align-items:center;gap:6px;}
-.ctit::before{content:'';width:3px;height:13px;background:var(--az2);border-radius:2px;}
-label{display:block;font-size:.74rem;font-weight:600;color:#374151;margin-bottom:3px;}
-input,select,textarea{width:100%;padding:8px 10px;font-size:0.85rem;border:1.5px solid var(--bd);border-radius:7px;background:var(--wh);}
-textarea{height:80px;background:var(--az-bg);border:2px dashed var(--az3);}
-.ua-card{border-left:6px solid var(--az3);padding:1.2rem;margin-bottom:1.5rem;background:#fcfdff;border-radius:8px;border:1px solid var(--bd);border-left-width:6px;}
-.lp{background:#F8FAFD;border:1.5px solid var(--bd);border-radius:8px;padding:0.8rem;margin-bottom:0.6rem;position:relative;}
-.res-destaque{font-size:1.6rem;font-weight:800;color:var(--ok);line-height:1.2;}
-.btn-recalc{background:var(--az2);color:#fff;border:none;padding:12px;border-radius:8px;font-weight:700;cursor:pointer;width:100%;margin-top:10px;transition:0.2s;}
-.btn-recalc:hover{background:var(--az3);}
-.badge{padding:2px 6px;border-radius:4px;font-size:0.6rem;font-weight:700;text-transform:uppercase;}
-.esp{background:var(--ok-bg);color:var(--ok);}
-.err-msg{background:var(--er-bg);color:var(--er);padding:8px;border-radius:6px;font-size:0.75rem;margin-top:8px;border:1px solid var(--er-bd);font-weight:600;}
-.tref{width:100%;border-collapse:collapse;font-size:0.75rem;}
-.tref th{background:var(--az2);color:#fff;padding:8px;text-align:left;}
-.tref td{padding:7px;border-bottom:1px solid #F3F4F6;}
-</style>
+    <meta charset="UTF-8">
+    <title>Bônus 2025 – Auditoria por Vínculo de Cargo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --az:#0D2B55; --az2:#1A4A8A; --az3:#3B82F6; --az-bg:#EBF2FB;
+            --ok:#14532D; --ok-bg:#DCFCE7; --er:#7F1D1D; --er-bg:#FEE2E2;
+            --bd:#D1D5DB; --wh:#fff; --r:10px;
+        }
+        body{ font-family: 'Inter', sans-serif; background:#F1F5F9; color:#1e2836; font-size:13px; margin:0; }
+        header{ background: var(--az); color:#fff; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; }
+        .container{ max-width: 1200px; margin: 1.5rem auto; display: grid; grid-template-columns: 350px 1fr; gap: 1.5rem; padding: 0 1rem; }
+        .card{ background:var(--wh); border:1px solid var(--bd); border-radius:var(--r); padding:1.2rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .ctit{ font-family:'Sora'; font-size:.7rem; font-weight:700; text-transform:uppercase; color:var(--az2); margin-bottom:1rem; border-left:3px solid var(--az3); padding-left:8px; }
+        
+        /* Estilo dos Selects e Inputs */
+        select, input, textarea { width:100%; padding:10px; border:1.5px solid var(--bd); border-radius:8px; margin-bottom:10px; font-family:inherit; }
+        textarea { height: 100px; background: var(--az-bg); font-family: monospace; font-size: 11px; }
+        
+        .ua-group { margin-bottom: 2rem; }
+        table { width:100%; border-collapse: collapse; background:#fff; border-radius:8px; overflow:hidden; margin-top:10px; }
+        th { background: var(--az-bg); color: var(--az); padding: 10px; text-align: left; font-size: 11px; border-bottom: 2px solid var(--bd); }
+        td { padding: 10px; border-bottom: 1px solid #eee; font-size: 11px; }
+        
+        .row-err { background-color: var(--er-bg); }
+        .badge { padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 9px; }
+        .badge-ok { background: var(--ok-bg); color: var(--ok); }
+        .badge-err { background: var(--er-bg); color: var(--er); }
+        
+        .total-box { font-size: 1.5rem; font-weight: 800; color: var(--az); margin-top: 10px; }
+    </style>
 </head>
 <body>
 
 <header>
-  <div class="hico">🏦</div>
-  <div>
-    <h1>Bônus 2025 – Diagnóstico Avançado (GOE Jacareí)</h1>
-    <p>Consolidação de Multidisciplinas • Gestão de UAs • Cálculo Real (Sem Duplicidade)</p>
-  </div>
+    <div>
+        <h1 style="margin:0; font-size:1.2rem;">Calculadora Bônus 2025</h1>
+        <span>Foco em Vínculo e Carga Horária</span>
+    </div>
 </header>
 
-<nav>
-  <button class="tab on" onclick="aba('calc',this)">🧮 Auditoria de Bônus</button>
-  <button class="tab" onclick="aba('ref',this)">📖 Disciplinas & Códigos</button>
-  <button class="tab" onclick="aba('lei',this)">⚖️ Fundamentação Legal</button>
-</nav>
-
-<div id="pnl-calc" class="pnl on"><div class="wrap"><div class="grid">
-  <div>
-    <div class="card paste-box">
-        <div class="ctit">Importação Direta (Portalnet)</div>
-        <label>Cole as linhas da consulta por RG abaixo:</label>
-        <textarea id="raw-portalnet" placeholder="Ctrl+C no Portalnet > Ctrl+V aqui..." oninput="processarDados()"></textarea>
-        <button class="btn-recalc" onclick="processarDados()">🔄 ATUALIZAR E RECALCULAR</button>
-    </div>
-    <div class="card">
-        <div class="ctit">Identificação</div>
-        <div class="f"><label>Nome do Servidor</label><input id="nome" placeholder="Nome Completo"></div>
-    </div>
-    <div id="container-escolas"></div>
-  </div>
-
-  <div id="col-resultado">
-    <div class="card" style="position: sticky; top: 1rem;">
-        <div class="ctit">Diagnóstico Consolidado</div>
-        <div id="res-dias">Aguardando dados...</div>
-        <hr style="margin:15px 0; opacity:0.1">
-        <div id="res-financeiro"></div>
-        <div id="res-recurso" style="display:none; margin-top:15px;">
-            <label style="color:var(--er)">⚠️ Texto para Recurso/Ofício:</label>
-            <div id="txt-recurso" style="font-size:0.75rem; background:#fff5f5; padding:10px; border-radius:6px; border:1px solid var(--er-bd);"></div>
+<div class="container">
+    <aside>
+        <div class="card">
+            <div class="ctit">1. Definir Cargo e Regra</div>
+            <label>Selecione o Cargo:</label>
+            <select id="select-cargo" onchange="atualizarRegras()">
+                <option value="PEB1">PEB I (Anos Iniciais / Grau Branco)</option>
+                <option value="PEB2">PEB II (Anos Finais e Médio / Grau 1 e 2)</option>
+                <option value="SUP">Carga Suplementar (Regra 2800)</option>
+                <option value="ADM">Administrativo / Unidade Regional</option>
+            </select>
+            
+            <div id="config-especifica" style="display:none;">
+                <label>Vínculo de Disciplina:</label>
+                <select id="tipo-vinculo" onchange="processarTabela()">
+                    <option value="ESP">Disciplina Específica (100% do Índice)</option>
+                    <option value="NESP">Disciplina Não Específica (Regra Proporcional)</option>
+                </select>
+            </div>
         </div>
-        <button class="btn-recalc" style="background:var(--gr); margin-top:15px;" onclick="window.print()">🖨️ IMPRIMIR LAUDO</button>
-    </div>
-  </div>
-</div></div></div>
 
-<div id="pnl-ref" class="pnl"><div class="wrap"><div class="grid">
-    <div class="card">
-        <div class="ctit">Busca de Disciplinas (PDF Oficial)</div>
-        <input type="text" placeholder="Pesquisar disciplina..." oninput="filtrarDisc(this.value)" style="margin-bottom:10px;">
-        <table class="tref">
-            <thead><tr><th>Cód</th><th>Disciplina</th><th>Tipo</th></tr></thead>
-            <tbody id="corpo-disc"></tbody>
-        </table>
-    </div>
-    <div class="card">
-        <div class="ctit">Critério Temporal</div>
-        <div class="ua-card" style="border-left-color:var(--wa)">
-            <strong>Mínimo: 244 Dias</strong><br>
-            Cálculo baseado em 2/3 do ano (366 dias em 2024/2025). 
-            Períodos com afastamentos (LIP, Licença Prêmio) são descontados da elegibilidade conforme BFE.
+        <div class="card">
+            <div class="ctit">2. Importar Portalnet</div>
+            <textarea id="raw-data" placeholder="Cole as colunas do Portalnet aqui..." oninput="processarTabela()"></textarea>
         </div>
-    </div>
-</div></div></div>
 
-<div id="pnl-lei" class="pnl"><div class="wrap">
-    <div class="card">
-        <div class="ctit">Fundamentação Jurídica para Ofícios</div>
-        <div style="line-height:1.8">
-            <p><strong>1. Da Lei Complementar nº 1.361/2021:</strong> Institui a Bonificação por Resultados (BR). O pagamento é condicionado ao alcance de metas e ao tempo de efetivo exercício.</p>
-            <p><strong>2. Da Deliberação BR nº 4/2026:</strong> Define os índices ICM (IDESP) aplicáveis para o exercício de 2025. O erro de vinculação de UA no PAEF impede a correta aplicação do índice da unidade escolar ou disciplina.</p>
-            <p><strong>3. Do Peso da Carga Horária:</strong> Orientação técnica COAPES/DFOLP. O valor é proporcional à carga horária cumprida. Erros no campo "Carga Parcial" reduzem o bônus indevidamente.</p>
-            <p><strong>4. Do Efetivo Exercício:</strong> Conforme o Estatuto do Funcionário Público, apenas ausências amparadas por lei (Férias, Licença Gestante, Gala, Nojo, TRE) não descontam do tempo total.</p>
+        <div class="card">
+            <div class="ctit">3. Forçar IDESP por UA</div>
+            <div id="lista-idesp-manual"></div>
         </div>
-    </div>
-</div></div>
+    </aside>
+
+    <main>
+        <div class="card">
+            <div class="ctit">Demonstrativo de Cálculo</div>
+            <div id="res-tabela">Aguardando dados...</div>
+            
+            <hr style="margin:20px 0; border:0; border-top:1px solid #eee;">
+            
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                    <div class="ctit">Total Geral Calculado</div>
+                    <div id="val-total" class="total-box">R$ 0,00</div>
+                </div>
+                <div id="res-dias" style="text-align:right"></div>
+            </div>
+        </div>
+
+        <div id="card-recurso" class="card" style="display:none; border-top: 5px solid var(--er);">
+            <div class="ctit" style="color:var(--er)">Inconsistência Detectada</div>
+            <div id="txt-recurso" style="font-size:11px; line-height:1.5;"></div>
+        </div>
+    </main>
+</div>
 
 <script>
-const DISC_MAP = {
-    "1100":"PORTUGUÊS", "1300":"MATEMÁTICA", "1600":"HISTÓRIA", "1700":"GEOGRAFIA",
-    "1900":"ED. FÍSICA", "1200":"INGLÊS", "1800":"ARTE", "8468":"SOCIOLOGIA (INOVA)",
-    "0500":"SALA DE RECURSOS", "7800":"PROJETO DE VIDA", "7900":"TECNOLOGIA",
-    "2000":"FÍSICA", "2100":"QUÍMICA", "2200":"BIOLOGIA", "2300":"SOCIOLOGIA (REG)"
-};
+let memoriaUA = new Map();
 
-function aba(id, btn) {
-    document.querySelectorAll('.pnl').forEach(p => p.classList.remove('on'));
-    document.querySelectorAll('.tab').forEach(b => b.classList.remove('on'));
-    document.getElementById('pnl-' + id).classList.add('on');
-    btn.classList.add('on');
+function atualizarRegras() {
+    const cargo = document.getElementById('select-cargo').value;
+    const divEsp = document.getElementById('config-especifica');
+    
+    // PEB II habilita escolha de Específica/Não Específica (conforme o PDF que você mandou)
+    divEsp.style.display = (cargo === 'PEB2') ? 'block' : 'none';
+    
+    processarTabela();
 }
 
-function filtrarDisc(v) {
-    const p = v.toUpperCase();
-    const corpo = document.getElementById('corpo-disc');
-    corpo.innerHTML = Object.keys(DISC_MAP)
-        .filter(k => DISC_MAP[k].includes(p) || k.includes(p))
-        .map(k => `<tr><td><strong>${k}</strong></td><td>${DISC_MAP[k]}</td><td>${parseInt(k)<2000?'Específica':'Não Esp.'}</td></tr>`).join('');
-}
-filtrarDisc('');
+function processarTabela() {
+    const texto = document.getElementById('raw-data').value.trim();
+    if (!texto) return;
 
-function parseData(s) { const p = s.split('/'); return p.length===3 ? new Date(p[2], p[1]-1, p[0]) : null; }
+    const cargo = document.getElementById('select-cargo').value;
+    const vinculo = document.getElementById('tipo-vinculo').value;
+    
+    // Regex para identificar início de linha por data
+    const regexLinha = /(\d{2}\/\d{2}\/\d{4}.+?)(?=\d{2}\/\d{2}\/\d{4}|$)/gs;
+    const linhas = texto.match(regexLinha);
+    if (!linhas) return;
 
-function processarDados() {
-    const texto = document.getElementById('raw-portalnet').value;
-    if (!texto.trim()) return;
-    const linhas = texto.split('\n');
     const uas = {};
+    const todasUAs = new Set();
 
-    linhas.forEach(linha => {
-        const col = linha.split(/\t|\s{2,}/).map(s => s.trim());
-        if (col.length >= 10) {
-            const ua = col[13] || "UA_VAZIA";
+    linhas.forEach(l => {
+        const col = l.split(/\t|\s{1,}/).filter(x => x.trim() !== "");
+        if (col.length >= 15) {
+            const ua = col[13];
+            todasUAs.add(ua);
             if (!uas[ua]) uas[ua] = [];
+
+            // Captura de valores (tratando vírgula e ponto)
+            const idespPortal = parseFloat(col[12].replace(",", ".")) || 0;
+            const vHora = parseFloat(col[17].replace("R$", "").replace(/\./g, "").replace(",", ".")) || 0;
+            const dias = parseInt(col[3]) || 0;
+            const peso = parseFloat(col[6].replace(",", ".")) || 0;
+            
+            // Regra de Negócio: Se tiver IDESP manual na lateral, usa ele.
+            const idespFinal = memoriaUA.has(ua) ? memoriaUA.get(ua) : idespPortal;
+
+            // Cálculo do Total
+            const total = vHora * dias * (peso / 100) * idespFinal;
+
             uas[ua].push({
-                ini: col[0], fim: col[1], dias: parseInt(col[3]) || 0,
-                base: parseFloat(col[4]) || 0, parcial: parseFloat(col[5]) || 0,
-                idesp: parseFloat(col[11]) || 0, vhora: parseFloat(col[17]) || 0,
-                disc: col[10]
+                periodo: col[0] + ' a ' + col[1],
+                disc: col[10],
+                idesp: idespFinal,
+                total: total,
+                err: idespFinal === 0
             });
         }
     });
-    renderizar(uas);
+
+    renderizar(uas, todasUAs);
 }
 
-function renderizar(uas) {
-    const container = document.getElementById('container-escolas');
-    container.innerHTML = "";
-    let periodosGeral = [];
-    let totalFinanceiro = 0;
-    let errosTexto = [];
+function renderizar(uas, todasUAs) {
+    const container = document.getElementById('res-tabela');
+    const panelManual = document.getElementById('lista-idesp-manual');
+    let htmlTotal = "";
+    let somaGeral = 0;
+    let temErro = false;
 
-    Object.keys(uas).forEach(ua => {
-        const dados = uas[ua];
-        const uaDiv = document.createElement('div');
-        uaDiv.className = 'ua-card';
-        let htmlL = `<div class="badge" style="background:var(--az2); color:#fff; font-size:0.75rem; margin-bottom:10px;">UA: ${ua}</div>`;
-        
-        dados.forEach(l => {
-            periodosGeral.push({start: parseData(l.ini), end: parseData(l.fim)});
-            const peso = l.base > 0 ? (l.parcial / l.base) : 0;
-            const valorLinha = l.vhora * l.parcial * peso * l.idesp;
-            totalFinanceiro += valorLinha;
-
-            if (ua === "UA_VAZIA") errosTexto.push(`Período ${l.ini} sem UA definida.`);
-            if (l.idesp === 0) errosTexto.push(`Unidade ${ua} com IDESP zero.`);
-
-            htmlL += `
-                <div class="lp">
-                    <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <span style="font-weight:700;">${l.ini} a ${l.fim}</span>
-                        <span class="badge esp">${DISC_MAP[l.disc] || l.disc}</span>
-                    </div>
-                    <div style="font-size:0.7rem; color:var(--gr); margin-top:5px; border-top:1px solid #eee; padding-top:5px;">
-                        Peso: ${(peso*100).toFixed(1)}% | IDESP: ${l.idesp} | <strong>R$ ${valorLinha.toFixed(2)}</strong>
-                    </div>
-                    ${(ua === "UA_VAZIA" || l.idesp === 0) ? `<div class="err-msg">🚨 Falha detectada no lançamento.</div>` : ''}
-                </div>`;
-        });
-        uaDiv.innerHTML = htmlL;
-        container.appendChild(uaDiv);
+    // Atualiza painel de IDESP manual
+    let htmlManual = "";
+    todasUAs.forEach(ua => {
+        const val = memoriaUA.get(ua) || "";
+        htmlManual += `<label style="font-size:10px">UA ${ua}:</label>
+                       <input type="number" step="0.0001" value="${val}" 
+                       onchange="memoriaUA.set('${ua}', parseFloat(this.value)); processarTabela()" 
+                       placeholder="Ex: 6.4500">`;
     });
+    panelManual.innerHTML = htmlManual || "<small>Aguardando UA...</small>";
 
-    // CÁLCULO DE DIAS REAIS (Sem Duplicidade)
-    periodosGeral.sort((a,b) => a.start - b.start);
-    let merged = [];
-    if(periodosGeral.length > 0 && periodosGeral[0].start){
-        let current = periodosGeral[0];
-        for(let i=1; i<periodosGeral.length; i++){
-            if(periodosGeral[i].start <= current.end){
-                current.end = new Date(Math.max(current.end, periodosGeral[i].end));
-            } else { merged.push(current); current = periodosGeral[i]; }
-        }
-        merged.push(current);
+    // Constrói a tabela de resultados
+    for (let ua in uas) {
+        htmlTotal += `<div class="ua-group"><strong>Unidade Administrativa: ${ua}</strong>`;
+        htmlTotal += `<table><thead><tr><th>Período</th><th>Disciplina</th><th>IDESP Aplicado</th><th>Valor Parcial</th></tr></thead><tbody>`;
+        
+        uas[ua].forEach(item => {
+            somaGeral += item.total;
+            if (item.err) temErro = true;
+            htmlTotal += `<tr class="${item.err ? 'row-err' : ''}">
+                <td>${item.periodo}</td>
+                <td>${item.disc}</td>
+                <td>${item.idesp.toFixed(4)} ${item.err ? '<span class="badge badge-err">ZERADO</span>' : ''}</td>
+                <td>R$ ${item.total.toLocaleString('pt-BR', {minimumFractionDigits:2})}</td>
+            </tr>`;
+        });
+        htmlTotal += `</tbody></table></div>`;
     }
-    const diasReais = merged.reduce((acc, r) => acc + Math.round((r.end - r.start)/(1000*60*60*24))+1, 0);
-    const elegivel = diasReais >= 244;
 
-    document.getElementById('res-dias').innerHTML = `
-        <div style="color:${elegivel?'var(--ok)':'var(--er)'}; font-size:1.8rem; font-weight:800;">${diasReais} DIAS REAIS</div>
-        <p style="font-weight:600">${elegivel ? '✅ ELEGÍVEL' : '🚨 NÃO ATINGIU 244 DIAS'}</p>`;
+    container.innerHTML = htmlTotal;
+    document.getElementById('val-total').innerText = somaGeral.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
 
-    document.getElementById('res-financeiro').innerHTML = `
-        <div class="ctit" style="margin-top:10px;">Valor Bruto Estimado</div>
-        <div class="res-destaque">R$ ${totalFinanceiro.toLocaleString('pt-BR', {minimumFractionDigits:2})}</div>`;
-
-    if (errosTexto.length > 0) {
-        document.getElementById('res-recurso').style.display = "block";
-        document.getElementById('txt-recurso').innerText = `Servidor ${document.getElementById('nome').value || '[NOME]'} apresenta inconsistências no Portalnet: ${errosTexto.join(' ')} Solicitamos correção via PAEF/URE conforme LC 1.361/2021.`;
+    // Gera o texto do recurso automático
+    const cardRecurso = document.getElementById('card-recurso');
+    if (temErro) {
+        cardRecurso.style.display = "block";
+        document.getElementById('txt-recurso').innerText = `O servidor apresenta inconsistência no bônus devido ao IDESP zerado em períodos da UA(s) pesquisada(s). Solicitamos correção via PAEF/URE conforme LC 1.361/2021 para que o cálculo reflita a carga horária efetivamente trabalhada.`;
     } else {
-        document.getElementById('res-recurso').style.display = "none";
+        cardRecurso.style.display = "none";
     }
 }
 </script>
+
 </body>
 </html>
