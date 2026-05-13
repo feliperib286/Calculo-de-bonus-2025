@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bônus 2025 – Diagnóstico Avançado Jacareí</title>
+<title>Bônus 2025 – Diagnóstico & Recurso (GOE)</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -50,6 +50,9 @@ input,select,textarea{width:100%;padding:7px 10px;font-size:.83rem;border:1.5px 
 .qa-card{background:var(--az-bg);border:1px solid #93C5FD;border-radius:8px;padding:.75rem 1rem;margin-bottom:0.5rem;}
 .qa-titulo{font-size:.72rem;font-weight:700;color:var(--az2);margin-bottom:.3rem;text-transform:uppercase;}
 .qa-item{font-size:.77rem;color:#374151;padding:2px 0;display:flex;gap:6px;}
+.cron-item{border-left:3px solid var(--az3);padding-left:15px;margin-bottom:15px;position:relative;}
+.cron-date{font-weight:700;color:var(--az2);font-size:0.85rem;}
+.cron-desc{font-size:0.8rem;color:#4b5563;}
 </style>
 </head>
 <body>
@@ -57,30 +60,31 @@ input,select,textarea{width:100%;padding:7px 10px;font-size:.83rem;border:1.5px 
 <header>
   <div class="hico">📋</div>
   <div>
-    <h1>Bônus 2025 – Diagnóstico Especialista (GOE)</h1>
-    <p>Requisito 244 dias · Conferência de Peso · Base image_827a12.png</p>
-    <span class="lei">Análise Baseada nos Documentos Técnicos SEDUC 2026</span>
+    <h1>Bônus 2025 – Diagnóstico & Recurso (GOE)</h1>
+    <p>Elegibilidade 244 dias · Cronograma Oficial · Mapeamento image_827a12.png</p>
+    <span class="lei">LC 1.361/2021 · Jacareí/SP</span>
   </div>
 </header>
 
 <nav>
-  <button class="tab on" onclick="aba('calc',this)">🧮 Diagnóstico & Importador</button>
-  <button class="tab" onclick="aba('ref',this)">📖 Tabelas & Legislação</button>
+  <button class="tab on" onclick="aba('calc',this)">🧮 Diagnóstico</button>
+  <button class="tab" onclick="aba('ref',this)">📖 Regras & Faltas</button>
+  <button class="tab" onclick="aba('crono',this)">📅 Cronograma & Recurso</button>
 </nav>
 
 <div id="pnl-calc" class="pnl on"><div class="wrap"><div class="grid">
 <div>
   <div class="card paste-box">
-    <div class="ctit">🚀 Importar do Portalnet</div>
+    <div class="ctit">🚀 Colar do Portalnet</div>
     <textarea id="raw-portalnet" placeholder="Cole as linhas da consulta por RG aqui..." oninput="importarPortalnet(this.value)"></textarea>
   </div>
 
   <div class="card">
-    <div class="ctit">1 · Elegibilidade 244 Dias</div>
+    <div class="ctit">1 · Dados do Servidor</div>
     <div class="g2">
-      <div class="f"><label>Nome</label><input id="nome" placeholder="Nome do Servidor"></div>
+      <div class="f"><label>Nome</label><input id="nome" placeholder="Nome completo"></div>
       <div class="f">
-        <label>Situação Funcional</label>
+        <label>Perfil Funcional</label>
         <select id="sit-func" onchange="analisar()">
           <option value="reg">Titular / Categoria O</option>
           <option value="art22">Professor - Artigo 22</option>
@@ -90,62 +94,80 @@ input,select,textarea{width:100%;padding:7px 10px;font-size:.83rem;border:1.5px 
       </div>
     </div>
     <div class="f" style="margin-top:10px">
-      <label>Soma de Dias Identificados (2/3 do ano = 244 dias)</label>
+      <label>Dias de Exercício (Soma Automática)</label>
       <input type="number" id="dias-totais" oninput="analisar()">
       <p id="aviso-prazo" style="font-size:0.75rem; font-weight:700; margin-top:5px;"></p>
     </div>
   </div>
 
   <div class="card">
-    <div class="ctit">2 · Conferência de Linhas</div>
+    <div class="ctit">2 · Linhas Identificadas</div>
     <div id="cont-linhas"></div>
   </div>
-  <button class="btn btn-pri" onclick="analisar()">🔍 Validar Todas as Regras</button>
+  <button class="btn btn-pri" onclick="analisar()">🔍 Validar Diagnóstico</button>
 </div>
-
 <div id="resultado"></div>
 </div></div></div>
 
 <div id="pnl-ref" class="pnl"><div class="wrap"><div class="grid">
 <div>
   <div class="card">
-    <div class="ctit">Elegibilidade (Base: Doc. Bonificação)</div>
-    <div class="qa-card">
-      <div class="qa-titulo">Tempo Mínimo: 244 Dias</div>
-      <div class="qa-item">Conforme LC 1.361/2021, o servidor precisa de 2/3 do ano em exercício.</div>
-      <div class="qa-item">Afastamentos sem vencimento e LIP descontam desse prazo.</div>
-    </div>
+    <div class="ctit">✅ Efetivo Exercício (Não Descontam)</div>
+    <table class="tref">
+      <tr><th>Cód</th><th>Tipo</th></tr>
+      <tr><td>047</td><td>Férias / Recesso</td></tr>
+      <tr><td>008</td><td>Licença Gestante</td></tr>
+      <tr><td>059</td><td>Licença Paternidade</td></tr>
+      <tr><td>130</td><td>Folgas TRE</td></tr>
+    </table>
   </div>
-
+</div>
+<div>
   <div class="card">
-    <div class="ctit">Cálculo do Peso (Base: Doc. Peso)</div>
-    <p style="font-size:0.75rem; margin-bottom:5px;">O peso é a proporção da carga horária na vigência:</p>
-    <div class="qa-card" style="background:#fff7ed; border-color:#fdba74;">
-      <div class="qa-item"><strong>Fórmula:</strong> (Carga Parcial / Carga Base) x 100</div>
-      <div class="qa-item">Ex: 100h parciais em base de 200h = Peso 50%.</div>
+    <div class="ctit">❌ Ausências (Reduzem o Valor)</div>
+    <table class="tref">
+      <tr><th>Cód</th><th>Tipo</th></tr>
+      <tr><td>009</td><td>Licença-Prêmio</td></tr>
+      <tr><td>011</td><td>Faltas Médicas</td></tr>
+      <tr><td>002</td><td>Licença Médica</td></tr>
+    </table>
+  </div>
+</div>
+</div></div></div>
+
+<div id="pnl-crono" class="pnl"><div class="wrap"><div class="grid">
+<div>
+  <div class="card">
+    <div class="ctit">📅 Cronograma Oficial (image_71c642.png)</div>
+    <div class="cron-item">
+      <div class="cron-date">30/04/2026</div>
+      <div class="cron-desc">Pagamento da Bonificação por Resultados (Exercício 2025).</div>
+    </div>
+    <div class="cron-item">
+      <div class="cron-date">Até 12/05/2026</div>
+      <div class="cron-desc">Prazo para o servidor solicitar a revisão (10 dias após disponibilização).</div>
+    </div>
+    <div class="cron-item">
+      <div class="cron-date">Maio/Junho 2026</div>
+      <div class="cron-desc">Análise das inconsistências pelas Diretorias de Ensino (UREs).</div>
     </div>
   </div>
 </div>
-
 <div>
   <div class="card">
-    <div class="ctit">✅ Efetivo Exercício (PPT Frequência)</div>
-    <table class="tref">
-      <tr><th>Cód</th><th>Tipo (NÃO desconta)</th></tr>
-      <tr><td>047</td><td>Férias / Recesso</td></tr>
-      <tr><td>008</td><td>Licença Gestante</td></tr>
-      <tr><td>378/381</td><td>Licença COVID (Inciso II)</td></tr>
-      <tr><td>124</td><td>Competições Esportivas</td></tr>
-    </table>
-  </div>
-  <div class="card">
-    <div class="ctit">❌ Descontam do Bônus</div>
-    <table class="tref">
-      <tr><th>Cód</th><th>Tipo (Reduz valor)</th></tr>
-      <tr><td>009</td><td>Licença-Prêmio</td></tr>
-      <tr><td>380</td><td>Atestado COVID (Inciso I)</td></tr>
-      <tr><td>002</td><td>Licença Médica (Faltas/Geral)</td></tr>
-    </table>
+    <div class="ctit">📄 Como Entrar com Recurso (image_71c341.png)</div>
+    <div class="qa-card">
+      <div class="qa-titulo">Passo 1: Fundamentação</div>
+      <div class="qa-item">Use o diagnóstico gerado na aba ao lado para explicar o erro (UA vazia, IDESP 0, etc).</div>
+    </div>
+    <div class="qa-card">
+      <div class="qa-titulo">Passo 2: Documentação</div>
+      <div class="qa-item">Anexar extrato do Portalnet, Histórico de Atribuição e BFE.</div>
+    </div>
+    <div class="qa-card">
+      <div class="qa-titulo">Passo 3: Protocolo</div>
+      <div class="qa-item">O recurso deve ser protocolado na Unidade Escolar para envio à URE via sistema oficial.</div>
+    </div>
   </div>
 </div>
 </div></div></div>
@@ -173,9 +195,9 @@ function importarPortalnet(texto) {
             const d = parseInt(col[3]) || 0;
             somaDias += d;
             addLinha({
-                ini: col[0], fim: col[1], dias: d, peso: col[6], 
-                grau: col[8], idesp: col[11]?.replace(',', '.'), 
-                ua: col[13], total: col[18]?.replace('R$', '').replace('.', '').replace(',', '.').trim()
+                ini: col[0], fim: col[1], dias: d, grau: col[8], 
+                idesp: col[11]?.replace(',', '.'), ua: col[13], 
+                total: col[18]?.replace('R$', '').replace('.', '').replace(',', '.').trim()
             });
         }
     });
@@ -194,15 +216,14 @@ function addLinha(d = {}) {
             <div class="f"><label>Início</label><input id="l${n}-ini" value="${d.ini||''}"></div>
             <div class="f"><label>Fim</label><input id="l${n}-fim" value="${d.fim||''}"></div>
             <div class="f"><label>Dias</label><input type="number" id="l${n}-dias" value="${d.dias||''}" oninput="recalc()"></div>
-            <div class="f"><label>Peso (%)</label><input type="number" id="l${n}-peso" value="${d.peso||''}"></div>
+            <div class="f"><label>UA</label><input id="l${n}-ua" value="${d.ua||''}"></div>
         </div>
         <div class="g4">
-            <div class="f"><label>UA</label><input id="l${n}-ua" value="${d.ua||''}"></div>
             <div class="f"><label>Grau</label><input id="l${n}-grau" value="${d.grau||''}"></div>
             <div class="f"><label>IDESP</label><input id="l${n}-idesp" value="${d.idesp||''}"></div>
-            <div class="f"><label>Valor R$</label><input id="l${n}-total" value="${d.total||''}"></div>
-        </div>
-        <div id="la-${n}" class="lp-alert"></div>`;
+            <div class="f"><label>Total R$</label><input id="l${n}-total" value="${d.total||''}"></div>
+            <div id="la-${n}" class="lp-alert"></div>
+        </div>`;
     document.getElementById('cont-linhas').appendChild(div);
 }
 
@@ -219,7 +240,7 @@ function analisar() {
     const aviso = document.getElementById('aviso-prazo');
     const elegivel = d >= DIAS_MINIMOS;
     
-    aviso.innerHTML = elegivel ? '✅ ELEGÍVEL' : `🚨 NÃO ELEGÍVEL (Mínimo ${DIAS_MINIMOS} dias)`;
+    aviso.innerHTML = elegivel ? '✅ ELEGÍVEL' : `🚨 ABAIXO DE ${DIAS_MINIMOS} DIAS!`;
     aviso.style.color = elegivel ? 'var(--ok)' : 'var(--er)';
 
     const totalPg = Array.from(document.querySelectorAll('[id$="-total"]'))
@@ -227,11 +248,11 @@ function analisar() {
     
     document.getElementById('resultado').innerHTML = `
         <div class="rc ${elegivel ? 'ok' : 'err'}">
-            <div class="rtit">Diagnóstico Baseado em Legislação</div>
+            <div class="rtit">Diagnóstico de Bônus (Jacareí)</div>
             <div class="rbody">
-                <strong>Status Temporal:</strong> ${elegivel ? 'Cumprido' : 'Tempo insuficiente'}<br>
-                <strong>Total Bruto Pago:</strong> R$ ${totalPg.toLocaleString('pt-BR', {minimumFractionDigits:2})}<br>
-                <strong>Observação:</strong> O cálculo de Art. 22 e PEI exige conferência de UA e Grau.
+                Dias de Exercício: <strong>${d} / ${DIAS_MINIMOS}</strong><br>
+                Valor Identificado: <strong>R$ ${totalPg.toLocaleString('pt-BR', {minimumFractionDigits:2})}</strong><br>
+                <em>${elegivel ? 'Servidor cumpre o requisito de 244 dias.' : 'Atenção: Servidor não atingiu o tempo mínimo.'}</em>
             </div>
         </div>`;
     
@@ -239,23 +260,18 @@ function analisar() {
         const n = i+1; 
         const ua = document.getElementById(`l${n}-ua`).value;
         const id = parseFloat(document.getElementById(`l${n}-idesp`).value) || 0;
-        const peso = parseFloat(document.getElementById(`l${n}-peso`).value) || 0;
         const grau = document.getElementById(`l${n}-grau`).value;
         const al = document.getElementById(`la-${n}`);
         
         let erros = [];
-        if (!ua || ua === '0') erros.push("<strong>UA Vazia:</strong> Falha no PAEF. Impede a aplicação do ICM da escola.");
-        if (id === 0) erros.push("<strong>IDESP Zero:</strong> O índice não foi carregado. Bônus não calculado nesta linha.");
-        if (peso === 0) erros.push("<strong>Erro de Peso:</strong> Peso 0 anula o valor da linha. Verifique a Carga Parcial.");
-        if (sit === 'qa' && grau !== '0') erros.push("<strong>Erro de Grau:</strong> GOE/AOE deve ser Grau 0 (Escola).");
-        if (sit === 'art22' && grau === '0') erros.push("<strong>Alerta Art. 22:</strong> Docentes em Art. 22 devem ter Grau 1 ou 2 (Série/Disciplina) da unidade de destino.");
+        if (!ua || ua === '0') erros.push("<strong>UA Vazia:</strong> Falha no cadastro PAEF. Impede o cálculo do IDESP.");
+        if (id === 0) erros.push("<strong>IDESP Zero:</strong> Índice não aplicado. Bônus zerado nesta linha.");
+        if (sit === 'qa' && grau !== '0') erros.push("<strong>Erro de Grau:</strong> GOE/AOE deve ser Grau 0.");
 
         if (erros.length > 0) {
-            al.className = 'lp-alert show err'; 
-            al.innerHTML = erros.join('<br>');
+            al.className = 'lp-alert show err'; al.innerHTML = erros.join('<br>');
         } else { 
-            al.className = 'lp-alert show ok'; 
-            al.innerHTML = '✅ Lançamento validado tecnicamente.'; 
+            al.className = 'lp-alert show ok'; al.innerHTML = '✅ Lançamento validado.'; 
         }
     });
 }
