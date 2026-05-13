@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bônus 2025 – Auditoria, Recurso & Explicação</title>
+<title>Bônus 2025 – Diagnóstico & Recurso (GOE)</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -22,69 +22,68 @@ header h1{font-family:var(--fh);font-size:1.1rem;font-weight:700;}
 nav{background:var(--az);display:flex;padding:0 1.75rem;gap:2px;}
 .tab{padding:.55rem 1.1rem;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.5);background:none;border:none;cursor:pointer;border-bottom:3px solid transparent;transition:.15s;}
 .tab.on{color:#fff;border-bottom-color:#60A5FA;}
-.wrap{max-width:1200px;margin:0 auto;padding:1.4rem 1rem;}
+.wrap{max-width:1200px;margin:0 auto;padding:1rem;}
 .pnl{display:none;}.pnl.on{display:block;}
 .grid{display:grid;grid-template-columns:560px 1fr;gap:1.2rem;}
 @media(max-width:960px){.grid{grid-template-columns:1fr;}}
 .card{background:var(--wh);border:1px solid var(--bd);border-radius:var(--r);padding:1.15rem;box-shadow:var(--sh);margin-bottom:.9rem;}
 .ctit{font-family:var(--fh);font-size:.67rem;font-weight:700;text-transform:uppercase;color:var(--az2);margin-bottom:.9rem;display:flex;align-items:center;gap:6px;}
 .ctit::before{content:'';width:3px;height:13px;background:var(--az2);border-radius:2px;}
-label{display:block;font-size:.74rem;font-weight:600;color:#374151;margin-bottom:3px;}
-input,select,textarea{width:100%;padding:7px 10px;font-size:.83rem;border:1.5px solid var(--bd);border-radius:7px;background:var(--wh);}
-.lp{background:#F8FAFD;border:1.5px solid var(--bd);border-radius:8px;padding:.9rem;margin-bottom:.65rem;}
-.btn{padding:10px 16px;font-family:var(--fh);font-size:.85rem;font-weight:700;border:none;border-radius:var(--r);cursor:pointer;transition:.15s;width:100%;}
-.btn-pri{background:var(--az2);color:#fff;}
-.btn-sec{background:var(--gr);color:#fff;margin-top:10px;}
-/* Tabela Excel */
+textarea{width:100%;height:80px;background:var(--az-bg);border:2px dashed var(--az3);border-radius:8px;padding:10px;font-family:monospace;font-size:11px;}
+input,select{width:100%;padding:8px;border:1px solid var(--bd);border-radius:6px;margin-bottom:5px;}
+.lp{background:#F8FAFD;border:1.5px solid var(--bd);border-radius:8px;padding:.9rem;margin-bottom:.65rem;position:relative;}
+.btn{padding:10px;font-family:var(--fh);font-weight:700;border:none;border-radius:var(--r);cursor:pointer;width:100%;}
+.btn-pri{background:var(--az2);color:#fff;margin-top:10px;}
+.btn-add{background:var(--gr);color:#fff;margin-top:5px;font-size:11px;}
+/* Tabela Excel Recurso */
 .excel-table{width:100%;border-collapse:collapse;margin-top:10px;background:white;font-size:11px;}
-.excel-table th{background:#f1f5f9;border:1px solid #cbd5e1;padding:8px;text-align:left;color:var(--az);}
+.excel-table th{background:#f1f5f9;border:1px solid #cbd5e1;padding:8px;text-align:left;}
 .excel-table td{border:1px solid #cbd5e1;padding:8px;}
-/* Explicação */
-.exp-box{background:var(--az-bg);border-radius:8px;padding:15px;margin-bottom:15px;border-left:4px solid var(--az3);}
-.exp-tit{font-weight:700;color:var(--az);margin-bottom:5px;display:block;}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="hico">📄</div>
+  <div class="hico">📊</div>
   <div>
-    <h1>Bônus 2025 – Gestão Completa (GOE Jacareí)</h1>
-    <p>Auditoria Híbrida • Tabela de Recurso • Explicação Técnica</p>
+    <h1>Bônus 2025 – Diagnóstico & Recurso (GOE)</h1>
+    <p>Captura Inteligente • Inclusão Manual • Aba Excel para Recurso</p>
   </div>
 </header>
 
 <nav>
-  <button class="tab on" onclick="aba('calc',this)">🧮 Auditoria</button>
-  <button class="tab" onclick="aba('excel',this)">📑 Tabela de Recurso</button>
-  <button class="tab" onclick="aba('exp',this)">💡 Explicação & Regras</button>
+  <button class="tab on" onclick="aba('calc',this)">🧮 Auditoria & Manual</button>
+  <button class="tab" onclick="aba('excel',this)">📑 Tabela de Recurso (Excel)</button>
 </nav>
 
 <div id="pnl-calc" class="pnl on"><div class="wrap"><div class="grid">
   <div>
-    <div class="card" style="background:var(--az-bg); border:2px dashed var(--az3);">
-      <div class="ctit">Importar Portalnet</div>
+    <div class="card" style="background:var(--az-bg);">
+      <div class="ctit">Importar do Portalnet</div>
       <textarea id="raw-portalnet" placeholder="Cole as linhas aqui..." oninput="importarPortalnet(this.value)"></textarea>
     </div>
+    
     <div class="card">
-      <div class="ctit">Lançamentos Atualizáveis</div>
+      <div class="ctit">Lançamentos Identificados</div>
       <div id="cont-linhas"></div>
-      <button class="btn btn-sec" onclick="addLinha()">➕ Adicionar Linha Manual</button>
+      <button class="btn btn-add" onclick="addLinhaManual()">➕ Adicionar Linha Manual</button>
     </div>
   </div>
+
   <div>
     <div class="card" style="position:sticky; top:1rem;">
-      <div class="ctit">Resumo do Diagnóstico</div>
-      <div id="res-valor" style="font-size:1.8rem; font-weight:800; color:var(--az2);">R$ 0,00</div>
-      <div id="res-dias" style="font-weight:700; margin-bottom:10px;">0 / 244 Dias</div>
-      <div id="res-alerta"></div>
+      <div class="ctit">Resultado Final</div>
+      <div id="res-valor" style="font-size:2rem; font-weight:800; color:var(--az2);">R$ 0,00</div>
+      <div id="res-dias" style="font-weight:700;">0 Dias Reais</div>
+      <div id="res-alerta" style="margin-top:10px;"></div>
+      <button class="btn btn-pri" onclick="analisar()">🔍 Atualizar Cálculos</button>
     </div>
   </div>
 </div></div></div>
 
 <div id="pnl-excel" class="pnl"><div class="wrap">
   <div class="card">
-    <div class="ctit">Planilha de Conferência para Recurso</div>
+    <div class="ctit">Tabela Demonstrativa para Recurso (Copiar para Excel)</div>
     <div style="overflow-x:auto;">
       <table class="excel-table">
         <thead>
@@ -98,36 +97,9 @@ input,select,textarea{width:100%;padding:7px 10px;font-size:.83rem;border:1.5px 
   </div>
 </div></div>
 
-<div id="pnl-exp" class="pnl"><div class="wrap">
-  <div class="card">
-    <div class="ctit">Guia de Orientação para o GOE</div>
-    
-    <div class="exp-box">
-      <span class="exp-tit">1. A Regra dos 244 Dias (Elegibilidade)</span>
-      O servidor deve possuir ao menos 2/3 de efetivo exercício no ano de 2025. Isso equivale a <strong>244 dias</strong>. Se o total na calculadora for menor, o bônus será indeferido automaticamente pelo sistema.
-    </div>
-
-    <div class="exp-box">
-      <span class="exp-tit">2. O Erro do Código 2800 (Carga Suplementar)</span>
-      O código <strong>2800</strong> identifica carga suplementar ou projetos. Muitas vezes, o sistema não associa o IDESP da escola a este código. Se você vir "IDESP 0.00" nesta linha, o recurso deve solicitar a "vinculação de índice à carga suplementar".
-    </div>
-
-    <div class="exp-box">
-      <span class="exp-tit">3. UA Vazia (Inconsistência de Cadastro)</span>
-      A UA (Unidade Administrativa) é o que "diz" ao sistema qual nota a escola tirou. Se a UA estiver em branco no Portalnet, o cálculo não tem base e resulta em zero. É necessário retificar o histórico no PAEF.
-    </div>
-
-    <div class="exp-box">
-      <span class="exp-tit">4. Base Legal para Citar</span>
-      • Lei Complementar nº 1.361/2021 (Institui a Bonificação)<br>
-      • Deliberação BR 4/2026 (Metas e Índices)<br>
-      • Tabela de Disciplinas Específicas (Resolução SEDUC)
-    </div>
-  </div>
-</div></div>
-
 <script>
 let _lc = 0;
+
 function aba(id, btn) {
     document.querySelectorAll('.pnl').forEach(p => p.classList.remove('on'));
     document.querySelectorAll('.tab').forEach(b => b.classList.remove('on'));
@@ -137,13 +109,24 @@ function aba(id, btn) {
 
 function importarPortalnet(texto) {
     if (!texto.trim()) return;
-    const regex = /(\d{2}\/\d{2}\/\d{4}.+?)(?=\d{2}\/\d{2}\/\d{4}|$)/gs;
-    const matches = texto.match(regex);
-    if (matches) {
-        matches.forEach(m => {
-            const c = m.split(/\t|\s{2,}/).filter(x => x.trim() !== "");
-            if (c.length >= 18) {
-                addLinha({ini:c[0], fim:c[1], dias:c[3], disc:c[10], idesp:c[12], ua:c[13], total:c[18]});
+    
+    // REGEX MELHORADO: Quebra a linha sempre que encontrar uma data (DD/MM/AAAA)
+    const regexLinha = /(\d{2}\/\d{2}\/\d{4}.+?)(?=\d{2}\/\d{2}\/\d{4}|$)/gs;
+    const correspondencias = texto.match(regexLinha);
+    
+    if (correspondencias) {
+        correspondencias.forEach(linha => {
+            const col = linha.split(/\t|\s{2,}/).filter(x => x.trim() !== "");
+            if (col.length >= 10) {
+                // Mapeamento baseado nas 19 colunas do Portalnet
+                addLinha({
+                    ini: col[0], fim: col[1], 
+                    dias: col[3] || 0, 
+                    disc: col[10] || "---",
+                    idesp: col[12] || "0,0000",
+                    ua: col[13] || "---",
+                    total: col[18] || "0,00"
+                });
             }
         });
     }
@@ -151,20 +134,28 @@ function importarPortalnet(texto) {
     analisar();
 }
 
-function addLinha(d = {}) {
+function addLinhaManual() {
+    addLinha({ini:'', fim:'', dias:0, disc:'', idesp:'0,0000', ua:'', total:'0,00'});
+}
+
+function addLinha(d) {
     _lc++; const n = _lc;
     const div = document.createElement('div');
     div.className = 'lp';
     div.id = `bloco-${n}`;
     div.innerHTML = `
-        <div style="display:flex; justify-content:space-between; font-weight:700; font-size:11px;">
-            <span>LINHA ${n} - UA: <input class="l-ua" value="${d.ua||''}" style="width:60px; border:none; background:transparent;" oninput="analisar()"></span>
+        <div style="display:flex; justify-content:space-between; font-weight:700; font-size:11px; margin-bottom:5px;">
+            <span>LINHA ${n} - UA: <input class="l-ua" value="${d.ua}" style="width:60px; border:none; background:transparent;" oninput="analisar()"></span>
             <button onclick="document.getElementById('bloco-${n}').remove(); analisar()" style="color:var(--er); border:none; background:none; cursor:pointer;">✖</button>
         </div>
-        <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:8px; margin-top:5px;">
-            <div class="f"><label>Dias</label><input type="number" class="l-dias" value="${d.dias||'0'}" oninput="analisar()"></div>
-            <div class="f"><label>IDESP</label><input class="l-idesp" value="${d.idesp||'0.0000'}" oninput="analisar()"></div>
-            <div class="f"><label>Total R$</label><input class="l-total" value="${d.total||'0.00'}" oninput="analisar()"></div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px">
+            <div class="f"><label>Início/Fim</label><input value="${d.ini} a ${d.fim}" oninput="analisar()"></div>
+            <div class="f"><label>Dias Calc.</label><input type="number" class="l-dias" value="${d.dias}" oninput="analisar()"></div>
+        </div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px; margin-top:5px;">
+            <div class="f"><label>IDESP</label><input class="l-idesp" value="${d.idesp}" oninput="analisar()"></div>
+            <div class="f"><label>Disciplina</label><input class="l-disc" value="${d.disc}" oninput="analisar()"></div>
+            <div class="f"><label>Valor R$</label><input class="l-total" value="${d.total.replace('R$','').replace('.','').replace(',','.')}" oninput="analisar()"></div>
         </div>`;
     document.getElementById('cont-linhas').appendChild(div);
     analisar();
@@ -173,24 +164,25 @@ function addLinha(d = {}) {
 function analisar() {
     let tV = 0; let tD = 0;
     const linhas = document.querySelectorAll('.lp');
-    const corpo = document.getElementById('corpo-excel');
-    corpo.innerHTML = "";
+    const corpoExcel = document.getElementById('corpo-excel');
+    corpoExcel.innerHTML = "";
 
     linhas.forEach(l => {
         const d = parseInt(l.querySelector('.l-dias').value) || 0;
-        const v = parseFloat(l.querySelector('.l-total').value.replace(',','.')) || 0;
+        const v = parseFloat(l.querySelector('.l-total').value) || 0;
         const id = l.querySelector('.l-idesp').value;
         const ua = l.querySelector('.l-ua').value;
+        const disc = l.querySelector('.l-disc').value;
+
         tV += v; tD += d;
 
-        corpo.innerHTML += `<tr><td>${ua}</td><td>-</td><td>${d}</td><td>-</td><td>${id}</td><td>R$ ${v.toFixed(2)}</td></tr>`;
+        corpoExcel.innerHTML += `<tr><td>${ua}</td><td>-</td><td>${d}</td><td>${disc}</td><td>${id}</td><td>R$ ${v.toFixed(2)}</td></tr>`;
     });
 
-    document.getElementById('res-valor').innerText = tV.toLocaleString('pt-BR', {style:'currency', currency:'BRL'});
-    document.getElementById('res-dias').innerText = `${tD} / 244 Dias`;
+    document.getElementById('res-valor').innerText = tV.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+    document.getElementById('res-dias').innerText = `${tD} Dias Reais`;
     document.getElementById('res-alerta').innerHTML = tD >= 244 ? 
-        '<div style="color:var(--ok); font-weight:700;">✅ Elegível</div>' : 
-        '<div style="color:var(--er); font-weight:700;">🚨 Não Elegível</div>';
+        '<b style="color:var(--ok)">✅ ELEGÍVEL</b>' : '<b style="color:var(--er)">🚨 NÃO ELEGÍVEL</b>';
 }
 </script>
 </body>
