@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bônus 2025 – Diagnóstico, Recurso & Elegibilidade</title>
+<title>Bônus 2025 – Sistema de Auditoria GOE</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -35,11 +35,9 @@ input,select{width:100%;padding:8px;border:1px solid var(--bd);border-radius:6px
 .btn{padding:10px;font-family:var(--fh);font-weight:700;border:none;border-radius:var(--r);cursor:pointer;width:100%;}
 .btn-pri{background:var(--az2);color:#fff;margin-top:10px;}
 .btn-add{background:var(--gr);color:#fff;margin-top:5px;font-size:11px;}
-/* Estilo Tabela Excel Recurso */
 .excel-table{width:100%;border-collapse:collapse;margin-top:10px;background:white;font-size:11px;}
 .excel-table th{background:#f1f5f9;border:1px solid #cbd5e1;padding:8px;text-align:left;color:var(--az);}
 .excel-table td{border:1px solid #cbd5e1;padding:8px;}
-/* Explicação */
 .exp-box{background:var(--az-bg);border-radius:8px;padding:15px;margin-bottom:15px;border-left:4px solid var(--az3);}
 .exp-tit{font-weight:700;color:var(--az);margin-bottom:5px;display:block;}
 </style>
@@ -49,20 +47,20 @@ input,select{width:100%;padding:8px;border:1px solid var(--bd);border-radius:6px
 <header>
   <div class="hico">📊</div>
   <div>
-    <h1>Bônus 2025 – Sistema Completo (GOE)</h1>
-    <p>Auditoria Híbrida • Recurso Excel • Dias Elegíveis (244 dias)</p>
+    <h1>Bônus 2025 – Diagnóstico & Recurso (GOE)</h1>
+    <p>Jacareí/SP • Mapeamento 19 Colunas • Gestão de Elegibilidade</p>
   </div>
 </header>
 
 <nav>
   <button class="tab on" onclick="aba('calc',this)">🧮 Auditoria & Manual</button>
   <button class="tab" onclick="aba('excel',this)">📑 Tabela para Recurso</button>
-  <button class="tab" onclick="aba('exp',this)">💡 Explicação & Dias Elegíveis</button>
+  <button class="tab" onclick="aba('exp',this)">💡 Explicação & Regras</button>
 </nav>
 
 <div id="pnl-calc" class="pnl on"><div class="wrap"><div class="grid">
   <div>
-    <div class="card" style="background:var(--az-bg);">
+    <div class="card" style="background:var(--az-bg); border:2px dashed var(--az3);">
       <div class="ctit">Importar do Portalnet</div>
       <textarea id="raw-portalnet" placeholder="Cole as linhas aqui..." oninput="importarPortalnet(this.value)"></textarea>
     </div>
@@ -76,19 +74,20 @@ input,select{width:100%;padding:8px;border:1px solid var(--bd);border-radius:6px
 
   <div>
     <div class="card" style="position:sticky; top:1rem; border-top: 5px solid var(--az2);">
-      <div class="ctit">Status de Elegibilidade</div>
+      <div class="ctit">Status de Elegibilidade (244 dias)</div>
       <div id="res-dias" style="font-size:1.8rem; font-weight:800; color:var(--az2);">0 Dias</div>
       <p id="info-elegivel" style="font-weight:700; margin-bottom:10px;"></p>
       <hr style="margin:10px 0; opacity:0.1">
-      <div id="res-valor" style="font-size:1.4rem; font-weight:800; color:var(--ok);">R$ 0,00</div>
-      <button class="btn btn-pri" style="margin-top:15px" onclick="analisar()">🔍 Forçar Recálculo</button>
+      <div class="ctit">Valor Total Estimado</div>
+      <div id="res-valor" style="font-size:1.6rem; font-weight:800; color:var(--ok);">R$ 0,00</div>
+      <button class="btn btn-pri" style="margin-top:15px" onclick="analisar()">🔍 Atualizar Cálculos</button>
     </div>
   </div>
 </div></div></div>
 
 <div id="pnl-excel" class="pnl"><div class="wrap">
   <div class="card">
-    <div class="ctit">Tabela Demonstrativa para Recurso (Padrão Excel)</div>
+    <div class="ctit">Tabela Demonstrativa para Recurso (Excel)</div>
     <div style="overflow-x:auto;">
       <table class="excel-table">
         <thead>
@@ -104,21 +103,14 @@ input,select{width:100%;padding:8px;border:1px solid var(--bd);border-radius:6px
 
 <div id="pnl-exp" class="pnl"><div class="wrap">
   <div class="card">
-    <div class="ctit">💡 Guia de Dias Elegíveis e Regras</div>
-    
+    <div class="ctit">💡 Guia Técnico e Regras de Elegibilidade</div>
     <div class="exp-box">
-      <span class="exp-tit">1. O que são Dias Elegíveis?</span>
-      Conforme a <strong>LC 1.361/2021</strong>, para receber o bônus o servidor precisa ter exercido suas funções por pelo menos 2/3 do ano letivo. Em 2025, isso corresponde a <strong>244 dias</strong> de efetivo exercício.
+      <span class="exp-tit">1. Requisito de Frequência (244 Dias)</span>
+      O servidor deve ter 2/3 de exercício no ano (244 dias). Faltas e licenças sem vencimento descontam deste tempo. Férias e Licença Gestante contam como efetivo exercício.
     </div>
-
     <div class="exp-box">
-      <span class="exp-tit">2. Contagem de Dias (Sem Duplicidade)</span>
-      Se o servidor trabalha em duas escolas ou disciplinas no mesmo dia, o sistema conta apenas <strong>1 dia real</strong>. O bônus é calculado sobre a carga, mas a elegibilidade é sobre o calendário.
-    </div>
-
-    <div class="exp-box">
-      <span class="exp-tit">3. Erro de IDESP Zerado</span>
-      Muitas vezes o Portalnet reconhece os dias, mas aplica IDESP 0,00. Isso acontece por erro de vínculo na SED (comum no código 2800). Use a aba "Recurso" para instruir o processo.
+      <span class="exp-tit">2. Erro de Lançamento (Código 2800)</span>
+      A carga suplementar deve incidir o IDESP da escola. Se a linha do código 2800 estiver com valor R$ 0,00, use a aba "Recurso" para protocolar o pedido de revisão.
     </div>
   </div>
 </div></div>
@@ -168,7 +160,7 @@ function addLinha(d) {
             <button onclick="document.getElementById('bloco-${n}').remove(); analisar()" style="color:var(--er); border:none; background:none; cursor:pointer;">✖</button>
         </div>
         <div style="display:grid; grid-template-columns: 1fr 2fr; gap:10px">
-            <div class="f"><label>Dias</label><input type="number" class="l-dias" value="${d.dias||0}" oninput="analisar()"></div>
+            <div class="f"><label>Dias Calc.</label><input type="number" class="l-dias" value="${d.dias||0}" oninput="analisar()"></div>
             <div class="f"><label>Período</label><input class="l-per" value="${d.ini||''} a ${d.fim||''}" oninput="analisar()"></div>
         </div>
         <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:8px; margin-top:5px;">
